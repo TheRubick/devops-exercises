@@ -4,23 +4,22 @@
 
 |Name|Topic|Objective & Instructions|Solution|Comments|
 |--------|--------|------|----|----|
-|Hello World|Variables|[Exercise](hello_world.md)|[Solution](solutions/hello_world.md) | Basic
-|Basic date|Variables|[Exercise](basic_date.md)|[Solution](solutions/basic_date.md) | Basic
-|Great Day|Variables|[Exercise](great_day.md)|[Solution](solutions/great_day.md) | Basic
-|Factors|Arithmetic|[Exercise](factors.md)|[Solution](solutions/factors.md) | Basic
-|Argument Check|Conditionals|[Exercise](argument_check.md)|[Solution](solutions/argument_check.md) | Basic
-|Files Size|For Loops|[Exercise](files_size.md)|[Solution](solutions/files_size.md) | Basic
-|Count Chars|Input + While Loops|[Exercise](count_chars.md)|[Solution](solutions/count_chars.md) | Basic
-|Sum|Functions|[Exercise](sum.md)|[Solution](solutions/sum.md) | Basic
-|Number of Arguments|Case Statement|[Exercise](num_of_args.md)|[Solution](solutions/num_of_args.md) | Basic
-|Empty Files|Misc|[Exercise](empty_files.md)|[Solution](solutions/empty_files.md) | Basic
-|Directories Comparison|Misc|[Exercise](directories_comparison.md)| :( | Basic
-|It's alive!|Misc|[Exercise](host_status.md)|[Solution](solutions/host_status.md) | Intermediate
-
+|Hello World|Variables|[Exercise](hello_world.md)|[Solution](solutions/hello_world.md) | Basic ✅
+|Basic date|Variables|[Exercise](basic_date.md)|[Solution](solutions/basic_date.md) | Basic ✅
+|Great Day|Variables|[Exercise](great_day.md)|[Solution](solutions/great_day.md) | Basic ✅
+|Factors|Arithmetic|[Exercise](factors.md)|[Solution](solutions/factors.md) | Basic ✅
+|Argument Check|Conditionals|[Exercise](argument_check.md)|[Solution](solutions/argument_check.md) | Basic ✅
+|Files Size|For Loops|[Exercise](files_size.md)|[Solution](solutions/files_size.md) | Basic ✅
+|Count Chars|Input + While Loops|[Exercise](count_chars.md)|[Solution](solutions/count_chars.md) | Basic ✅
+|Sum|Functions|[Exercise](sum.md)|[Solution](solutions/sum.md) | Basic ✅
+|Number of Arguments|Case Statement|[Exercise](num_of_args.md)|[Solution](solutions/num_of_args.md) | Basic ✅
+|Empty Files|Misc|[Exercise](empty_files.md)|[Solution](solutions/empty_files.md) | Basic ✅
+|Directories Comparison|Misc|[Exercise](directories_comparison.md)| :( | Basic ✅
+|It's alive!|Misc|[Exercise](host_status.md)|[Solution](solutions/host_status.md) | Intermediate ✅
 ## Shell Scripting - Self Assessment
 
 <details>
-<summary>What does this line in shell scripts means?: <code>#!/bin/bash</code></summary><br><b>
+<summary>What does this line in shell scripts means?: <code>#!/bin/bash ✅</code></summary><br><b>
 
 
 `#!/bin/bash` is She-bang
@@ -30,7 +29,7 @@
 </b></details>
 
 <details>
-<summary>True or False? When a certain command/line fails in a shell script, the shell script, by default, will exit and stop running</summary><br><b>
+<summary>True or False? When a certain command/line fails in a shell script, the shell script, by default, will exit and stop running ✅</summary><br><b>
 
 Depends on the language and settings used.
 If the script is a bash script then this statement is true. When a script written in Bash fails to run a certain command it will keep running and will execute all other commands mentioned after the command which failed.
@@ -39,7 +38,7 @@ Most of the time we might actually want the opposite to happen. In order to make
 </b></details>
 
 <details>
-<summary>What do you tend to include in every script you write?</summary><br><b>
+<summary>What do you tend to include in every script you write? ✅</summary><br><b>
 
 Few example:
 
@@ -50,7 +49,7 @@ You can have an entirely different answer. It's based only on your experience an
 </b></details>
 
 <details>
-<summary>Today we have tools and technologies like Ansible, Puppet, Chef, ... Why would someone still use shell scripting?</summary><br><b>
+<summary>Today we have tools and technologies like Ansible, Puppet, Chef, ... Why would someone still use shell scripting? ✅</summary><br><b>
 
   * Speed
   * Flexibility
@@ -58,7 +57,7 @@ You can have an entirely different answer. It's based only on your experience an
   * We are delivering the scripts to customers who don't have access to the public network and don't necessarily have Ansible installed on their systems.
 </b></details>
 
-#### Shell Scripting - Variables
+#### Shell Scripting - Variables ✅
 
 <details>
 <summary>How to define a variable with the value "Hello World"?</summary><br><b>
@@ -104,7 +103,7 @@ Michelangelo
 </b></details>
 
 <details>
-<summary>Explain what would be the result of each command:
+<summary>Explain what would be the result of each command: ✅
 
   * <code>echo $0</code>
   * <code>echo $?</code>
@@ -113,24 +112,24 @@ Michelangelo
 </b></details>
 
 <details>
-<summary>What is <code>$@</code>?</summary><br><b>
+<summary>What is <code>$@</code>? ✅</summary><br><b>
 </b></details>
 
 <details>
-<summary>What is difference between <code>$@</code> and <code>$*</code>?</summary><br><b>
+<summary>What is difference between <code>$@</code> and <code>$*</code>? ❎</summary><br><b>
 
 `$@` is an array of all the arguments passed to the script
 `$*` is a single string of all the arguments passed to the script
 </b></details>
 
 <details>
-<summary>How do you get input from the user in shell scripts?</summary><br><b>
+<summary>How do you get input from the user in shell scripts? ✅</summary><br><b>
 
 Using the keyword <code>read</code> so for example <code>read x</code> will wait for user input and will store it in the variable x.
 </b></details>
 
 <details>
-<summary>How to compare variables length?</summary><br><b>
+<summary>How to compare variables length? ❎</summary><br><b>
 
 ```
 if [ ${#1} -ne ${#2} ]; then
@@ -138,7 +137,7 @@ if [ ${#1} -ne ${#2} ]; then
 ```
 </b></details>
 
-#### Shell Scripting - Conditionals
+#### Shell Scripting - Conditionals ✅
 
 <details>
 <summary>Explain conditionals and demonstrate how to use them</summary><br><b>
@@ -158,7 +157,7 @@ if [[ ${var//*.} =~ $regex ]]; then
 ```
 </b></details>
 
-#### Shell Scripting - Arithmetic Operations
+#### Shell Scripting - Arithmetic Operations ✅
 
 <details>
 <summary>How to perform arithmetic operations on numbers?</summary><br><b>
@@ -177,7 +176,7 @@ Another way: `expr 1 + 2`
 `if [ $(($1 % 4)) -eq 0 ]; then`
 </b></details>
 
-#### Shell Scripting - Loops
+#### Shell Scripting - Loops ✅
 
 <details>
 <summary>What is a loop? What types of loops are you familiar with?</summary><br><b>
@@ -187,10 +186,10 @@ Another way: `expr 1 + 2`
 <summary>Demonstrate how to use loops</summary><br><b>
 </b></details>
 
-#### Shell Scripting - Troubleshooting
+#### Shell Scripting - Troubleshooting ✅
 
 <details>
-<summary>How do you debug shell scripts?</summary><br><b>
+<summary>How do you debug shell scripts? ✅</summary><br><b>
 
 Answer depends on the language you are using for writing your scripts. If Bash is used for example then:
 
@@ -207,12 +206,13 @@ If Python, then using pdb is very useful.
 x = 2
 echo $x
 ```
+✅
 </summary><br><b>
 
 Should be `x=2`
 </b></details>
 
-#### Shell Scripting - Substring
+#### Shell Scripting - Substring ❎
 
 <details>
 <summary>How to extract everything after the last dot in a string?</summary><br><b>
@@ -229,17 +229,17 @@ ${var%.*}
 #### Shell Scripting - Misc
 
 <details>
-<summary>Generate 8 digit random number</summary><br><b>
+<summary>Generate 8 digit random number ❎</summary><br><b>
 
 shuf -i 9999999-99999999 -n 1
 </b></details>
 
 <details>
-<summary>Can you give an example to some Bash best practices?</summary><br><b>
+<summary>Can you give an example to some Bash best practices? ✅</summary><br><b>
 </b></details>
 
 <details>
-<summary>What is the ternary operator? How do you use it in bash?</summary><br><b>
+<summary>What is the ternary operator? How do you use it in bash? ✅</summary><br><b>
 
 A short way of using if/else. An example:
 
@@ -250,14 +250,14 @@ A short way of using if/else. An example:
 <summary>What does the following code do and when would you use it?
 
 <code>diff <(ls /tmp) <(ls /var/tmp)</code>
-
+❎
 </summary><br>
 It is called 'process substitution'. It provides a way to pass the output of a command to another command when using a pipe <code>|</code> is not possible. It can be used when a command does not support <code>STDIN</code> or you need the output of multiple commands.
 https://superuser.com/a/1060002/167769
 </details>
 
 <details>
-<summary>What are you using for testing shell scripts?</summary><br><b>
+<summary>What are you using for testing shell scripts? ❎</summary><br><b>
 
 bats
 </b></details>
