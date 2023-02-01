@@ -595,13 +595,13 @@ ISP (Internet Service Provider) is the local internet company provider.
 
 |Name|Topic|Objective & Instructions|Solution|Comments|
 |--------|--------|------|----|----|
-|Fork 101|Fork|[Link](topics/os/fork_101.md)|[Link](topics/os/solutions/fork_101_solution.md)
-|Fork 102|Fork|[Link](topics/os/fork_102.md)|[Link](topics/os/solutions/fork_102_solution.md)
+|Fork 101|Fork|[Link](topics/os/fork_101.md)|[Link](topics/os/solutions/fork_101_solution.md) ✅
+|Fork 102|Fork|[Link](topics/os/fork_102.md)|[Link](topics/os/solutions/fork_102_solution.md) ✅
 
 ### Operating System - Self Assessment
 
 <details>
-<summary>What is an operating system?</summary><br><b>
+<summary>What is an operating system? :grey_exclamation: </summary><br><b>
 
 From the book "Operating Systems: Three Easy Pieces":
 
@@ -611,13 +611,13 @@ From the book "Operating Systems: Three Easy Pieces":
 #### Operating System - Process
 
 <details>
-<summary>Can you explain what is a process?</summary><br><b>
+<summary>Can you explain what is a process? ✅</summary><br><b>
 
 A process is a running program. A program is one or more instructions and the program (or process) is executed by the operating system.
 </b></details>
 
 <details>
-<summary>If you had to design an API for processes in an operating system, what would this API look like?</summary><br><b>
+<summary>If you had to design an API for processes in an operating system, what would this API look like? ❎</summary><br><b>
 
 It would support the following:
 
@@ -628,7 +628,7 @@ It would support the following:
 </b></details>
 
 <details>
-<summary>How a process is created?</summary><br><b>
+<summary>How a process is created? ❎</summary><br><b>
 
 * The OS is reading program's code and any additional relevant data
 * Program's code is loaded into the memory or more specifically, into the address space of the process.
@@ -639,13 +639,13 @@ It would support the following:
 </b></details>
 
 <details>
-<summary>True or False? The loading of the program into the memory is done eagerly (all at once)</summary><br><b>
+<summary>True or False? The loading of the program into the memory is done eagerly (all at once) :grey_exclamation:</summary><br><b>
 
 False. It was true in the past but today's operating systems perform lazy loading which means only the relevant pieces required for the process to run are loaded first.
 </b></details>
 
 <details>
-<summary>What are different states of a process?</summary><br><b>
+<summary>What are different states of a process? ✅</summary><br><b>
 
 * Running - it's executing instructions
 * Ready - it's ready to run but for different reasons it's on hold
@@ -653,7 +653,7 @@ False. It was true in the past but today's operating systems perform lazy loadin
 </b></details>
 
 <details>
-<summary>What are some reasons for a process to become blocked?</summary><br><b>
+<summary>What are some reasons for a process to become blocked? :grey_exclamation:</summary><br><b>
 
   - I/O operations (e.g. Reading from a disk)
   - Waiting for a packet from a network
@@ -664,20 +664,20 @@ False. It was true in the past but today's operating systems perform lazy loadin
 </b></details>
 
 <details>
-<summary>What is "time sharing"?</summary><br><b>
+<summary>What is "time sharing"? :grey_exclamation:</summary><br><b>
 
 Even when using a system with one physical CPU, it's possible to allow multiple users to work on it and run programs. This is possible with time sharing where computing resources are shared in a way it seems to the user the system has multiple CPUs but in fact it's simply one CPU shared by applying multiprogramming and multi-tasking.
 </b></details>
 
 <details>
-<summary>What is "space sharing"?</summary><br><b>
+<summary>What is "space sharing"? :grey_exclamation:</summary><br><b>
 
 Somewhat the opposite of time sharing. While in time sharing a resource is used for a while by one entity and then the same resource can be used by another resource, in space sharing the space is shared by multiple entities but in a way where it's not being transferred between them.<br>
 It's used by one entity until this entity decides to get rid of it. Take for example storage. In storage, a file is yours until you decide to delete it.
 </b></details>
 
 <details>
-<summary>What component determines which process runs at a given moment in time?</summary><br><b>
+<summary>What component determines which process runs at a given moment in time? ✅</summary><br><b>
 
 CPU scheduler
 </b></details>
@@ -685,7 +685,7 @@ CPU scheduler
 #### Operating System - Memory
 
 <details>
-<summary>What is "virtual memory" and what purpose it serves?</summary><br><b>
+<summary>What is "virtual memory" and what purpose it serves? :grey_exclamation:</summary><br><b>
 
 Virtual memory combines your computer's RAM with temporary space on your hard disk. When RAM runs low, virtual memory helps to move data from RAM to a space called a paging file. Moving data to paging file can free up the RAM so your computer can complete its work. In general, the more RAM your computer has, the faster the programs run.
 https://www.minitool.com/lib/virtual-memory.html
@@ -710,7 +710,7 @@ The kernel is part of the operating system and is responsible for tasks like:
 </b></details>
 
 <details>
-<summary>True or False? Some pieces of the code in the kernel are loaded into protected areas of the memory so applications can't overwritten them</summary><br><b>
+<summary>True or False? Some pieces of the code in the kernel are loaded into protected areas of the memory so applications can't overwritten them ✅</summary><br><b>
 
 True
 </b></details>
@@ -724,7 +724,7 @@ True
 </b></details>
 
 <details>
-<summary>What is cache? What is buffer?</summary><br><b>
+<summary>What is cache? What is buffer? ❎</summary><br><b>
 
 Buffer: Reserved place in RAM which is used to hold data for temporary purposes
 Cache: Cache is usually used when processes reading and writing to the disk to make the process faster by making similar data used by different programs easily accessible.
