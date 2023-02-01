@@ -53,15 +53,15 @@ Desclaimer: developed by repository owner
 
 |Name|Topic|Objective & Instructions|Solution|Comments|
 |--------|--------|------|----|----|
-| Navigation | cd, pwd | [Exercise](exercises/navigation/README.md) | [Solution](exercises/navigation/solution.md)
-| Create and Destroy | touch, rm, mkdir | [Exercise](exercises/create_remove/README.md) | [Solution](exercises/create_remove/solution.md)
-| Copy Time | touch, cp, ls | [Exercise](exercises/copy/README.md) | [Solution](exercises/copy/solution.md)
+| Navigation | cd, pwd | [Exercise](exercises/navigation/README.md) | [Solution](exercises/navigation/solution.md)  ✅
+| Create and Destroy | touch, rm, mkdir | [Exercise](exercises/create_remove/README.md) | [Solution](exercises/create_remove/solution.md)  ✅
+| Copy Time | touch, cp, ls | [Exercise](exercises/copy/README.md) | [Solution](exercises/copy/solution.md)  ✅
 
 ### Misc
 
 |Name|Topic|Objective & Instructions|Solution|Comments|
 |--------|--------|------|----|----|
-| Unique Count |  | [Exercise](exercises/uniqe_count/README.md) | [Solution](exercises/uniqe_count/solution.md)
+| Unique Count |  | [Exercise](exercises/uniqe_count/README.md) | [Solution](exercises/uniqe_count/solution.md) ✅
 
 ## Linux Questions
 
@@ -77,7 +77,7 @@ Desclaimer: developed by repository owner
 </b></details>
 
 <details>
-<summary>Explain what each of the following commands does and give an example on how to use it:
+<summary>Explain what each of the following commands does and give an example on how to use it: ✅
 
   * touch
   * ls
@@ -100,7 +100,7 @@ Desclaimer: developed by repository owner
 </b></details>
 
 <details>
-<summary>What each of the following commands does?
+<summary>What each of the following commands does? ✅
 
   * cd /
   * cd ~
@@ -119,7 +119,7 @@ Desclaimer: developed by repository owner
 </b></details>
 
 <details>
-<summary>Some of the commands in the previous question can be run with the -r/-R flag. What does it do? Give an example to when you would use it</summary><br><b>
+<summary>Some of the commands in the previous question can be run with the -r/-R flag. What does it do? Give an example to when you would use it ✅ </summary><br><b>
 
 The -r (or -R in some commands) flag allows the user to run a certain command recursively. For example, listing all the files under the following tree is possible when done recursively (`ls -R`):
 
@@ -134,27 +134,27 @@ To list all the files, one can run `ls -R /dir1`
 </b></details>
 
 <details>
-<summary>Explain each field in the output of `ls -l` command</summary><br><b>
+<summary>Explain each field in the output of `ls -l` command ✅</summary><br><b>
 It shows a detailed list of files in a long format. From the left:
 
 * file permissions, number of links, owner name, owner group, file size, timestamp of last modification and directory/file name
 </b></details>
 
 <details>
-<summary>What are hidden files/directories? How to list them?</summary><br><b>
+<summary>What are hidden files/directories? How to list them? ✅</summary><br><b>
 
 These are files directly not displayed after performing a standard ls direct listing. An example of these files are .bashrc which are used to execute some scripts. Some also store configuration about services on your host like .KUBECONFIG. The command used to list them is, `ls -a`
 </b></details>
 
 <details>
-<summary>What do > and < do in terms of input and output for programs?</summary><br><b>
+<summary>What do > and < do in terms of input and output for programs? ✅</summary><br><b>
 They take in input (<) and output for a given file (>) using stdin and stdout.
 
 `myProgram < input.txt > executionOutput.txt`
 </b></details>
 
 <details>
-<summary>Explain what each of the following commands does and give an example on how to use it:
+<summary>Explain what each of the following commands does and give an example on how to use it: ✅
 
   * sed
   * grep
@@ -172,13 +172,13 @@ They take in input (<) and output for a given file (>) using stdin and stdout.
 </b></details>
 
 <details>
-<summary>How to rename the name of a file or a directory?</summary><br><b>
+<summary>How to rename the name of a file or a directory? ✅</summary><br><b>
 
 Using the `mv` command.
 </b></details>
 
 <details>
-<summary>Specify which command would you use (and how) for each of the following scenarios 
+<summary>Specify which command would you use (and how) for each of the following scenarios ✅
 
   * Remove a directory with files
   * Display the content of a file
@@ -194,14 +194,14 @@ Using the `mv` command.
 </b></details>
 
 <details>
-<summary>How can you check what is the path of a certain command?</summary><br><b>
+<summary>How can you check what is the path of a certain command? :grey_exclamation: </summary><br><b>
 
   * whereis
   * which
 </b></details>
 
 <details>
-<summary>What is the difference between these two commands? Will it result in the same output?
+<summary>What is the difference between these two commands? Will it result in the same output? :grey_exclamation:
 
 ```
 echo hello world
@@ -213,13 +213,13 @@ The echo command receives two separate arguments in the first execution and in t
 </b></details>
 
 <details>
-<summary>Explain piping. How do you perform piping?</summary><br><b>
+<summary>Explain piping. How do you perform piping? ✅</summary><br><b>
 
 Using a pipe in Linux, allows you to send the output of one command to the input of another command. For example: `cat /etc/services | wc -l`
 </b></details>
 
 <details>
-<summary>Fix the following commands:
+<summary>Fix the following commands: ✅
 
   * sed "s/1/2/g' /tmp/myFile
   * find . -iname \*.yaml -exec sed -i "s/1/2/g" {} ;
@@ -232,13 +232,13 @@ find . -iname "*.yaml" -exec sed -i "s/1/2/g" {} \;
 </b></details>
 
 <details>
-<summary>How to check which commands you executed in the past?</summary><br><b>
+<summary>How to check which commands you executed in the past? ✅</summary><br><b>
 
 history command or .bash_history file
 </b></details>
 
 <details>
-<summary>Running the command <code>df</code> you get "command not found". What could be wrong and how to fix it?</summary><br><b>
+<summary>Running the command <code>df</code> you get "command not found". What could be wrong and how to fix it? :grey_exclamation:</summary><br><b>
 </b>
 <p><b>
 Most likely the default/generated $PATH was somehow modified or overridden thus not containing <code>/bin/</code> where df would normally go.
@@ -258,7 +258,7 @@ permissions issues, bad compiled software (if you compiled it by yourself)... th
 </details>
 
 <details>
-<summary>How do you schedule tasks periodically?</summary><br><b>
+<summary>How do you schedule tasks periodically? ✅</summary><br><b>
 
 You can use the commands <code>cron</code> and <code>at</code>.
 With cron, tasks are scheduled using the following format:
@@ -273,7 +273,7 @@ Alternatively if you are using a distro with systemd it's recommended to use sys
 </b></details>
 
 <a name="questions-linux-redirection"></a>
-### I/O Redirection
+### I/O Redirection :grey_exclamation:
 
 <details>
 <summary>Explain Linux I/O redirection</summary><br><b>
@@ -308,7 +308,7 @@ The file `die_hard` will not be created
 ### Filesystem Hierarchy Standard
 
 <details>
-<summary>In Linux FHS (Filesystem Hierarchy Standard) what is the <code>/</code>?</summary><br><b>
+<summary>In Linux FHS (Filesystem Hierarchy Standard) what is the <code>/</code>? ✅</summary><br><b>
 
 The root of the filesystem. The beginning of the tree.
 </b></details>
@@ -316,11 +316,11 @@ The root of the filesystem. The beginning of the tree.
 <details>
 <summary>What is stored in each of the following paths?
 
-  - /bin, /sbin, /usr/bin and /usr/sbin
-  - /etc
-  - /home
-  - /var
-  - /tmp</summary><br><b>
+  - /bin, /sbin, /usr/bin and /usr/sbin ✅
+  - /etc ✅
+  - /home ✅
+  - /var ❎
+  - /tmp ✅</summary><br><b>
 
   * binaries
   * configuration files
@@ -330,13 +330,13 @@ The root of the filesystem. The beginning of the tree.
 </b></details>
 
 <details>
-<summary>What is special about the /tmp directory when compared to other directories?</summary><br><b>
+<summary>What is special about the /tmp directory when compared to other directories? ✅</summary><br><b>
 
 `/tmp` folder is cleaned automatically, usually upon reboot.
 </b></details>
 
 <details>
-<summary>What kind of information one can find in /proc?</summary><br><b>
+<summary>What kind of information one can find in /proc? ✅</summary><br><b>
  
 It contains useful information about the processes that are currently running, it is regarded as control and information center for kernel.
 </b></details>
@@ -346,13 +346,13 @@ It contains useful information about the processes that are currently running, i
 </b></details>
 
 <details>
-<summary>True or False? only root can create files in /proc</summary><br><b>
+<summary>True or False? only root can create files in /proc ✅</summary><br><b>
 
 False. No one can create file in /proc directly (certain operations can lead to files being created in /proc by the kernel).
 </b></details>
 
 <details>
-<summary>What can be found in /proc/cmdline?</summary><br><b>
+<summary>What can be found in /proc/cmdline? ❎</summary><br><b>
 
 The command passed to the boot loader to run the kernel
 </b></details>
@@ -365,13 +365,13 @@ The command passed to the boot loader to run the kernel
 ### Permissions
 
 <details>
-<summary>How to change the permissions of a file?</summary><br><b>
+<summary>How to change the permissions of a file? ✅</summary><br><b>
 
 Using the `chmod` command.
 </b></details>
 
 <details>
-<summary>What does the following permissions mean?:
+<summary>What does the following permissions mean?: ✅
 
   * 777
   * 644
@@ -385,24 +385,24 @@ Using the `chmod` command.
 </b></details>
 
 <details>
-<summary>What this command does? <code>chmod +x some_file</code></summary><br><b>
+<summary>What this command does? <code>chmod +x some_file</code> :grey_exclamation: </summary><br><b>
 It adds execute permissions to all sets i.e user, group and others
 </b></details>
 
 <details>
-<summary>Explain what is setgid and setuid</summary><br><b>
+<summary>Explain what is setgid and setuid ❎</summary><br><b>
 
 * setuid is a linux file permission that permits a user to run a file or program with the permissions of the owner of that file. This is possible by elevation of current user privileges.
 * setgid is a process when executed will run as the group that owns the file.
 </b></details>
 
 <details>
-<summary>What is the purpose of sticky bit?</summary><br><b>
+<summary>What is the purpose of sticky bit? ❎</summary><br><b>
 Its a bit that only allows the owner or the root user to delete or modify the file.
 </b></details>
 
 <details>
-<summary>What the following commands do?
+<summary>What the following commands do? ✅
 
   - chmod
   - chown
@@ -418,17 +418,17 @@ Its a bit that only allows the owner or the root user to delete or modify the fi
 </b></details>
 
 <details>
-<summary>True or False? In order to install packages on the system one must be the root user or use the sudo command</summary><br><b>
+<summary>True or False? In order to install packages on the system one must be the root user or use the sudo command ✅</summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>Explain what are ACLs. For what use cases would you recommend to use them?</summary><br><b>
+<summary>Explain what are ACLs. For what use cases would you recommend to use them? ❎</summary><br><b>
 </b></details>
 
 <details>
-<summary>You try to create a file but it fails. Name at least three different reason as to why it could happen</summary><br><b>
+<summary>You try to create a file but it fails. Name at least three different reason as to why it could happen :grey_exclamation:</summary><br><b>
 
 * No more disk space
 * No more inodes
@@ -436,7 +436,7 @@ True
 </b></details>
 
 <details>
-<summary>A user accidentally executed the following <code>chmod -x $(which chmod)</code>. How to fix it?</summary><br><b>
+<summary>A user accidentally executed the following <code>chmod -x $(which chmod)</code>. How to fix it? ❎</summary><br><b>
 
 Using `sudo setfacl -m u::rx /usr/bin/chmod` will set the execute permissions on `chmod` for all the users. Post this, the `chmod` binary can be used as usual.
 </b></details>
@@ -445,19 +445,19 @@ Using `sudo setfacl -m u::rx /usr/bin/chmod` will set the execute permissions on
 ### Scenarios
 
 <details>
-<summary>You would like to copy a file to a remote Linux host. How would you do?</summary><br><b>
+<summary>You would like to copy a file to a remote Linux host. How would you do? ✅</summary><br><b>
 
 There are multiple ways to transfer files between hosts. Personal opinion: use `rsync`
 </b></details>
 
 <details>
-<summary>How to generate a random string?</summary><br><b>
+<summary>How to generate a random string? ❎</summary><br><b>
 
 One way is to run the following: `cat /proc/sys/kernel/random/uuid`
 </b></details>
 
 <details>
-<summary>How to generate a random string of 7 characters?</summary><br><b>
+<summary>How to generate a random string of 7 characters? ❎</summary><br><b>
 
 `mkpasswd -l 7`
 </b></details>
@@ -466,7 +466,7 @@ One way is to run the following: `cat /proc/sys/kernel/random/uuid`
 ### Systemd
 
 <details>
-<summary>What is systemd?</summary><br>
+<summary>What is systemd? ✅</summary><br>
 <b>
 Systemd is a daemon (System 'd', d stands for daemon).
 
@@ -481,20 +481,20 @@ Hardware -> Kernel -> <u>Daemons</u>, System Libraries, Server Display.
 </details>
 
 <details>
-<summary>How to start or stop a service?</summary><br><b>
+<summary>How to start or stop a service? ✅</summary><br><b>
 
 To start a service: `systemctl start <service name>`
 To stop a service: `systemctl stop <service name>`
 </b></details>
 
 <details>
-<summary>How to check the status of a service?</summary><br><b>
+<summary>How to check the status of a service? ✅</summary><br><b>
 
 `systemctl status <service name>`
 </b></details>
 
 <details>
-<summary>On a system which uses systemd, how would you display the logs?</summary><br><b>
+<summary>On a system which uses systemd, how would you display the logs? ✅</summary><br><b>
 
 <code>journalctl</code>
 </b></details>
@@ -506,19 +506,19 @@ To stop a service: `systemctl stop <service name>`
 ### Troubleshooting and Debugging
 
 <details>
-<summary>Where system logs are located?</summary><br><b>
+<summary>Where system logs are located? ✅</summary><br><b>
 
 /var/log
 </b></details>
 
 <details>
-<summary>How to follow file's content as it being appended without opening the file every time?</summary><br><b>
+<summary>How to follow file's content as it being appended without opening the file every time? ✅</summary><br><b>
 
 tail -f <file_name>
 </b></details>
 
 <details>
-<summary>What are you using for troubleshooting and debugging <b>network</b> issues?</summary><br><b>
+<summary>What are you using for troubleshooting and debugging <b>network</b> issues? ❎</summary><br><b>
 
 <code>dstat -t</code> is great for identifying network and disk issues.
 <code>netstat -tnlaup</code> can be used to see which processes are running on which ports.
@@ -529,20 +529,20 @@ tail -f <file_name>
 </b></details>
 
 <details>
-<summary>What are you using for troubleshooting and debugging <b>disk & file system</b> issues?</summary><br><b>
+<summary>What are you using for troubleshooting and debugging <b>disk & file system</b> issues? ❎</summary><br><b>
 
 <code>dstat -t</code> is great for identifying network and disk issues.
 <code>opensnoop</code> can be used to see which files are being opened on the system (in real time).
 </b></details>
 
 <details>
-<summary>What are you using for troubleshooting and debugging <b>process</b> issues?</summary><br><b>
+<summary>What are you using for troubleshooting and debugging <b>process</b> issues? ❎</summary><br><b>
 
 <code>strace</code> is great for understanding what your program does. It prints every system call your program executed.
 </b></details>
 
 <details>
-<summary>What are you using for debugging CPU related issues?</summary><br><b>
+<summary>What are you using for debugging CPU related issues? ❎</summary><br><b>
 
 <code>top</code> will show you how much CPU percentage each process consumes
 <code>perf</code> is a great choice for sampling profiler and in general, figuring out what your CPU cycles are "wasted" on
@@ -550,7 +550,7 @@ tail -f <file_name>
 </b></details>
 
 <details>
-<summary>You get a call from someone claiming "my system is SLOW". What do you do?</summary><br><b>
+<summary>You get a call from someone claiming "my system is SLOW". What do you do? ❎</summary><br><b>
 
 * Check with `top` for anything unusual
 * Run `dstat -t` to check if it's related to disk or network.
@@ -559,22 +559,22 @@ tail -f <file_name>
 </b></details>
 
 <details>
-<summary>Explain iostat output</summary><br><b>
+<summary>Explain iostat output ❎</summary><br><b>
 </b></details>
 
 <details>
-<summary>How to debug binaries?</summary><br><b>
+<summary>How to debug binaries? ❎</summary><br><b>
 </b></details>
 
 <details>
-<summary>What is the difference between CPU load and utilization?</summary><br><b>
+<summary>What is the difference between CPU load and utilization? ❎</summary><br><b>
 </b></details>
 
 <details>
-<summary>How you measure time execution of a program?</summary><br><b>
+<summary>How you measure time execution of a program? ❎</summary><br><b>
 </b></details>
 
-#### Scenarios
+#### Scenarios ❎
 
 <details>
 <summary>You have a process writing to a file. You don't know which process exactly, you just know the path of the file. You would like to kill the process as it's no longer needed. How would you achieve it?</summary><br><b>
@@ -587,7 +587,7 @@ tail -f <file_name>
 ### Kernel
 
 <details>
-<summary>What is a kernel, and what does it do?</summary><br><b>
+<summary>What is a kernel, and what does it do? :grey_exclamation:</summary><br><b>
 
 The kernel is part of the operating system and is responsible for tasks like:
 
@@ -597,7 +597,7 @@ The kernel is part of the operating system and is responsible for tasks like:
 </b></details>
 
 <details>
-<summary>How do you find out which Kernel version your system is using?</summary><br><b>
+<summary>How do you find out which Kernel version your system is using? ✅</summary><br><b>
 
 `uname -a` command
 </b></details>
@@ -607,7 +607,7 @@ The kernel is part of the operating system and is responsible for tasks like:
 </b></details>
 
 <details>
-<summary>Explain user space vs. kernel space</summary><br><b>
+<summary>Explain user space vs. kernel space :grey_exclamation:</summary><br><b>
 
 The operating system executes the kernel in protected memory to prevent anyone from changing (and risking it crashing). This is what is known as "Kernel space".
 "User space" is where users executes their commands or applications. It's important to create this separation since we can't rely on user applications to not tamper with the kernel, causing it to crash.
@@ -616,7 +616,7 @@ Applications can access system resources and indirectly the kernel space by maki
 </b></details>
 
 <details>
-<summary>In what phases of kernel lifecycle, can you change its configuration?</summary><br><b>
+<summary>In what phases of kernel lifecycle, can you change its configuration? :grey_exclamation:</summary><br><b>
 
   * Build time (when it's compiled)
   * Boot time (when it starts)
@@ -624,31 +624,31 @@ Applications can access system resources and indirectly the kernel space by maki
 </b></details>
 
 <details>
-<summary>Where can you find kernel's configuration?</summary><br><b>
+<summary>Where can you find kernel's configuration? ✅</summary><br><b>
 
 Usually it will reside in `/boot/config-<kernel version>.<os release>.<arch>`
 </b></details>
 
 <details>
-<summary>Where can you find the file that contains the command passed to the boot loader to run the kernel?</summary><br><b>
+<summary>Where can you find the file that contains the command passed to the boot loader to run the kernel? ❎</summary><br><b>
 
 `/proc/cmdline`
 </b></details>
 
 <details>
-<summary>How to list kernel's runtime parameters?</summary><br><b>
+<summary>How to list kernel's runtime parameters? ❎</summary><br><b>
 
 `sysctl -a`
 </b></details>
 
 <details>
-<summary>Will running <code>sysctl -a</code> as a regular user vs. root, produce different result?</summary><br><b>
+<summary>Will running <code>sysctl -a</code> as a regular user vs. root, produce different result? :grey_exclamation:</summary><br><b>
 
 Yes, you might notice that in most systems, when running `systctl -a` with root, you'll get more runtime parameters compared to executing the same command with a regular user.
 </b></details>
 
 <details>
-<summary>You would like to enable IPv4 forwarding in the kernel, how would you do it?</summary><br><b>
+<summary>You would like to enable IPv4 forwarding in the kernel, how would you do it? ❎</summary><br><b>
 
 `sudo sysctl net.ipv4.ip_forward=1`
 
@@ -658,7 +658,7 @@ Another way to is to run `echo 1 | sudo tee /proc/sys/net/ipv4/ip_forward`
 </b></details>
 
 <details>
-<summary>How <code>sysctl</code> applies the changes to kernel's runtime parameters the moment you run sysctl command?</summary><br><b>
+<summary>How <code>sysctl</code> applies the changes to kernel's runtime parameters the moment you run sysctl command? ❎</summary><br><b>
 
 If you `strace` the sysctl command you can see it does it by changing the file under /proc/sys/...
 
@@ -666,13 +666,13 @@ In the past it was done with sysctl system call, but it was deprecated at some p
 </b></details>
 
 <details>
-<summary>How changes to kernel runtime parameters persist? (applied even after reboot to the system for example)</summary><br><b>
+<summary>How changes to kernel runtime parameters persist? (applied even after reboot to the system for example) ✅</summary><br><b>
 
 There is a service called `systemd-sysctl` that takes the content of /etc/sysctl.conf and applies it. This is how changes persist, even after reboot, when they are written in /etc/sysctl.conf
 </b></details>
 
 <details>
-<summary>Are the changes you make to kernel parameters in a container, affects also the kernel parameters of the host on which the container runs?</summary><br><b>
+<summary>Are the changes you make to kernel parameters in a container, affects also the kernel parameters of the host on which the container runs? ✅</summary><br><b>
 
 No. Containers have their own /proc filesystem so any change to kernel parameters inside a container, are not affecting the host or other containers running on that host.
 </b></details>
@@ -1058,13 +1058,13 @@ sar -n TCP,ETCP 1
 ### Processes
 
 <details>
-<summary>how to list all the processes running in your system?</summary><br><b>
+<summary>how to list all the processes running in your system? ✅</summary><br><b>
 
 `ps -ef`
 </b></details>
 
 <details>
-<summary>How to run a process in the background and why to do that in the first place?</summary><br><b>
+<summary>How to run a process in the background and why to do that in the first place? :grey_exclamation:</summary><br><b>
 
 You can achieve that by specifying & at the end of the command.
 As to why, since some commands/processes can take a lot of time to finish
@@ -1072,7 +1072,7 @@ execution or run forever, you may want to run them in the background instead of 
 </b></details>
 
 <details>
-<summary>How can you find how much memory a specific process consumes?</summary><br><b>
+<summary>How can you find how much memory a specific process consumes? ✅</summary><br><b>
 <code>
 mem()
 {                                                                                                      
@@ -1083,7 +1083,7 @@ mem()
 </b></details>
 
 <details>
-<summary>What signal is used by default when you run 'kill *process id*'?</summary><br><b>
+<summary>What signal is used by default when you run 'kill *process id*'? ❎</summary><br><b>
 <pre>
 The default signal is SIGTERM (15). This signal kills
 process gracefully which means it allows it to save current
@@ -1092,7 +1092,7 @@ state configuration.
 </b></details>
 
 <details>
-<summary>What signals are you familiar with?</summary><br><b>
+<summary>What signals are you familiar with? ❎</summary><br><b>
 
 SIGTERM - default signal for terminating a process
 SIGHUP - common usage is for reloading configuration
@@ -1110,7 +1110,7 @@ To view all available signals run `kill -l`
 </b></details>
 
 <details>
-<summary>What is a trap?</summary><br><b>
+<summary>What is a trap? ❎</summary><br><b>
 </b></details>
 
 <details>
@@ -1118,18 +1118,18 @@ To view all available signals run `kill -l`
 </b></details>
 
 <details>
-<summary>What happens when you press ctrl + c?</summary><br><b>
+<summary>What happens when you press ctrl + c? ❎</summary><br><b>
 </b></details>
 
 <details>
-<summary>What is a Daemon in Linux?</summary><br><b>
+<summary>What is a Daemon in Linux? ✅</summary><br><b>
 
 A background process. Most of these processes are waiting for requests or set of conditions to be met before actually running anything.
 Some examples: sshd, crond, rpcbind.
 </b></details>
 
 <details>
-<summary>What are the possible states of a process in Linux?</summary><br><b>
+<summary>What are the possible states of a process in Linux? :grey_exclamation:</summary><br><b>
 <pre>
 Running (R)
 Uninterruptible Sleep (D) - The process is waiting for I/O
@@ -1145,7 +1145,7 @@ Zombie (z)
 </b></details>
 
 <details>
-<summary>What is a zombie process?</summary><br><b>
+<summary>What is a zombie process? :grey_exclamation:</summary><br><b>
 
 A process which has finished to run but has not exited.
 
@@ -1153,7 +1153,7 @@ One reason it happens is when a parent process is programmed incorrectly. Every 
 </b></details>
 
 <details>
-<summary>How to get rid of zombie processes?</summary><br><b>
+<summary>How to get rid of zombie processes? ❎</summary><br><b>
 
 You can't kill a zombie process the regular way with `kill -9` for example as it's already dead.
 
@@ -1174,7 +1174,7 @@ If you mention at any point ps command with arugments, be familiar with what the
 </b></details>
 
 <details>
-<summary>What is the init process?</summary><br><b>
+<summary>What is the init process? ✅</summary><br><b>
 It is the first process executed by the kernel during the booting of a system. It is a daemon process which runs till the system is shutdown. That is why, it is the parent of all the processes
 </b></details>
 
@@ -1195,25 +1195,25 @@ It is the first process executed by the kernel during the booting of a system. I
 </b></details>
 
 <details>
-<summary>Find all the files which end with '.yml' and replace the number 1 in 2 in each file</summary><br><b>
+<summary>Find all the files which end with '.yml' and replace the number 1 in 2 in each file ✅</summary><br><b>
 
 find /some_dir -iname \*.yml -print0 | xargs -0 -r sed -i "s/1/2/g"
 </b></details>
 
 <details>
-<summary>You run ls and you get "/lib/ld-linux-armhf.so.3 no such file or directory". What is the problem?</summary><br><b>
+<summary>You run ls and you get "/lib/ld-linux-armhf.so.3 no such file or directory". What is the problem? :grey_exclamation:</summary><br><b>
 
 The ls executable is built for an incompatible architecture.
 </b></details>
 
 <details>
-<summary>How would you split a 50 lines file into 2 files of 25 lines each?</summary><br><b>
+<summary>How would you split a 50 lines file into 2 files of 25 lines each? ❎</summary><br><b>
 
 You can use the <code>split</code> command this way: <code>split -l 25 some_file</code>
 </b></details>
 
 <details>
-<summary>What is a file descriptor? What file descriptors are you familiar with?</summary><br><b>
+<summary>What is a file descriptor? What file descriptors are you familiar with? ❎</summary><br><b>
 Kerberos
 File descriptor, also known as file handler, is a unique number which identifies an open file in the operating system.
 
