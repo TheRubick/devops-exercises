@@ -97,7 +97,7 @@
 ## Network
 
 <details>
-<summary>In general, what do you need in order to communicate?</summary><br><b>
+<summary>In general, what do you need in order to communicate? ❎</summary><br><b>
 
   - A common language (for the two ends to understand)
   - A way to address who do you want to communicate with
@@ -106,7 +106,7 @@
 </b></details>
 
 <details>
-<summary>What is TCP/IP?</summary><br><b>
+<summary>What is TCP/IP? ❎</summary><br><b>
 
 A set of protocols that define how two or more devices can communicate with each other.
 
@@ -115,14 +115,14 @@ To learn more about TCP/IP, read [here](http://www.penguintutor.com/linux/basic-
 </b></details>
 
 <details>
-<summary>What is Ethernet?</summary><br><b>
+<summary>What is Ethernet? ✅</summary><br><b>
 
 Ethernet simply refers to the most common type of Local Area Network (LAN) used today. A LAN—in contrast to a WAN (Wide Area Network), which spans a larger geographical area—is a connected network of computers in a small area, like your office, college campus, or even home.
 
 </b></details>
 
 <details>
-<summary>What is a MAC address? What is it used for?</summary><br><b>
+<summary>What is a MAC address? What is it used for? ✅</summary><br><b>
 
 A MAC address is a unique identification number or code used to identify individual devices on the network.
 
@@ -131,19 +131,19 @@ Packets that are sent on the ethernet are always coming from a MAC address and s
 </b></details>
 
 <details>
-<summary>When is this MAC address used?: ff:ff:ff:ff:ff:ff</summary><br><b>
+<summary>When is this MAC address used?: ff:ff:ff:ff:ff:ff ❎</summary><br><b>
 
 When a device sends a packet to the broadcast MAC address (FF:FF:FF:FF:FF:FF​), it is delivered to all stations on the local network. Ethernet broadcasts are used to resolve IP addresses to MAC addresses (by ARP) at the datalink layer .
 </b></details>
 
 <details>
-<summary>What is an IP address?</summary><br><b>
+<summary>What is an IP address? ✅</summary><br><b>
 
 An Internet Protocol address (IP address) is a numerical label assigned to each device connected to a computer network that uses the Internet Protocol for communication.An IP address serves two main functions: host or network interface identification and location addressing.
 </b></details>
 
 <details>
-<summary>Explain subnet mask and given an example</summary><br><b>
+<summary>Explain subnet mask and given an example ✅</summary><br><b>
 
 A Subnet mask is a 32-bit number that masks an IP address, and divides the IP address into network address and host address. Subnet Mask is made by setting network bits to all "1"s and setting host bits to all "0"s. Within a given network, out of the total usable host addresses, two are always reserved for specific purposes and cannot be allocated to any host. These are the first address, which is reserved as a network address (a.k.a network ID) and the last address used for network broadcast.
 
@@ -152,17 +152,17 @@ A Subnet mask is a 32-bit number that masks an IP address, and divides the IP ad
 </b></details>
 
 <details>
-<summary>What is a private IP address? In which scenarios/system designs, one should use it?</summary><br><b>
+<summary>What is a private IP address? In which scenarios/system designs, one should use it? ✅</summary><br><b>
 Private IP addresses are assigned to the hosts in the same network to communicate among one another. As the name "private" suggests, the devices having the private IP addresses assigned can't be reached by the devices from any external network. For example, if I am living in a hostel and I want my hostelmates to join the game server I have hosted, I will ask them to join via my server's private IP address, since the network is local to the hostel.
 </b></details>
 
 <details>
-<summary>What is a public IP address? In which scenarios/system designs, one should use it?</summary><br><b>
+<summary>What is a public IP address? In which scenarios/system designs, one should use it? ✅</summary><br><b>
 A public IP address is the public facing IP address. In the event that you was hosting a game server that you want your friends to join, you will give your friends your public IP address to allow their computers to identify and locate your network and server in order for the connection to take place. One time that you would not need to use a public facing IP address is in the event that you was playing with friends who was connected to the same network as you, in that case, you would use a private ip address. In order for someone to be able to connect to your server that is located internally, you will have to setup a port forward to tell your router to allow traffic from the public domain into your network and vice versa.
 </b></details>
 
 <details>
-<summary>Explain the OSI model. What layers there are? What each layer is responsible for?</summary><br><b>
+<summary>Explain the OSI model. What layers there are? What each layer is responsible for? ✅</summary><br><b>
 
 - Application: user end (HTTP is here)
 - Presentation: establishes context between application-layer entities (Encryption is here)
@@ -176,7 +176,7 @@ You can read more about the OSI model in [penguintutor.com](http://www.penguintu
 </b></details>
 
 <details>
-<summary>For each of the following determines to which OSI layer it belongs:
+<summary>For each of the following determines to which OSI layer it belongs: ✅
 
   * Error correction
   * Packets routing
@@ -195,7 +195,7 @@ You can read more about the OSI model in [penguintutor.com](http://www.penguintu
 </b></details>
 
 <details>
-<summary>What delivery schemes are you familiar with?</summary><br><b>
+<summary>What delivery schemes are you familiar with? ❎</summary><br><b>
 
 Unitcast: One to one communication where there is one sender and one receiver.
 
@@ -206,7 +206,7 @@ Multicast: Sending a message to a group of subscribers. It can be one-to-many or
 </b></details>
 
 <details>
-<summary>What is CSMA/CD? Is it used in modern ethernet networks?</summary><br><b>
+<summary>What is CSMA/CD? Is it used in modern ethernet networks? ❎</summary><br><b>
 
 CSMA/CD stands for Carrier Sense Multiple Access / Collision Detection.
 Its primarily focus it to manage access to shared medium/bus where only one host can transmit at a given point of time.
@@ -222,7 +222,7 @@ CSMA/CD algorithm:
 </b></details>
 
 <details>
-<summary>Describe the following network devices and the difference between them:
+<summary>Describe the following network devices and the difference between them: ❎
 
   * router
   * switch
@@ -231,35 +231,35 @@ CSMA/CD algorithm:
 </b></details>
 
 <details>
-<summary>What is a "Collision Domain"?</summary><br><b>
+<summary>What is a "Collision Domain"? ❎</summary><br><b>
 </b></details>
 
 <details>
-<summary>What is a "Broadcast Domain"?</summary><br><b>
+<summary>What is a "Broadcast Domain"? ❎</summary><br><b>
 </b></details>
 
 <details>
-<summary>three computers connected to a switch. How many collision domains are there? How many broadcast domains?</summary><br><b>
+<summary>three computers connected to a switch. How many collision domains are there? How many broadcast domains? ❎</summary><br><b>
 
 Three collision domains and one broadcast domain
 </b></details>
 
 <details>
-<summary>How does a router works?</summary><br><b>
+<summary>How does a router works? ✅</summary><br><b>
 
 A router is a physical or virtual appliance that passes information between two or more packet-switched computer networks. A router inspects a given data packet's destination Internet Protocol address (IP address), calculates the best way for it to reach its destination and then forwards it accordingly.
 
 </b></details>
 
 <details>
-<summary>What is NAT?</summary><br><b>
+<summary>What is NAT? ✅</summary><br><b>
 
  Network Address Translation (NAT) is a process in which one or more local IP address is translated into one or more Global IP address and vice versa in order to provide Internet access to the local hosts.
 
 </b></details>
 
 <details>
-<summary>What is a proxy? How does it works? What do we need it for?</summary><br><b>
+<summary>What is a proxy? How does it works? What do we need it for? ❎</summary><br><b>
 
 A proxy server acts as a gateway between you and the internet. It’s an intermediary server separating end users from the websites they browse.
 
@@ -269,7 +269,7 @@ Proxy servers provide varying levels of functionality, security, and privacy dep
 </b></details>
 
 <details>
-<summary>What is TCP? How does it works? What is the 3 way handshake?</summary><br><b>
+<summary>What is TCP? How does it works? What is the 3 way handshake? ✅</summary><br><b>
 
 TCP 3-way handshake or three-way handshake is a process which is used in a TCP/IP network to make a connection between server and client.
 
@@ -281,7 +281,7 @@ A three-way handshake is primarily used to create a TCP socket connection. It wo
 </b></details>
 
 <details>
-<summary>What is round-trip delay or round-trip time?</summary><br><b>
+<summary>What is round-trip delay or round-trip time? ✅</summary><br><b>
 
 From [wikipedia](https://en.wikipedia.org/wiki/Round-trip_delay): "the length of time it takes for a signal to be sent plus the length of time it takes for an acknowledgement of that signal to be received"
 
@@ -289,11 +289,11 @@ Bonus question: what is the RTT of LAN?
 </b></details>
 
 <details>
-<summary>How does SSL handshake work?</summary><br><b>
+<summary>How does SSL handshake work? ❎</summary><br><b>
 </b></details>
 
 <details>
-<summary>What is the difference between TCP and UDP?</summary><br><b>
+<summary>What is the difference between TCP and UDP? ✅</summary><br><b>
 
 TCP establishes a connection between the client and the server to guarantee the order of the packages, on the other hand, UDP does not establish a connection between client and server and doesn't handle package order. This makes UDP more lightweight than TCP and a perfect candidate for services like streaming.
 
@@ -305,13 +305,13 @@ TCP establishes a connection between the client and the server to guarantee the 
 </b></details>
 
 <details>
-<summary>Explain "default gateway"</summary><br><b>
+<summary>Explain "default gateway" ✅</summary><br><b>
 
 A default gateway serves as an access point or IP router that a networked computer uses to send information to a computer in another network or the internet.
 </b></details>
 
 <details>
-<summary>What is ARP? How does it works?</summary><br><b>
+<summary>What is ARP? How does it works? ✅</summary><br><b>
 
 ARP stands for Address Resolution Protocol. When you try to ping an IP address on your local network, say 192.168.1.1, your system has to turn the IP address 192.168.1.1 into a MAC address. This involves using ARP to resolve the address, hence its name.
 
@@ -323,7 +323,7 @@ Systems keep an ARP look-up table where they store information about what IP add
 </b></details>
 
 <details>
-<summary>What is DHCP? How does it works?</summary><br><b>
+<summary>What is DHCP? How does it works? ✅</summary><br><b>
 
 It stands for Dynamic Host Configuration Protocol, and allocates IP addresses, subnet masks and gateways to hosts. This is how it works:
 
@@ -336,33 +336,33 @@ Read more [here](https://linuxjourney.com/lesson/dhcp-overview)
 </b></details>
 
 <details>
-<summary>Can you have two DHCP servers in the same network? How it works?</summary><br><b>
+<summary>Can you have two DHCP servers in the same network? How it works? ❎</summary><br><b>
 </b></details>
 
 <details>
-<summary>What is SSL tunneling? How does it works?</summary><br><b>
+<summary>What is SSL tunneling? How does it works? ❎</summary><br><b>
 </b></details>
 
 <details>
-<summary>What is a socket? Where can you see the list of sockets in your system?</summary><br><b>
+<summary>What is a socket? Where can you see the list of sockets in your system? :grey_exclamation:</summary><br><b>
 </b></details>
 
 <details>
-<summary>What is IPv6? Why should we consider using it if we have IPv4?</summary><br><b>
+<summary>What is IPv6? Why should we consider using it if we have IPv4? ✅</summary><br><b>
 </b></details>
 
 <details>
-<summary>What is VLAN?</summary><br><b>
+<summary>What is VLAN? ❎</summary><br><b>
 </b></details>
 
 <details>
-<summary>What is MTU?</summary><br><b>
+<summary>What is MTU? ✅</summary><br><b>
 	
 MTU stands for Maximum Transmission Unit. It's the size of the largest PDU (protocol Data Unit) that can be sent in a single transaction.
 </b></details>
 
 <details>
-<summary>What happens if you send a packet that is bigger than the MTU?</summary><br><b>
+<summary>What happens if you send a packet that is bigger than the MTU? ✅</summary><br><b>
 	
 With IPv4 protocol, router can fragment the PDU then sending all the fragmented PDU through the transaction.
 	
@@ -370,19 +370,19 @@ With IPv6 protocol, it issues a error to the user's computer.
 </b></details>
 
 <details>
-<summary>True or False?. Ping is using UDP because it doesn't care about reliable connection</summary><br><b>
+<summary>True or False?. Ping is using UDP because it doesn't care about reliable connection ❎</summary><br><b>
 </b></details>
 
 <details>
-<summary>What is SDN?</summary><br><b>
+<summary>What is SDN? ❎</summary><br><b>
 </b></details>
 
 <details>
-<summary>What is ICMP? What is it used for?</summary><br><b>
+<summary>What is ICMP? What is it used for? :grey_exclamation:</summary><br><b>
 </b></details>
 
 <details>
-<summary>What is NAT? How does it work?</summary><br><b>
+<summary>What is NAT? How does it work? ✅</summary><br><b>
 
 NAT stands for network address translation. It’s a way to map multiple local private addresses to a public one before transferring the information. Organizations that want multiple devices to employ a single IP address use NAT, as do most home routers.
 For example, your computer's private IP could be 192.168.1.100, but your router maps the traffic to it's public IP (e.g. 1.1.1.1). Any device on the internet would see the traffic coming from your public IP (1.1.1.1) instead of your private IP (192.168.1.100).
@@ -393,7 +393,7 @@ For example, your computer's private IP could be 192.168.1.100, but your router 
 </b></details>
 
 <details>
-<summary>Which port number is used in each of the following protocols?:
+<summary>Which port number is used in each of the following protocols?: :grey_exclamation:
 
   * SSH
   * SMTP
@@ -418,7 +418,7 @@ For example, your computer's private IP could be 192.168.1.100, but your router 
 </b></details>
 
 <details>
-<summary>What is APIPA?</summary><br><b>
+<summary>What is APIPA? ❎</summary><br><b>
 
 APIPA is a set of it addresses that devices are allocated
 when the main DHCP server is not reachable
@@ -426,7 +426,7 @@ when the main DHCP server is not reachable
 </b></details>
 
 <details>
-<summary>What ip range does APIPA use?</summary><br><b>
+<summary>What ip range does APIPA use? ❎</summary><br><b>
 
 APIPA uses the ip range: 169.254.0.1 - 169.254.255.254.
 
@@ -577,14 +577,14 @@ Read more [here](https://www.globalsign.com/en/blog/what-is-hsts-and-how-do-i-us
 #### Network - Misc
 
 <details>
-<summary>What is the Internet? Is it the same as the World Wide Web?</summary><br><b>
+<summary>What is the Internet? Is it the same as the World Wide Web? ✅</summary><br><b>
 
 The internet refers to network of networks, transferring huge amounts of data around the globe.<br>
 The World Wide Web is an application running on millions of server, on top of the internet, accessed through what is know as the web browser
 </b></details>
 
 <details>
-<summary>What is the ISP?</summary><br><b>
+<summary>What is the ISP? ✅</summary><br><b>
 
 ISP (Internet Service Provider) is the local internet company provider.
 </b></details>
