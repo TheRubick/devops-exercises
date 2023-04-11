@@ -12,7 +12,7 @@
 ### CI/CD Self Assessment
 
 <details>
-<summary>What is Continuous Integration?</summary><br><b>
+<summary>What is Continuous Integration? ✅</summary><br><b>
 
 A development practice where developers integrate code into a shared repository frequently. It can range from a couple of changes every day or a week to a couple of changes in one hour in larger scales.
 
@@ -20,7 +20,7 @@ Each piece of code (change/patch) is verified, to make the change is safe to mer
 </b></details>
 
 <details>
-<summary>What is Continuous Deployment?</summary><br><b>
+<summary>What is Continuous Deployment? ❎</summary><br><b>
 
 A development strategy used by developers to release software automatically into production where any code commit must pass through an automated testing phase. Only when this is successful is the release considered production worthy. This eliminates any human interaction and should be implemented only after production-ready pipelines have been set with real-time monitoring and reporting of deployed assets. If any issues are detected in production it should be easy to rollback to previous working state.
 
@@ -28,7 +28,7 @@ For more info please read [here](https://www.atlassian.com/continuous-delivery/c
 </b></details>
 
 <details>
-<summary>Can you describe an example of a CI (and/or CD) process starting the moment a developer submitted a change/PR to a repository?</summary><br><b>
+<summary>Can you describe an example of a CI (and/or CD) process starting the moment a developer submitted a change/PR to a repository? ❎</summary><br><b>
 
 There are many answers for such a question, as CI processes vary, depending on the technologies used and the type of the project to where the change was submitted.
 Such processes can include one or more of the following stages:
@@ -48,7 +48,7 @@ A complete different answer or CI process, can describe how a developer pushes c
 </b></details>
 
 <details>
-<summary>What is Continuous Delivery?</summary><br><b>
+<summary>What is Continuous Delivery? ✅</summary><br><b>
 
 A development strategy used to frequently deliver code to QA and Ops for testing. This entails having a staging area that has production like features where changes can only be accepted for production after a manual review. Because of this human entanglement there is usually a time lag between release and review making it slower and error prone as compared to continuous deployment.
 
@@ -56,14 +56,14 @@ For more info please read [here](https://www.atlassian.com/continuous-delivery/c
 </b></details>
 
 <details>
-<summary>What is difference between Continuous Delivery and Continuous Deployment?</summary><br><b>
+<summary>What is difference between Continuous Delivery and Continuous Deployment? ✅</summary><br><b>
 
 Both encapsulate the same process of deploying the changes which were compiled and/or tested in the CI pipelines.<br>
 The difference between the two is that Continuous Delivery isn't fully automated process as opposed to Continuous Deployment where every change that is tested in the process is eventually deployed to production. In continuous delivery someone is either approving the deployment process or the deployment process is based on constraints and conditions (like time constraint of deploying every week/month/...)
 </b></details>
 
 <details>
-<summary>What CI/CD best practices are you familiar with? Or what do you consider as CI/CD best practice?</summary><br><b>
+<summary>What CI/CD best practices are you familiar with? Or what do you consider as CI/CD best practice? ❎</summary><br><b>
 
 * Commit and test often.
 * Testing/Staging environment should be a clone of production environment.
@@ -79,7 +79,7 @@ The difference between the two is that Continuous Delivery isn't fully automated
 </b></details>
 
 <details>
-<summary>Where do you store CI/CD pipelines? Why?</summary><br><b>
+<summary>Where do you store CI/CD pipelines? Why? ❎</summary><br><b>
 
 There are multiple approaches as to where to store the CI/CD pipeline definitions:
 
@@ -104,7 +104,7 @@ There are multiple approaches as to where to store the CI/CD pipeline definition
 #### CI/CD - Jenkins
 
 <details>
-<summary>What is Jenkins? What have you used it for?</summary><br><b>
+<summary>What is Jenkins? What have you used it for? ✅</summary><br><b>
 
 Jenkins is an open source automation tool written in Java with plugins built for Continuous Integration purpose. Jenkins is used to build and test your software projects continuously making it easier for developers to integrate changes to the project, and making it easier for users to obtain a fresh build. It also allows you to continuously deliver your software by integrating with a large number of testing and deployment technologies.
 
@@ -122,7 +122,7 @@ Jenkins integrates development life-cycle processes of all kinds, including buil
 </b></details>
 
 <details>
-<summary>What are the limitations or disadvantages of Jenkins?</summary><br><b>
+<summary>What are the limitations or disadvantages of Jenkins? ❎</summary><br><b>
 
 This might be considered to be an opinionated answer:
 
@@ -170,7 +170,7 @@ Each has its own disadvantages and advantages. Emails for example, if sent too o
 </b></details>
 
 <details>
-<summary>You need to run unit tests every time a change submitted to a given project. Describe in details how your pipeline would look like and what will be executed in each stage</summary><br><b>
+<summary>You need to run unit tests every time a change submitted to a given project. Describe in details how your pipeline would look like and what will be executed in each stage ❎</summary><br><b>
 
 The pipelines will have multiple stages:
 
@@ -210,7 +210,7 @@ You can describe the UI way to add new nodes but better to explain how to do in 
 </b></details>
 
 <details>
-<summary>What are some of Jenkins limitations?</summary><br><b>
+<summary>What are some of Jenkins limitations? ❎</summary><br><b>
 
   * Testing cross-dependencies (changes from multiple projects together)
   * Starting builds from any stage (although Cloudbees implemented something called checkpoints)
