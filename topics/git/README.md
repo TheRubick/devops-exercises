@@ -1,6 +1,6 @@
 # Git
 
-## Exercises
+## Exercises ✅
 
 |Name|Topic|Objective & Instructions|Solution|Comments|
 |--------|--------|------|----|----|
@@ -13,13 +13,13 @@
 ### Git Basics
 
 <details>
-<summary>How do you know if a certain directory is a git repository?</summary><br><b>
+<summary>How do you know if a certain directory is a git repository? ✅</summary><br><b>
 
 You can check if there is a ".git" directory.
 </b></details>
 
 <details>
-<summary>Explain the following: <code>git directory</code>, <code>working directory</code> and <code>staging area</code></summary><br><b>
+<summary>Explain the following: <code>git directory</code>, <code>working directory</code> and <code>staging area</code> :grey_exclamation:</summary><br><b>
 
 This answer taken from [git-scm.com](https://git-scm.com/book/en/v1/Getting-Started-Git-Basics#_the_three_states)
 
@@ -31,7 +31,7 @@ The staging area is a simple file, generally contained in your Git directory, th
 </b></details>
 
 <details>
-<summary>What is the difference between <code>git pull</code> and <code>git fetch</code>?</summary><br><b>
+<summary>What is the difference between <code>git pull</code> and <code>git fetch</code>? ✅</summary><br><b>
 
 Shortly, git pull = git fetch + git merge
 
@@ -43,7 +43,7 @@ a separate branch in your local repository
 </b></details>
 
 <details>
-<summary>How to check if a file is tracked and if not, then track it?</summary><br><b>
+<summary>How to check if a file is tracked and if not, then track it? :grey_exclamation: </summary><br><b>
 
 There are different ways to check whether a file is tracked or not:
 
@@ -53,23 +53,23 @@ There are different ways to check whether a file is tracked or not:
 </b></details>
 
 <details>
-<summary>Explain what the file <code>gitignore</code> is used for</summary><br><b>
+<summary>Explain what the file <code>gitignore</code> is used for ✅</summary><br><b>
 </b></details>
 
 <details>
-<summary>How can you see which changes have done before committing them?</summary><br><b>
+<summary>How can you see which changes have done before committing them? ❎</summary><br><b>
 
 `git diff`
 </b></details>
 
 <details>
-<summary>What <code>git status</code> does?</summary><br><b>
+<summary>What <code>git status</code> does? ✅ </summary><br><b>
 
 `git status` helps you to understand the tracking status of files in your repository. Focusing on working directory and staging area - you can learn which changes were made in the working directory, which changes are in the staging area and in general, whether files are being tracked or not.
 </b></details>
 
 <details>
-<summary>You've created new files in your repository. How to make sure Git tracks them?</summary><br><b>
+<summary>You've created new files in your repository. How to make sure Git tracks them? ✅</summary><br><b>
 
 `git add FILES`
 </b></details>
@@ -77,13 +77,13 @@ There are different ways to check whether a file is tracked or not:
 ### Scenarios
 
 <details>
-<summary>You have files in your repository you don't want Git to ever track them. What should you be doing to avoid ever tracking them?</summary><br><b>
+<summary>You have files in your repository you don't want Git to ever track them. What should you be doing to avoid ever tracking them? ✅</summary><br><b>
 
 Add them to the file `.gitignore`. This will make sure these files are never added to staging area.
 </b></details>
 
 <details>
-<summary>A development team in your organization is using a monorepo and it's became quite big, including hundred thousands of files. They say running many git operations is taking a lot of time to run (like git status for example). Why does that happen and what can you do in order to help them?</summary><br><b>
+<summary>A development team in your organization is using a monorepo and it's became quite big, including hundred thousands of files. They say running many git operations is taking a lot of time to run (like git status for example). Why does that happen and what can you do in order to help them? ❎ </summary><br><b>
 
 Many Git operations are related to filesystem state. `git status` for example will run diffs to compare HEAD commit to index and another diff to compare index to working directory. As part of these diffs, it would need to run quite a lot of `lstat()` system calls. When running on hundred thousands of files, it can take seconds if not minutes.
 
@@ -111,7 +111,7 @@ Finally, with certain build systems, you can know which files are being used/rel
 ### Branches
 
 <details>
-<summary>What's is the branch strategy (flow) you know?</summary><br><b>
+<summary>What's is the branch strategy (flow) you know? ❎</summary><br><b>
 
 * Git flow
 * GitHub flow
@@ -123,13 +123,13 @@ Finally, with certain build systems, you can know which files are being used/rel
 </b></details>
 
 <details>
-<summary>True or False? A branch is basically a simple pointer or reference to the head of certain line of work</summary><br><b>
+<summary>True or False? A branch is basically a simple pointer or reference to the head of certain line of work ✅</summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>You have two branches - main and devel. How do you make sure devel is in sync with main?</summary><br><b>
+<summary>You have two branches - main and devel. How do you make sure devel is in sync with main? ❎</summary><br><b>
 
 ```
 git checkout main
@@ -140,25 +140,25 @@ git merge main
 </b></details>
 
 <details>
-<summary>Describe shortly what happens behind the scenes when you run <code>git branch <BRANCH></code></summary><br><b>
+<summary>Describe shortly what happens behind the scenes when you run <code>git branch <BRANCH></code> ❎</summary><br><b>
 
 Git runs update-ref to add the SHA-1 of the last commit of the branch you're on into the new branch you would like to create
 </b></details>
 
 <details>
-<summary>When you run <code>git branch <BRANCH></code> how does Git know the SHA-1 of the last commit?</summary><br><b>
+<summary>When you run <code>git branch <BRANCH></code> how does Git know the SHA-1 of the last commit? ❎</summary><br><b>
 
 Using the HEAD file: `.git/HEAD`
 </b></details>
 
 <details>
-<summary>What <code>unstaged</code> means in regards to Git?</summary><br><b>
+<summary>What <code>unstaged</code> means in regards to Git? :grey_exclamation:</summary><br><b>
 
 A file the is in the working directory but is not in the HEAD nor in the staging area, referred to as "unstaged".
 </b></details>
 
 <details>
-<summary>True or False? when you <code>git checkout some_branch</code>, Git updates .git/HEAD to <code>/refs/heads/some_branch</code></summary><br><b>
+<summary>True or False? when you <code>git checkout some_branch</code>, Git updates .git/HEAD to <code>/refs/heads/some_branch</code> ✅</summary><br><b>
 
 True
 </b></details>
@@ -166,7 +166,7 @@ True
 ### Merge
 
 <details>
-<summary>You have two branches - main and devel. How do you merge devel into main?</summary><br><b>
+<summary>You have two branches - main and devel. How do you merge devel into main? ✅</summary><br><b>
 
 git checkout main
 git merge devel
@@ -174,7 +174,7 @@ git push origin main
 </b></details>
 
 <details>
-<summary>How to resolve git merge conflicts?</summary><br><b>
+<summary>How to resolve git merge conflicts? ✅</summary><br><b>
 
 <p>
 First, you open the files which are in conflict and identify what are the conflicts.
@@ -186,7 +186,7 @@ Finally, you run `git rebase --continue`
 </b></details>
 
 <details>
-<summary>What merge strategies are you familiar with?</summary><br><b>
+<summary>What merge strategies are you familiar with? ✅</summary><br><b>
 
 Mentioning two or three should be enough and it's probably good to mention that 'recursive' is the default one.
 
@@ -199,7 +199,7 @@ This page explains it the best: https://git-scm.com/docs/merge-strategies
 </b></details>
 
 <details>
-<summary>Explain Git octopus merge</summary><br><b>
+<summary>Explain Git octopus merge ❎</summary><br><b>
 
 Probably good to mention that it's:
 
@@ -210,7 +210,7 @@ This is a great article about Octopus merge: http://www.freblogg.com/2016/12/git
 </b></details>
 
 <details>
-<summary>What is the difference between <code>git reset</code> and <code>git revert</code>?</summary><br><b>
+<summary>What is the difference between <code>git reset</code> and <code>git revert</code>? :grey_exclamation: </summary><br><b>
 
 <p>
 
@@ -235,7 +235,7 @@ Suppose a team is working on a `feature` branch that is coming from the `main` b
 </b></details>
 
 <details>
-<summary>How do you revert a specific file to previous commit?</summary><br><b>
+<summary>How do you revert a specific file to previous commit? ❎</summary><br><b>
 
 ```
 git checkout HEAD~1 -- /path/of/the/file
@@ -247,7 +247,7 @@ git checkout HEAD~1 -- /path/of/the/file
 </b></details>
 
 <details>
-<summary>What is the <code>.git</code> directory? What can you find there?</summary><br><b>
+<summary>What is the <code>.git</code> directory? What can you find there? :grey_exclamation:</summary><br><b>
 	The <code>.git</code> folder contains all the information that is necessary for your project in version control and all the information about commits, remote repository address, etc. All of them are present in this folder. It also contains a log that stores your commit history so that you can roll back to history.
 
 
@@ -255,14 +255,14 @@ This info copied from [https://stackoverflow.com/questions/29217859/what-is-the-
 </b></details>
 
 <details>
-<summary>What are some Git anti-patterns? Things that you shouldn't do</summary><br><b>
+<summary>What are some Git anti-patterns? Things that you shouldn't do :grey_exclamation:</summary><br><b>
 
   * Not waiting too long between commits
   * Not removing the .git directory :)
 </b></details>
 
 <details>
-<summary>How do you remove a remote branch?</summary><br><b>
+<summary>How do you remove a remote branch? ✅</summary><br><b>
 
 You delete a remote branch with this syntax:
 
@@ -270,7 +270,7 @@ git push origin :[branch_name]
 </b></details>
 
 <details>
-<summary>Are you familiar with gitattributes? When would you use it?</summary><br><b>
+<summary>Are you familiar with gitattributes? When would you use it? ❎</summary><br><b>
 
 gitattributes allow you to define attributes per pathname or path pattern.<br>
 
@@ -278,20 +278,20 @@ You can use it for example to control endlines in files. In Windows and Unix bas
 </b></details>
 
 <details>
-<summary>How do you discard local file changes? (before commit)</summary><br><b>
+<summary>How do you discard local file changes? (before commit) ❎</summary><br><b>
 
 `git checkout -- <file_name>`
 </b></details>
 
 <details>
-<summary>How do you discard local commits?</summary><br><b>
+<summary>How do you discard local commits? ❎</summary><br><b>
 
 `git reset HEAD~1` for removing last commit
 If you would like to also discard the changes you `git reset --hard``
 </b></details>
 
 <details>
-<summary>True or False? To remove a file from git but not from the filesystem, one should use <code>git rm </code></summary><br><b>
+<summary>True or False? To remove a file from git but not from the filesystem, one should use <code>git rm </code> :grey_exclamation:</summary><br><b>
 
 False. If you would like to keep a file on your filesystem, use `git reset <file_name>`
 </b></details>
@@ -307,20 +307,20 @@ False. If you would like to keep a file on your filesystem, use `git reset <file
 ## Git Diff
 
 <details>
-<summary>What git diff does?</summary><br><b>
+<summary>What git diff does? :grey_exclamation:</summary><br><b>
 
 git diff can compare between two commits, two files, a tree and the staging area, etc.
 </b></details>
 
 <details>
-<summary>Which one is faster? <code>git diff-index HEAD</code> or <code>git diff HEAD</code> </summary><br><b>
+<summary>Which one is faster? <code>git diff-index HEAD</code> or <code>git diff HEAD</code> ❎ </summary><br><b>
 
 `git diff-index` is faster but to be fair, it's because it does less. `git diff index` won't look at the content,
 only metadata like timestamps.
 </b></details>
 
 <details>
-<summary>By which other Git commands does git diff used?</summary><br><b>
+<summary>By which other Git commands does git diff used? :grey_exclamation: </summary><br><b>
 
 The diff mechanism used by `git status` to perform a comparison and let the user know which files are being tracked
 </b></details>
@@ -328,7 +328,7 @@ The diff mechanism used by `git status` to perform a comparison and let the user
 ## Git Internal
 
 <details>
-<summary>Describe how `git status` works</summary><br><b>
+<summary>Describe how `git status` works :grey_exclamation: </summary><br><b>
 
 Shortly, it runs `git diff` twice:
 
@@ -337,7 +337,7 @@ Shortly, it runs `git diff` twice:
 </b></details>
 
 <details>
-<summary>If <code>git status</code> has to run diff on all the files in the HEAD commit to those in staging area/index and another one on staging area/index and working directory, how is it fairly fast? </summary><br><b>
+<summary>If <code>git status</code> has to run diff on all the files in the HEAD commit to those in staging area/index and another one on staging area/index and working directory, how is it fairly fast? ❎ </summary><br><b>
 
 One reason is about the structure of the index, commits, etc.
 
