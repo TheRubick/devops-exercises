@@ -27,7 +27,7 @@
 ## Exercises
 
 <a name="exercises-running-containers"></a>
-### Running Containers
+### Running Containers ✅
 
 |Name|Topic|Objective & Instructions|Solution|Comments|
 |--------|--------|------|----|----|
@@ -37,7 +37,7 @@
 |Containerized Database with Persistent Storage|Applications|[Exercise](containerized_db_persistent_storage.md)|[Solution](solutions/containerized_db_persistent_storage.md)
 
 <a name="exercises-containers-images"></a>
-### Images
+### Images ✅
 
 |Name|Topic|Objective & Instructions|Solution|Comments|
 |--------|--------|------|----|----|
@@ -51,10 +51,10 @@
 
 |Name|Topic|Objective & Instructions|Solution|Comments|
 |--------|--------|------|----|----|
-|Run, Forest, Run!|Restart Policies|[Exercise](run_forest_run.md)|[Solution](solutions/run_forest_run.md)
-|Layer by Layer|Image Layers|[Exercise](image_layers.md)|[Solution](solutions/image_layers.md)
-|Containerize an application | Containerization |[Exercise](containerize_app.md)|[Solution](solutions/containerize_app.md)
-|Multi-Stage Builds|Multi-Stage Builds|[Exercise](multi_stage_builds.md)|[Solution](solutions/multi_stage_builds.md)
+|Run, Forest, Run!|Restart Policies|[Exercise](run_forest_run.md)|[Solution](solutions/run_forest_run.md)|✅
+|Layer by Layer|Image Layers|[Exercise](image_layers.md)|[Solution](solutions/image_layers.md)|:grey_exclamation:
+|Containerize an application | Containerization |[Exercise](containerize_app.md)|[Solution](solutions/containerize_app.md)|
+|Multi-Stage Builds|Multi-Stage Builds|[Exercise](multi_stage_builds.md)|[Solution](solutions/multi_stage_builds.md)|❎
 
 ## Questions
 
@@ -62,7 +62,7 @@
 ### Containers 101
 
 <details>
-<summary>What is a Container?</summary><br><b>
+<summary>What is a Container? ✅</summary><br><b>
 
 This can be tricky to answer since there are many ways to create a containers:
 
@@ -74,13 +74,13 @@ If to focus on OCI (Open Container Initiative) based containers, it offers the f
 </b></details>
 
 <details>
-<summary>Why containers are needed? What is their goal?</summary><br><b>
+<summary>Why containers are needed? What is their goal? ✅</summary><br><b>
 
 OCI provides a good [explanation](https://github.com/opencontainers/runtime-spec/blob/master/principles.md#the-5-principles-of-standard-containers): "Define a unit of software delivery called a Standard Container. The goal of a Standard Container is to encapsulate a software component and all its dependencies in a format that is self-describing and portable, so that any compliant runtime can run it without extra dependencies, regardless of the underlying machine and the contents of the container."
 </b></details>
 
 <details>
-<summary>What is a container image?</summary><br><b>
+<summary>What is a container image? ✅</summary><br><b>
 
 * An image of a container contains the application, its dependencies and the operating system where the application is executed.<br>
 * It's a collection of read-only layers. These layers are loosely coupled
@@ -88,7 +88,7 @@ OCI provides a good [explanation](https://github.com/opencontainers/runtime-spec
 </b></details>
 
 <details>
-<summary>How are containers different from virtual machines (VMs)?</summary><br><b>
+<summary>How are containers different from virtual machines (VMs)? ✅</summary><br><b>
 
 The primary difference between containers and VMs is that containers allow you to virtualize
 multiple workloads on a single operating system while in the case of VMs, the hardware is being virtualized to run multiple machines each with its own guest OS.
@@ -101,7 +101,7 @@ You can also think about it as containers are for OS-level virtualization while 
 </b></details>
 
 <details>
-<summary>In which scenarios would you use containers and in which you would prefer to use VMs?</summary><br><b>
+<summary>In which scenarios would you use containers and in which you would prefer to use VMs? :grey_exclamation:</summary><br><b>
 
 You should choose VMs when:
   * You need run an application which requires all the resources and functionalities of an OS
@@ -113,7 +113,7 @@ You should choose containers when:
 </b></details>
 
 <details>
-<summary>Describe the process of containerizing an application</summary><br><b>
+<summary>Describe the process of containerizing an application ✅</summary><br><b>
 
 1. Write a Containerfile/Dockerfile that includes your app (including the commands to run it) and its dependencies
 2. Build the image using the Containerfile/Dockefile you wrote
@@ -122,7 +122,7 @@ You should choose containers when:
 </b></details>
 
 <details>
-<summary>What are some of the advantages in using containers? you can compare to other options like VMs</summary><br><b>
+<summary>What are some of the advantages in using containers? you can compare to other options like VMs ✅</summary><br><b>
 
 * Reusable: container can be used by multiple different users for different usages - production vs. staging, development, testing, etc.
 * Lightweight: containers are fairly lightweight which means deployments can be done quickly since you don't need to install a full OS (as in VMs for example)
@@ -135,13 +135,13 @@ You should choose containers when:
 Note: I've used `Podman` in the answers, but other containers engines can be used as well (e.g. Docker)
 
 <details>
-<summary>How to run a container?</summary><br><b>
+<summary>How to run a container? ✅</summary><br><b>
 
 `podman run ubuntu`
 </b></details>
 
 <details>
-<summary>Why after running <code>podman container run ubuntu</code> the output of <code>podman container ls</code> is empty?</summary><br><b>
+<summary>Why after running <code>podman container run ubuntu</code> the output of <code>podman container ls</code> is empty? ✅</summary><br><b>
 
 Because the container immediately exits after running the ubuntu image. This is completely normal and expected as containers designed to run a service or a app and exit when they are done running it. To see the container you can run `podman ps -a`
 
@@ -149,13 +149,13 @@ If you want the container to keep running, you can run a command like `sleep 100
 </b></details>
 
 <details>
-<summary>How to list all the containers on the local host?</summary><br><b>
+<summary>How to list all the containers on the local host? ✅</summary><br><b>
 
 `podman container ls`
 </b></details>
 
 <details>
-<summary>How to attach your shell to a terminal of a running container?</summary><br><b>
+<summary>How to attach your shell to a terminal of a running container? ✅</summary><br><b>
 
 `podman container exec -it [container id/name] bash`
 
@@ -163,19 +163,19 @@ This can be done in advance while running the container: `podman container run -
 </b></details>
 
 <details>
-<summary>True or False? You can remove a running container if it doesn't running anything</summary><br><b>
+<summary>True or False? You can remove a running container if it doesn't running anything ✅</summary><br><b>
 
 False. You have to stop the container before removing it.
 </b></details>
 
 <details>
-<summary>How to stop and remove a container?</summary><br><b>
+<summary>How to stop and remove a container? ✅</summary><br><b>
 
 `podman container stop <container id/name> && podman container rm <container id/name>`
 </b></details>
 
 <details>
-<summary>What happens when you run <code>docker container run ubuntu</code>?</summary><br><b>
+<summary>What happens when you run <code>docker container run ubuntu</code>? ❎</summary><br><b>
 
 1. Docker client posts the command to the API server running as part of the Docker daemon
 2. Docker daemon checks if a local image exists
@@ -185,7 +185,7 @@ False. You have to stop the container before removing it.
 </b></details>
 
 <details>
-<summary>How to run a container in the background?</summary><br><b>
+<summary>How to run a container in the background? ✅</summary><br><b>
 
 With the -d flag. It will run in the background and will not attach it to the terminal.
 
@@ -197,13 +197,13 @@ With the -d flag. It will run in the background and will not attach it to the te
 </b></details>
 
 <details>
-<summary>True or False? If image <code>httpd-service</code> has an entry point for running the httpd service then, the following will run the container and eventually the httpd service <code>podman run httpd-service ls</code></summary><br><b>
+<summary>True or False? If image <code>httpd-service</code> has an entry point for running the httpd service then, the following will run the container and eventually the httpd service <code>podman run httpd-service ls</code> ❎</summary><br><b>
 
 False. Running that command will override the entry point so the httpd service won't run and instead podman will run the `ls` command.
 </b></details>
 
 <details>
-<summary>True or False? Running <code>podman restart CONTAINER_NAME</code> kills the main process inside the container and runs it again from scratch</summary><br><b>
+<summary>True or False? Running <code>podman restart CONTAINER_NAME</code> kills the main process inside the container and runs it again from scratch ❎ </summary><br><b>
 
 False. `podman restart` creates an entirely new container with the same ID while reusing the filesystem and state of the original container.
 </b></details>
@@ -218,13 +218,13 @@ curl 127.0.0.1:8080
 </b></details>
 
 <details>
-<summary>After running a container, it stopped. <code>podman ps</code> shows nothing. How can you show its details?</summary><br><b>
+<summary>After running a container, it stopped. <code>podman ps</code> shows nothing. How can you show its details? :grey_exclamation: </summary><br><b>
 
 `podman ps -a` will shows also the details of a stopped container.
 </b></details>
 
 <details>
-<summary>How to list all the image tags for a given container image?</summary><br><b>
+<summary>How to list all the image tags for a given container image? ❎ </summary><br><b>
 
 `podman search --list-tags IMAGE_NAME`
 </b></details>
@@ -233,14 +233,14 @@ curl 127.0.0.1:8080
 ### Images
 
 <details>
-<summary>Why container images are relatively small?</summary><br><b>
+<summary>Why container images are relatively small? ✅ </summary><br><b>
 
 * Most of the images don't contain Kernel. They share and access the one used by the host on which they are running
 * Containers intended to run specific application in most cases. This means they hold only what the application needs in order to run
 </b></details>
 
 <details>
-<summary>You are interested in running a container with snake game application. How can you search for such image and check if it exists?</summary><br><b>
+<summary>You are interested in running a container with snake game application. How can you search for such image and check if it exists? ❎ </summary><br><b>
 
 `podman search snake-game`. Surprisingly, there are a couple of matches :)
 
@@ -256,7 +256,7 @@ docker.io   docker.io/rahulgadre/snake-game                                     
 </b></details>
 
 <details>
-<summary>How to list the container images on certain host?</summary><br><b>
+<summary>How to list the container images on certain host? ✅ </summary><br><b>
 
 ```
 CONTAINER_BINARY=podman
@@ -267,7 +267,7 @@ Note: you can also use `$CONTAINER_RUNTIME image ls`
 </b></details>
 
 <details>
-<summary>How to download/pull a container image without actually running a container?</summary><br><b>
+<summary>How to download/pull a container image without actually running a container? ✅ </summary><br><b>
 
 ```
 CONTAINER_BINARY=podman
@@ -276,32 +276,32 @@ $CONTAINER_BINARY pull rhel
 </b></details>
 
 <details>
-<summary>True or False? It's not possible to remove an image if a certain container is using it</summary><br><b>
+<summary>True or False? It's not possible to remove an image if a certain container is using it ✅</summary><br><b>
 
 True. You should stop and remove the container before trying to remove the image it uses.
 </b></details>
 
 <details>
-<summary>True or False? If a tag isn't specified when pulling an image, the 'latest' tag is being used</summary><br><b>
+<summary>True or False? If a tag isn't specified when pulling an image, the 'latest' tag is being used ✅</summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>True or False? Using the 'latest' tag when pulling an image means, you are pulling the most recently published image</summary><br><b>
+<summary>True or False? Using the 'latest' tag when pulling an image means, you are pulling the most recently published image ✅</summary><br><b>
 
 False. While this might be true in some cases, it's not guaranteed that you'll pull the latest published image when using the 'latest' tag.<br>
 For example, in some images, 'edge' tag is used for the most recently published images.
 </b></details>
 
 <details>
-<summary>Where pulled images are stored?</summary><br><b>
+<summary>Where pulled images are stored? ✅</summary><br><b>
 
 Depends on the container technology being used. For example, in case of Docker, images are stored in `/var/lib/docker/`
 </b></details>
 
 <details>
-<summary>Explain container image layers</summary><br><b>
+<summary>Explain container image layers :grey_exclamation:</summary><br><b>
 
   - The layers of an image is where all the content is stored - code, files, etc.
   - Each layer is independent
@@ -310,44 +310,44 @@ Depends on the container technology being used. For example, in case of Docker, 
 </b></details>
 
 <details>
-<summary>True or False? Changing the content of any of the image layers will cause the hash content of the image to change</summary><br><b>
+<summary>True or False? Changing the content of any of the image layers will cause the hash content of the image to change ✅</summary><br><b>
 
 True. These hashes are content based and since images (and their layers) are immutable, any change will cause the hashes to change.
 </b></details>
 
 <details>
-<summary>How to list the layers of an image?</summary><br><b>
+<summary>How to list the layers of an image? :grey_exclamation:</summary><br><b>
 
 In case of Docker, you can use `docker image inspect <name>`
 </b></details>
 
 <details>
-<summary>True or False? In most cases, container images contain their own kernel</summary><br><b>
+<summary>True or False? In most cases, container images contain their own kernel ✅</summary><br><b>
 
 False. They share and access the one used by the host on which they are running.
 </b></details>
 
 <details>
-<summary>True or False? A single container image can have multiple tags</summary><br><b>
+<summary>True or False? A single container image can have multiple tags ✅</summary><br><b>
 
 True. When listing images, you might be able to see two images with the same ID but different tags.
 </b></details>
 
 <details>
-<summary>What is a dangling image?</summary><br><b>
+<summary>What is a dangling image? ❎ </summary><br><b>
 
 It's an image without tags attached to it.
 One way to reach this situation is by building an image with exact same name and tag as another already existing image. It can be still referenced by using its full SHA.
 </b></details>
 
 <details>
-<summary>How to see changes done to a given image over time?</summary><br><b>
+<summary>How to see changes done to a given image over time? ❎ </summary><br><b>
 
 In the case of Docker, you could use `docker history <name>`
 </b></details>
 
 <details>
-<summary>What `podman commit` does?. When will you use it?</summary><br><b>
+<summary>What `podman commit` does?. When will you use it? ✅ </summary><br><b>
 
 Creates a new image from a running container. Users can apply extra changes to be saved in the new image version.
 
@@ -355,7 +355,7 @@ Most of the time the user case for using `podman commit` would be to apply chang
 </b></details>
 
 <details>
-<summary>True or False? Multiple images can share layers</summary><br><b>
+<summary>True or False? Multiple images can share layers ✅ </summary><br><b>
 
 True.<br>
 One evidence for that can be found in pulling images. Sometimes when you pull an image, you'll see a line similar to the following:<br>
@@ -365,7 +365,7 @@ This is because it recognizes such layer already exists on the host, so there is
 </b></details>
 
 <details>
-<summary>What is the digest of an image? What problem does it solves?</summary><br><b>
+<summary>What is the digest of an image? What problem does it solves? :grey_exclamation: </summary><br><b>
 
 Tags are mutable. This is mean that we can have two different images with the same name and the same tag. It can be very confusing to see two images with the same name and the same tag in your environment. How would you know if they are truly the same or are they different?<br>
 
@@ -373,13 +373,13 @@ This is where "digests` come handy. A digest is a content-addressable identifier
 </b></details>
 
 <details>
-<summary>True or False? A single image can support multiple architectures (Linux x64, Windows x64, ...)</summary><br><b>
+<summary>True or False? A single image can support multiple architectures (Linux x64, Windows x64, ...) ✅ </summary><br><b>
 
 True.
 </b></details>
 
 <details>
-<summary>What is a distribution hash in regards to layers?</summary><br><b>
+<summary>What is a distribution hash in regards to layers? ❎ </summary><br><b>
 
   - Layers are compressed when pushed or pulled
   - distribution hash is the hash of the compressed layer
@@ -388,7 +388,7 @@ True.
 </b></details>
 
 <details>
-<summary>How multi-architecture images work? Explain by describing what happens when an image is pulled</summary><br><b>
+<summary>How multi-architecture images work? Explain by describing what happens when an image is pulled ❎ </summary><br><b>
 
 1. A client makes a call to the registry to use a specific image (using an image name and optionally a tag)
 2. A manifest list is parsed (assuming it exists) to check if the architecture of the client is supported and available as a manifest
@@ -397,25 +397,25 @@ True.
 </b></details>
 
 <details>
-<summary>How to check which architectures a certain container image supports?</summary><br><b>
+<summary>How to check which architectures a certain container image supports? ❎ </summary><br><b>
 
 `docker manifest inspect <name>`
 </b></details>
 
 <details>
-<summary>How to check what a certain container image will execute once we'll run a container based on that image?</summary><br><b>
+<summary>How to check what a certain container image will execute once we'll run a container based on that image? :grey_exclamation: </summary><br><b>
 
 Look for "Cmd" or "Entrypoint" fields in the output of `docker image inspec <image name>`
 </b></details>
 
 <details>
-<summary>How to view the instructions that were used to build image?</summary><br><b>
+<summary>How to view the instructions that were used to build image? :grey_exclamation: </summary><br><b>
 
 `docker image history <image name>:<tag>`
 </b></details>
 
 <details>
-<summary>How <code>docker image build</code> works?</summary><br><b>
+<summary>How <code>docker image build</code> works? :grey_exclamation: </summary><br><b>
 
 1. Docker spins up a temporary container
 2. Runs a single instruction in the temporary container
@@ -425,7 +425,7 @@ Look for "Cmd" or "Entrypoint" fields in the output of `docker image inspec <ima
 </b></details>
 
 <details>
-<summary>What is the role of cache in image builds?</summary><br><b>
+<summary>What is the role of cache in image builds? ❎ </summary><br><b>
 
 When you build an image for the first time, the different layers are being cached. So, while the first build of the image might take time, any other build of the same image (given that Containerfile/Dockerfile didn't change or the content used by the instructions) will be instant thanks to the caching mechanism used.
 
@@ -449,7 +449,7 @@ To delete all images: `podman rmi -a`
 </b></details>
 
 <details>
-<summary>What ways are there to reduce container images size?</summary><br><b>
+<summary>What ways are there to reduce container images size? :grey_exclamation: </summary><br><b>
 
   * Reduce number of instructions - in some case you may be able to join layers by installing multiple packages with one instructions for example or using `&&` to concatenate RUN instructions
   * Using smaller images - in some cases you might be using images that contain more than what is needed for your application to run. It is good to get overview of some images and see whether you can use smaller images that you are usually using.
@@ -458,7 +458,7 @@ To delete all images: `podman rmi -a`
 </b></details>
 
 <details>
-<summary>What are the pros and cons of squashing images?</summary><br><b>
+<summary>What are the pros and cons of squashing images? ❎ </summary><br><b>
 
 Pros:
   * Smaller image
@@ -469,7 +469,7 @@ Cons:
 </b></details>
 
 <details>
-<summary>You would like to share an image with another developer, but without using a registry. How would you do it?</summary><br><b>
+<summary>You would like to share an image with another developer, but without using a registry. How would you do it? ✅ </summary><br><b>
 
 ```
 # On the local host
@@ -482,26 +482,26 @@ podman load -i some_image.tar
 </b></details>
 
 <details>
-<summary>True or False? Once a container is stopped and removed, its image removed as well from the host</summary><br><b>
+<summary>True or False? Once a container is stopped and removed, its image removed as well from the host ✅</summary><br><b>
 
 False. The image will still be available for use by potential containers in the future.<br>
 To remove the container, run `podman rmi IMAGE`
 </b></details>
 
 <details>
-<summary>How to view the instructions that were used to build image?</summary><br><b>
+<summary>How to view the instructions that were used to build image? ✅ </summary><br><b>
 
 `docker image history <image name>:<tag>`
 </b></details>
 
 <details>
-<summary>How to find out which files were added to the container image filesystem?</summary><br><b>
+<summary>How to find out which files were added to the container image filesystem? ❎ </summary><br><b>
 
 `podman diff IMAGE_NAME`
 </b></details>
 
 <details>
-<summary>True or False? <code>podman diff</code> works only on the container filesystem and not mounted files</summary><br><b>
+<summary>True or False? <code>podman diff</code> works only on the container filesystem and not mounted files ❎ </summary><br><b>
 
 True. For mounted files you can use `podman inspec CONTAINER_NAMD/ID`
 </b></details>
@@ -515,7 +515,7 @@ Registry
 #### Registry
 
 <details>
-<summary>What is a Registry?</summary><br><b>
+<summary>What is a Registry? ✅ </summary><br><b>
 
 - A registry is a service which stores container images and allows users to pull specified images to run containers.
 - There are public registries (everyone can access them) and private (accessed only internally in the organization or specific network)
@@ -528,7 +528,7 @@ A registry contains one or more repositories which in turn contain one or more i
 </b></details>
 
 <details>
-<summary>How to find out which registry do you use by default from your environment?</summary><br><b>
+<summary>How to find out which registry do you use by default from your environment? ✅ </summary><br><b>
 
 Depends on the containers technology you are using. For example, in case of Docker, it can be done with `docker info`
 
@@ -539,7 +539,7 @@ Registry: https://index.docker.io/v1
 </b></details>
 
 <details>
-<summary>How to configure registries with the containers engine you are using?</summary><br><b>
+<summary>How to configure registries with the containers engine you are using? ✅ </summary><br><b>
 
 For podman, registries can be configured in `/etc/containers/registries.conf` this way:
 
@@ -550,13 +550,13 @@ registries = ["quay.io"]
 </b></details>
 
 <details>
-<summary>How to retrieve the latest ubuntu image?</summary><br><b>
+<summary>How to retrieve the latest ubuntu image? ✅ </summary><br><b>
 
 `podman image pull ubuntu:latest`
 </b></details>
 
 <details>
-<summary>How to push an image to a registry?</summary><br><b>
+<summary>How to push an image to a registry? ✅ </summary><br><b>
 
 `podman push IMAGE`
 
@@ -564,7 +564,7 @@ You can specify a specific registry: `podman push IMAGE REGISTRY_ADDRESS`
 </b></details>
 
 <details>
-<summary>What are some best practices in regards to Container Images?</summary><br><b>
+<summary>What are some best practices in regards to Container Images? :grey_exclamation: </summary><br><b>
 
 - Use tags. Using `latest` is quite common (which can mean latest build or latest release)
   - tag like `3.1` can be used to reference the latest release/tag of the image like `3.1.6`
@@ -573,7 +573,7 @@ You can specify a specific registry: `podman push IMAGE REGISTRY_ADDRESS`
 </b></details>
 
 <details>
-<summary>What ways are there for creating new images?</summary><br><b>
+<summary>What ways are there for creating new images? ✅ </summary><br><b>
 
 1. Create a Containerfile/Dockerfile and build an image out of it
 2. Using `podman commit` on a running container after making changes to it
@@ -582,7 +582,7 @@ You can specify a specific registry: `podman push IMAGE REGISTRY_ADDRESS`
 #### Tags
 
 <details>
-<summary>What are image tags? Why is it recommended to use tags when supporting multiple releases/versions of a project?</summary><br><b>
+<summary>What are image tags? Why is it recommended to use tags when supporting multiple releases/versions of a project? ✅ </summary><br><b>
 
 Image tags are used to distinguish between multiple versions of the same software or project. Let's say you developed a project called "FluffyUnicorn" and the current release is `1.0`. You are about to release `1.1` but you still want to keep `1.0` as stable release for anyone who is interested in it. What would you do? If your answer is create another, separate new image, then you probably want to rethink the idea and just create a new image tag for the new release.
 
@@ -590,7 +590,7 @@ In addition, it's important to note that container registries support tags. So w
 </b></details>
 
 <details>
-<summary>How to tag an image?</summary><br><b>
+<summary>How to tag an image? ✅ </summary><br><b>
 
 `podman tag IMAGE:TAG`
 
@@ -598,13 +598,13 @@ for example: `podman tag FluffyUnicorn:latest`
 </b></details>
 
 <details>
-<summary>True or False? Once created, it's impossible to remove a tag for a certain image</summary><br><b>
+<summary>True or False? Once created, it's impossible to remove a tag for a certain image ✅</summary><br><b>
 
 False. You can run `podman rmi IMAGE:TAG`.
 </b></details>
 
 <details>
-<summary>True or False? Multiple tags can reference the same image</summary><br><b>
+<summary>True or False? Multiple tags can reference the same image ✅</summary><br><b>
 
 True.
 </b></details>
@@ -612,20 +612,20 @@ True.
 #### Containerfile
 
 <details>
-<summary>What is a Containerfile/Dockerfile?</summary><br><b>
+<summary>What is a Containerfile/Dockerfile? ✅ </summary><br><b>
 
 Different container engines (e.g. Docker, Podman) can build images automatically by reading the instructions from a Containerfile/Dockerfile. A Containerfile/Dockerfile is a text file that contains all the instructions for building an image which containers can use.
 </b></details>
 
 <details>
-<summary>What instruction exists in every Containerfile/Dockefile and what does it do?</summary><br><b>
+<summary>What instruction exists in every Containerfile/Dockefile and what does it do? ✅ </summary><br><b>
 
 In every Containerfile/Dockerfile, you can find the instruction `FROM <image name>` which is also the first instruction (at least most of the time. You can put ARG before).<br> 
 It specifies the base layer of the image to be used. Every other instruction is a layer on top of that base image.
 </b></details>
 
 <details>
-<summary>List five different instructions that are available for use in a Containerfile/Dockerfile</summary><br><b>
+<summary>List five different instructions that are available for use in a Containerfile/Dockerfile ✅</summary><br><b>
 
   * WORKDIR: sets the working directory inside the image filesystems for all the instructions following it
   * EXPOSE: exposes the specified port (it doesn't adds a new layer, rather documented as image metadata)
@@ -635,7 +635,7 @@ It specifies the base layer of the image to be used. Every other instruction is 
 </b></details>
 
 <details>
-<summary>What are some of the best practices regarding Containerfiles/Dockerfiles that you are following?</summary><br><b>
+<summary>What are some of the best practices regarding Containerfiles/Dockerfiles that you are following? ✅</summary><br><b>
 
   * Include only the packages you are going to use. Nothing else.
   * Specify a tag in FROM instruction. Not using a tag means you'll always pull the latest, which changes over time and might result in unexpected result.
@@ -646,20 +646,20 @@ It specifies the base layer of the image to be used. Every other instruction is 
 </b></details>
 
 <details>
-<summary>What is the "build context"?</summary><br><b>
+<summary>What is the "build context"? ❎ </summary><br><b>
 
 [Docker docs](https://docs.docker.com/engine/reference/commandline/build): "A build’s context is the set of files located in the specified PATH or URL"
 </b></details>
 
 <details>
-<summary>What is the difference between ADD and COPY in Containerfile/Dockerfile?</summary><br><b>
+<summary>What is the difference between ADD and COPY in Containerfile/Dockerfile? ✅ </summary><br><b>
 
 COPY takes in a source and destination. It lets you copy in a file or directory from the build context into the Docker image itself.<br>
 ADD lets you do the same, but it also supports two other sources. You can use a URL instead of a file or directory from the build context. In addition, you can extract a tar file from the source directly into the destination.
 </b></details>
 
 <details>
-<summary>What is the difference between CMD and RUN in Containerfile/Dockerfile?</summary><br><b>
+<summary>What is the difference between CMD and RUN in Containerfile/Dockerfile? ❎ </summary><br><b>
 
 RUN lets you execute commands inside of your Docker image. These commands get executed once at build time and get written into your Docker image as a new layer.
 CMD is the command the container executes by default when you launch the built image. A Containerfile/Dockerfile can only have one CMD.
@@ -667,7 +667,7 @@ You could say that CMD is a Docker run-time operation, meaning it’s not someth
 </b></details>
 
 <details>
-<summary>How to create a new image using a Containerfile/Dockerfile?</summary><br><b>
+<summary>How to create a new image using a Containerfile/Dockerfile? ✅ </summary><br><b>
 
 The following command is executed from within the directory where Dockefile resides:
 
@@ -676,29 +676,25 @@ The following command is executed from within the directory where Dockefile resi
 </b></details>
 
 <details>
-<summary>Do you perform any checks or testing on your Containerfiles/Dockerfiles?</summary><br><b>
+<summary>Do you perform any checks or testing on your Containerfiles/Dockerfiles? ❎ </summary><br><b>
 
 One option is to use [hadolint](https://github.com/hadolint/hadolint) project which is a linter based on Containerfile/Dockerfile best practices.
 </b></details>
 
 <details>
-<summary>Which instructions in Containerfile/Dockerfile create new layers?</summary><br><b>
+<summary>Which instructions in Containerfile/Dockerfile create new layers? ✅ </summary><br><b>
 
 Instructions such as FROM, COPY and RUN, create new image layers instead of just adding metadata.
 </b></details>
 
 <details>
-<summary>Which instructions in Containerfile/Dockerfile create image metadata and don't create new layers?</summary><br><b>
+<summary>Which instructions in Containerfile/Dockerfile create image metadata and don't create new layers? ✅ </summary><br><b>
 
 Instructions such as ENTRYPOINT, ENV, EXPOSE, create image metadata and they don't create new layers.
 </b></details>
 
 <details>
-<summary>Is it possible to identify which instruction create a new layer from the output of <code>podman image history</code>?</summary><br><b>
-</b></details>
-
-<details>
-<summary>True or False? Each Containerfile instruction runs in an independent container using an image built from every previous layer/entry</summary><br><b>
+<summary>True or False? Each Containerfile instruction runs in an independent container using an image built from every previous layer/entry ✅</summary><br><b>
 
 True
 </b></details>
@@ -713,6 +709,7 @@ CMD ["param0"]
 ENTRYPOINT cmd param0 param1
 CMD param0
 ```
+❎
 </summary><br><b>
 
 The first form is also referred as "Exec form" and the second one is referred as "Shell form".<br>
@@ -730,19 +727,19 @@ That would results in running `ls /bin/sh -c /tmp`
 </b></details>
 
 <details>
-<summary>Containerfile/Dockerfile can contain more than one ENTRYPOINT instruction and one CMD instruction</summary><br><b>
+<summary>Containerfile/Dockerfile can contain more than one ENTRYPOINT instruction and one CMD instruction ❎</summary><br><b>
 
 True but in case of ENTRYPOINT and CMD only the last instruction takes effect.
 </b></details>
 
 <details>
-<summary>What happens when CMD instruction is defined but not an ENTRYPOINT instruction in a Containerfile/Dockerfile?</summary><br><b>
+<summary>What happens when CMD instruction is defined but not an ENTRYPOINT instruction in a Containerfile/Dockerfile? ❎</summary><br><b>
 
 The ENTRYPOINT from the base image is being used in such case.
 </b></details>
 
 <details>
-<summary>In the case of running <code>podman run -it IMAGE ls</code> the <code>ls</code> overrides the <code>___</code> instruction</summary><br><b>
+<summary>In the case of running <code>podman run -it IMAGE ls</code> the <code>ls</code> overrides the <code>___</code> instruction ✅ </summary><br><b>
 
 CMD
 </b></details>
@@ -751,25 +748,25 @@ CMD
 ### Storage
 
 <details>
-<summary>Container storage is said to be ephemeral. What does it mean?</summary><br><b>
+<summary>Container storage is said to be ephemeral. What does it mean? ✅</summary><br><b>
 
 It means the contents of the container and the data generated by it, is gone when the container is removed.
 </b></details>
 
 <details>
-<summary>True or False? Applications running on containers, should use the container storage to store persistent data</summary><br><b>
+<summary>True or False? Applications running on containers, should use the container storage to store persistent data ✅</summary><br><b>
 
 False. Containers are not built to store persistent data and even if it's possible with some implementations, it might not perform well in case of applications with intensive I/O operations.
 </b></details>
 
 <details>
-<summary>You stopped a running container but, it still uses the storage in case you ever resume it. How to reclaim the storage of a container?</summary><br><b>
+<summary>You stopped a running container but, it still uses the storage in case you ever resume it. How to reclaim the storage of a container? ✅ </summary><br><b>
 
 In order to reclaim the storage of a container, you have to remove it.
 </b></details>
 
 <details>
-<summary>How to create a new volume?</summary><br><b>
+<summary>How to create a new volume? ✅</summary><br><b>
 
 ```
 CONTAINER_BINARY=podman
@@ -778,7 +775,7 @@ $CONTAINER_BINARY volume create some_volume
 </b></details>
 
 <details>
-<summary>How to mount a directory from the host to a container?</summary><br><b>
+<summary>How to mount a directory from the host to a container? ✅ </summary><br><b>
 
 ```
 CONTAINER_BINARY=podman
@@ -799,7 +796,7 @@ sudo restorecon -Rv /tmp/dir_on_the_host
 <a name="questions-containerfile"></a>
 
 <a name="questions-architecture"></a>
-### Architecture
+### Architecture ❎
 
 <details>
 <summary>How container achieve isolation from the rest of the system?</summary><br><b>
@@ -1042,7 +1039,7 @@ Because each container has its own writable container layer, and all changes are
 ### Docker Compose
 
 <details>
-<summary>Explain what is Docker compose and what is it used for</summary><br><b>
+<summary>Explain what is Docker compose and what is it used for ✅</summary><br><b>
 
 Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a YAML file to configure your application’s services. Then, with a single command, you create and start all the services from your configuration.
 
@@ -1051,14 +1048,14 @@ In general, it's useful for running applications which composed out of several d
 </b></details>
 
 <details>
-<summary>Describe the process of using Docker Compose</summary><br><br>
+<summary>Describe the process of using Docker Compose ✅</summary><br><br>
 
 * Define the services you would like to run together in a docker-compose.yml file
 * Run `docker-compose up` to run the services
 </b></details>
 
 <details>
-<summary>Explain Multi-stage builds</summary><br><b>
+<summary>Explain Multi-stage builds :grey_exclamation: </summary><br><b>
 
 Multi-stages builds allow you to produce smaller container images by splitting the build process into multiple stages.
 
@@ -1072,13 +1069,13 @@ A better solution might be to use multi-stage builds where one stage (the build 
 </b></details>
 
 <details>
-<summary>True or False? In multi-stage builds, artifacts can be copied between stages</summary><br><b>
+<summary>True or False? In multi-stage builds, artifacts can be copied between stages ✅</summary><br><b>
 
 True. This allows us to eventually produce smaller images.
 </b></details>
 
 <details>
-<summary>What <code>.dockerignore</code> is used for?</summary><br><b>
+<summary>What <code>.dockerignore</code> is used for? ❎</summary><br><b>
 
 By default, Docker uses everything (all the files and directories) in the directory you use as build context.<br>
 `.dockerignore` used for excluding files and directories from the build context
