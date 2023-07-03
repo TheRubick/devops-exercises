@@ -88,7 +88,7 @@
 
 |Name|Topic|Objective & Instructions|Solution|Comments|
 |--------|--------|------|----|----|
-| Launch EC2 web instance | EC2 | [Exercise](exercises/launch_ec2_web_instance/exercise.md) | [Solution](exercises/launch_ec2_web_instance/solution.md) | |
+| Launch EC2 web instance | EC2 | [Exercise](exercises/launch_ec2_web_instance/exercise.md) | [Solution](exercises/launch_ec2_web_instance/solution.md) | ✅ |
 | Security Groups | EC2 | [Exercise](exercises/security_groups/exercise.md) | [Solution](exercises/security_groups/solution.md) | |
 | IAM Roles | EC2, IAM | [Exercise](exercises/ec2_iam_roles/exercise.md) | [Solution](exercises/ec2_iam_roles/solution.md) | |
 | Spot Instances | EC2 | [Exercise](exercises/create_spot_instances/exercise.md) | [Solution](exercises/create_spot_instances/solution.md) | |
