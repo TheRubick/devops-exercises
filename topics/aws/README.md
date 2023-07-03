@@ -78,11 +78,11 @@
 
 |Name|Topic|Objective & Instructions|Solution|Comments|
 |--------|--------|------|----|----|
-| Create a User | IAM | [Exercise](exercises/create_user/exercise.md) | [Solution](exercises/create_user/solution.md) | |
-| Password Policy | IAM | [Exercise](exercises/password_policy_and_mfa/exercise.md) | [Solution](exercises/password_policy_and_mfa/solution.md) | |
-| Create a role | IAM | [Exercise](exercises/create_role/exercise.md) | [Solution](exercises/create_role/solution.md) | |
-| Credential Report | IAM | [Exercise](exercises/credential_report/exercise.md) | [Solution](exercises/credential_report/solution.md) | |
-| Access Advisor | IAM | [Exercise](exercises/access_advisor/exercise.md) | [Solution](exercises/access_advisor/solution.md) | |
+| Create a User | IAM | [Exercise](exercises/create_user/exercise.md) | [Solution](exercises/create_user/solution.md) | ✅ | 
+| Password Policy | IAM | [Exercise](exercises/password_policy_and_mfa/exercise.md) | [Solution](exercises/password_policy_and_mfa/solution.md) | ✅ |
+| Create a role | IAM | [Exercise](exercises/create_role/exercise.md) | [Solution](exercises/create_role/solution.md) | ✅ |
+| Credential Report | IAM | [Exercise](exercises/credential_report/exercise.md) | [Solution](exercises/credential_report/solution.md) | ✅ |
+| Access Advisor | IAM | [Exercise](exercises/access_advisor/exercise.md) | [Solution](exercises/access_advisor/solution.md) | :grey_exclamation: |
 
 ### EC2
 
