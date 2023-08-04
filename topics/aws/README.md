@@ -189,7 +189,7 @@ Failover | Route 53 | [Exercise](exercises/route_53_failover/exercise.md) | [Sol
 ### Global Infrastructure
 
 <details>
-<summary>Explain the following
+<summary>Explain the following ✅
 
   * Availability zone
   * Region
@@ -203,19 +203,19 @@ Edge locations are basically content delivery network which caches data and insu
 </b></details>
 
 <details>
-<summary>True or False? Each AWS region is designed to be completely isolated from the other AWS regions </summary><br><b>
+<summary>True or False? Each AWS region is designed to be completely isolated from the other AWS regions ✅ </summary><br><b>
 
 True.
 </b></details>
 
 <details>
-<summary>True or False? Each region has a minimum number of 1 availability zones and the maximum is 4</summary><br><b>
+<summary>True or False? Each region has a minimum number of 1 availability zones and the maximum is 4 ✅</summary><br><b>
 
 False. The minimum is 2 while the maximum is 6.
 </b></details>
 
 <details>
-<summary>What considerations to take when choosing an AWS region for running a new application?</summary><br><b>
+<summary>What considerations to take when choosing an AWS region for running a new application? ✅</summary><br><b>
 
 * Services Availability: not all service (and all their features) are available in every region
 * Reduced latency: deploy application in a region that is close to customers
@@ -226,38 +226,38 @@ False. The minimum is 2 while the maximum is 6.
 ### IAM
 
 <details>
-<summary>What is IAM? What are some of its features?</summary><br><b>
+<summary>What is IAM? What are some of its features? ✅</summary><br><b>
 
 In short, it's used for managing users, groups, access policies & roles
 Full explanation can be found [here](https://aws.amazon.com/iam)
 </b></details>
 
 <details>
-<summary>True or False? IAM configuration is defined globally and not per region</summary><br><b>
+<summary>True or False? IAM configuration is defined globally and not per region ✅</summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>True or False? When creating an AWS account, root account is created by default. This is the recommended account to use and share in your organization</summary><br><b>
+<summary>True or False? When creating an AWS account, root account is created by default. This is the recommended account to use and share in your organization ✅</summary><br><b>
 
 False. Instead of using the root account, you should be creating users and use them.
 </b></details>
 
 <details>
-<summary>True or False? Groups in AWS IAM, can contain only users and not other groups</summary><br><b>
+<summary>True or False? Groups in AWS IAM, can contain only users and not other groups ❎</summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>True or False? Users in AWS IAM, can belong only to a single group</summary><br><b>
+<summary>True or False? Users in AWS IAM, can belong only to a single group ✅</summary><br><b>
 
 False. Users can belong to multiple groups.
 </b></details>
 
 <details>
-<summary>What are some best practices regarding IAM in AWS?</summary><br><b>
+<summary>What are some best practices regarding IAM in AWS? :grey_exclamation: </summary><br><b>
 
 * Delete root account access keys and don't use root account regularly
 * Create IAM user for any physical user. Don't share users.
@@ -267,19 +267,19 @@ False. Users can belong to multiple groups.
 </b></details>
 
 <details>
-<summary>What permissions does a new user have?</summary><br><b>
+<summary>What permissions does a new user have? :grey_exclamation: </summary><br><b>
 
 Only a login access.
 </b></details>
 
 <details>
-<summary>True or False? If a user in AWS is using password for authenticating, he doesn't needs to enable MFA</summary><br><b>
+<summary>True or False? If a user in AWS is using password for authenticating, he doesn't needs to enable MFA ✅</summary><br><b>
 
 False(!). MFA is a great additional security layer to use for authentication.
 </b></details>
 
 <details>
-<summary>What ways are there to access AWS?</summary><br><b>
+<summary>What ways are there to access AWS? :grey_exclamation: </summary><br><b>
 
   * AWS Management Console
   * AWS CLI
@@ -287,26 +287,26 @@ False(!). MFA is a great additional security layer to use for authentication.
 </b></details>
 
 <details>
-<summary>What are Roles?</summary><br><b>
+<summary>What are Roles? ✅ </summary><br><b>
 
 [AWS docs](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles.html): "An IAM role is an IAM identity that you can create in your account that has specific permissions...it is an AWS identity with permission policies that determine what the identity can and cannot do in AWS."
 For example, you can make use of a role which allows EC2 service to access s3 buckets (read and write).
 </b></details>
 
 <details>
-<summary>What are Policies?</summary><br><b>
+<summary>What are Policies? ✅ </summary><br><b>
 
 Policies documents used to give permissions as to what a user, group or role are able to do. Their format is JSON.
 </b></details>
 
 <details>
-<summary>A user is unable to access an s3 bucket. What might be the problem?</summary><br><b>
+<summary>A user is unable to access an s3 bucket. What might be the problem? ✅ </summary><br><b>
 
 There can be several reasons for that. One of them is lack of policy. To solve that, the admin has to attach the user with a policy what allows him to access the s3 bucket.
 </b></details>
 
 <details>
-<summary>What should you use to:
+<summary>What should you use to: ✅
 
   - Grant access between two services/resources?
   - Grant user access to resources/services?</summary><br><b>
@@ -316,7 +316,7 @@ There can be several reasons for that. One of them is lack of policy. To solve t
 </b></details>
 
 <details>
-<summary>What statements AWS IAM policies are consist of?</summary><br><b>
+<summary>What statements AWS IAM policies are consist of? :grey_exclamation: </summary><br><b>
 
 * Sid: identifier of the statement (optional)
 * Effect: allow or deny access
@@ -327,7 +327,7 @@ There can be several reasons for that. One of them is lack of policy. To solve t
 </b></details>
 
 <details>
-<summary>Explain the following policy:
+<summary>Explain the following policy: ✅
 
 ```
 {
@@ -347,40 +347,40 @@ This policy permits to perform any action on any resource. It happens to be the 
 </b></details>
 
 <details>
-<summary>What security tools AWS IAM provides?</summary><br><b>
+<summary>What security tools AWS IAM provides? ❎ </summary><br><b>
 
 * IAM Credentials Report: lists all the account users and the status of their credentials
 * IAM Access Advisor: Shows service permissions granted to a user and information on when he accessed these services the last time
 </b></details>
 
 <details>
-<summary>Which tool would you use to optimize user permissions by identifying which services he doesn't regularly (or at all) access?</summary><br><b>
+<summary>Which tool would you use to optimize user permissions by identifying which services he doesn't regularly (or at all) access? ✅ </summary><br><b>
 
 IAM Access Advisor
 </b></details>
 
 <details>
-<summary>What type of IAM object would you use to allow inter-service communication?</summary><br><b>
+<summary>What type of IAM object would you use to allow inter-service communication? ❎</summary><br><b>
 
 Role
 </b></details>
 ### EC2
 
 <details>
-<summary>What is EC2?</summary><br><b>
+<summary>What is EC2? ✅ </summary><br><b>
 
 "a web service that provides secure, resizable compute capacity in the cloud".
 Read more [here](https://aws.amazon.com/ec2)
 </b></details>
 
 <details>
-<summary>True or False? EC2 is a regional service</summary><br><b>
+<summary>True or False? EC2 is a regional service ✅ </summary><br><b>
 
 True. As opposed to IAM for example, which is a global service, EC2 is a regional service.
 </b></details>
 
 <details>
-<summary>What are some of the properties/configuration options of EC2 instances that can be set or modified?</summary><br><b>
+<summary>What are some of the properties/configuration options of EC2 instances that can be set or modified? ✅</summary><br><b>
 
 * OS (Linux, Windows)
 * RAM and CPU
@@ -391,7 +391,7 @@ True. As opposed to IAM for example, which is a global service, EC2 is a regiona
 </b></details>
 
 <details>
-<summary>What would you use for customizing EC2 instances? As in software installation, OS configuration, etc.</summary><br><b>
+<summary>What would you use for customizing EC2 instances? As in software installation, OS configuration, etc. ✅ </summary><br><b>
 
 AMI. With AMI (Amazon Machine Image) you can customize EC2 instances by specifying which software to install, what OS changes should be applied, etc.
 </b></details>
@@ -399,14 +399,14 @@ AMI. With AMI (Amazon Machine Image) you can customize EC2 instances by specifyi
 #### AMI
 
 <details>
-<summary>What is AMI?</summary><br><b>
+<summary>What is AMI? ✅ </summary><br><b>
 
 Amazon Machine Images is "An Amazon Machine Image (AMI) provides the information required to launch an instance".
 Read more [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html)
 </b></details>
 
 <details>
-<summary>What are the different sources for AMIs?</summary><br><b>
+<summary>What are the different sources for AMIs? :grey_exclamation: </summary><br><b>
 
 * Personal AMIs - AMIs you create
 * AWS Marketplace for AMIs - AMIs made by others, mostly sold for some price
@@ -414,13 +414,13 @@ Read more [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AMIs.html)
 </b></details>
 
 <details>
-<summary>True or False? AMI are built for specific region</summary><br><b>
+<summary>True or False? AMI are built for specific region ❎ </summary><br><b>
 
 True (but they can be copied from one region to another).
 </b></details>
 
 <details>
-<summary>Describe in high-level the process of creating AMIs</summary><br><b>
+<summary>Describe in high-level the process of creating AMIs :grey_exclamation: </summary><br><b>
 
 1. Start an EC2 instance
 2. Customized the EC2 instance (install packages, change OS configuration, etc.)
@@ -430,14 +430,14 @@ True (but they can be copied from one region to another).
 </b></details>
 
 <details>
-<summary>What is an instance type?</summary><br><b>
+<summary>What is an instance type? ✅ </summary><br><b>
 
 "the instance type that you specify determines the hardware of the host computer used for your instance"
 Read more about instance types [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html)
 </b></details>
 
 <details>
-<summary>Explain the instance type naming convention</summary><br><b>
+<summary>Explain the instance type naming convention ✅ </summary><br><b>
 
 Let's take for example the following instance type: m5.large
 
@@ -447,7 +447,7 @@ Let's take for example the following instance type: m5.large
 </b></details>
 
 <details>
-<summary>True or False? The following are instance types available for a user in AWS:
+<summary>True or False? The following are instance types available for a user in AWS: ✅
 
   * Compute optimized
   * Network optimized
@@ -457,7 +457,7 @@ False. From the above list only compute optimized is available.
 </b></details>
 
 <details>
-<summary>Explain each of the following instance types:
+<summary>Explain each of the following instance types: :grey_exclamation:
 
   * "Compute Optimized"
   * "Memory Optimized"
@@ -481,7 +481,7 @@ Storage Optimized:
 </b></details>
 
 <details>
-<summary>What can you attach to an EC2 instance in order to store data?</summary><br><b>
+<summary>What can you attach to an EC2 instance in order to store data? ✅ </summary><br><b>
 
 EBS
 </b></details>
@@ -489,57 +489,57 @@ EBS
 #### EBS
 
 <details>
-<summary>Explain Amazon EBS</summary><br><b>
+<summary>Explain Amazon EBS ✅ </summary><br><b>
 
 [AWS Docs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/AmazonEBS.html): "provides block level storage volumes for use with EC2 instances. EBS volumes behave like raw, unformatted block devices."
 </b></details>
 
 <details>
-<summary>What happens to EBS volumes when the instance is terminated?</summary><br><b>
+<summary>What happens to EBS volumes when the instance is terminated? ✅ </summary><br><b>
 
 By deafult, the root volume is marked for deletion, while other volumes will still remain.<br>
 You can control what will happen to every volume upon termination.
 </b></details>
 
 <details>
-<summary>What happens to the EC2 disk (EBS) when the instance is stopped?</summary><br><b>
+<summary>What happens to the EC2 disk (EBS) when the instance is stopped? ✅ </summary><br><b>
 
 Disk is intact and can be used when the instance starts.
 </b></details>
 
 <details>
-<summary>True or False? EBS volumes are locked to a specific availability zone</summary><br><b>
+<summary>True or False? EBS volumes are locked to a specific availability zone ❎ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>Explain EBS Snapshots</summary><br><b>
+<summary>Explain EBS Snapshots ✅ </summary><br><b>
 
 EBS snapshots used for making a backup of the EBS volume at point of time.
 </b></details>
 
 <details>
-<summary>What are the use cases for using EBS snapshots?</summary><br><b>
+<summary>What are the use cases for using EBS snapshots? ✅ </summary><br><b>
 
 * Backups of the data
 * Moving the data between AZs
 </b></details>
 
 <details>
-<summary>Is it possible to attach the same EBS volume to multiple EC2 instances?</summary><br><b>
+<summary>Is it possible to attach the same EBS volume to multiple EC2 instances? ❎ </summary><br><b>
 
 Yes, with multi-attach it's possible to attach a single EBS volume to multiple instances.
 </b></details>
 
 <details>
-<summary>True or False? EBS is a network drive hence, it requires network connectivity</summary><br><b>
+<summary>True or False? EBS is a network drive hence, it requires network connectivity ✅ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>What EBS volume types are there?</summary><br><b>
+<summary>What EBS volume types are there? :grey_exclamation: </summary><br><b>
 
 * HDD (st 1, sc 1): Low cost HDD volumes
 * SSD
@@ -548,37 +548,37 @@ True
 </b></details>
 
 <details>
-<summary>If you need an EBS volume for low latency workloads, which volume type would you use?</summary><br><b>
+<summary>If you need an EBS volume for low latency workloads, which volume type would you use? ✅</summary><br><b>
 
 SSD - io1, io2
 </b></details>
 
 <details>
-<summary>If you need an EBS volume for workloads that require good performance but the cost is also an important aspect for you, which volume type would you use?</summary><br><b>
+<summary>If you need an EBS volume for workloads that require good performance but the cost is also an important aspect for you, which volume type would you use? ✅ </summary><br><b>
 
 SSD - gp2, gp3
 </b></details>
 
 <details>
-<summary>If you need an EBS volume for high-throughput, which volume type would you use?</summary><br><b>
+<summary>If you need an EBS volume for high-throughput, which volume type would you use? ✅</summary><br><b>
 
 SSD - io1, io2
 </b></details>
 
 <details>
-<summary>If you need an EBS volume for infrequently data access, which volume type would you use?</summary><br><b>
+<summary>If you need an EBS volume for infrequently data access, which volume type would you use? ✅ </summary><br><b>
 
 HDD - sc1
 </b></details>
 
 <details>
-<summary>Which EBS volume types can be used as boot volumes for EC2 instances?</summary><br><b>
+<summary>Which EBS volume types can be used as boot volumes for EC2 instances? ❎ </summary><br><b>
 
 SSD: gp2, gp3, io1, io2
 </b></details>
 
 <details>
-<summary>True or False? In EBS gp2 volume type, IP will increase if the disk size increases</summary><br><b>
+<summary>True or False? In EBS gp2 volume type, IP will increase if the disk size increases :grey_exclamation: </summary><br><b>
 
 True.
 </b></details>
@@ -586,20 +586,20 @@ True.
 #### Instance Store
 
 <details>
-<summary>If you would like to have an hardware disk attached to your EC2 instead of a network one (EBS). What would you use?</summary><br><b>
+<summary>If you would like to have an hardware disk attached to your EC2 instead of a network one (EBS). What would you use? ✅</summary><br><b>
 
 EC2 Instance Store.
 </b></details>
 
 <details>
-<summary>Explain EC2 Instance Store. Why would someone choose to use it over other options?</summary><br><b>
+<summary>Explain EC2 Instance Store. Why would someone choose to use it over other options? ❎ </summary><br><b>
 
 EC2 instance store provides better I/O performances when compared to EBS.<br>
 It is mostly used for cache and temporary data purposes.
 </b></details>
 
 <details>
-<summary>Are there any disadvantages in using instance store over EBS?</summary><br><b>
+<summary>Are there any disadvantages in using instance store over EBS? ❎ </summary><br><b>
 
 Yes, the data on instance store is lost when they are stopped.
 </b></details>
@@ -607,7 +607,7 @@ Yes, the data on instance store is lost when they are stopped.
 #### EFS
 
 <details>
-<summary>What is Amazon EFS?</summary><br><b>
+<summary>What is Amazon EFS? ✅ </summary><br><b>
 
 [AWS Docs](https://aws.amazon.com/efs): "Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully managed elastic NFS file system for use with AWS Cloud services and on-premises resources."
 
@@ -615,13 +615,13 @@ In simpler words, it's a network file system you can mount on one or more EC2 in
 </b></details>
 
 <details>
-<summary>True or False? EFS is locked into a single availability zone</summary><br><b>
+<summary>True or False? EFS is locked into a single availability zone ✅ </summary><br><b>
 
 False. EFS can be mounted across multiple availability zones.
 </b></details>
 
 <details>
-<summary>What are some use cases for using EFS?</summary><br><b>
+<summary>What are some use cases for using EFS? :grey_exclamation: </summary><br><b>
 
 * Data sharing (e.g. developers working on the same source control)
 * Web serving
@@ -629,19 +629,19 @@ False. EFS can be mounted across multiple availability zones.
 </b></details>
 
 <details>
-<summary>True or False? EFS only compatible with Linux based AMI</summary><br><b>
+<summary>True or False? EFS only compatible with Linux based AMI ❎ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>True or False? EFS requires the user to perform capacity planning as it doesn't scales automatically</summary><br><b>
+<summary>True or False? EFS requires the user to perform capacity planning as it doesn't scales automatically ❎ </summary><br><b>
 
 False. EFS scales automatically and you pay-per-use.
 </b></details>
 
 <details>
-<summary>What EFS modes are there?</summary><br><b>
+<summary>What EFS modes are there? ❎ </summary><br><b>
 
 * Performance mode
   * General purpose: used mainly for CMS, web serving, ... as it's optimal for latency sensitive applications
@@ -652,19 +652,19 @@ False. EFS scales automatically and you pay-per-use.
 </b></details>
 
 <details>
-<summary>Which EFS mode would you use if you need to perform media processing?</summary><br><b>
+<summary>Which EFS mode would you use if you need to perform media processing? ❎ </summary><br><b>
 
 Performance Mode (Max I/O): It provides high throughput and scales to operations per second. Mainly used for big data, media processing, etc.
 </b></details>
 
 <details>
-<summary>What is the default EFS mode?</summary><br><b>
+<summary>What is the default EFS mode? ❎ </summary><br><b>
 
 Performance Mode (General Purpose): Used for web serving, CMS, ... anything that is sensitive to latency.
 </b></details>
 
 <details>
-<summary>What EFS storage tiers are there?</summary><br><b>
+<summary>What EFS storage tiers are there? ❎ </summary><br><b>
 
 * Standard: frequently accessed files
 * Infrequent access: lower prices to store files but it also costs to retrieve them
