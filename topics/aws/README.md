@@ -1029,38 +1029,38 @@ Pros:
 ### VPC
 
 <details>
-<summary>What is VPC?</summary><br><b>
+<summary>What is VPC? ✅ </summary><br><b>
 
 "A logically isolated section of the AWS cloud where you can launch AWS resources in a virtual network that you define"
 Read more about it [here](https://aws.amazon.com/vpc).
 </b></details>
 
 <details>
-<summary>True or False? VPC spans multiple regions</summary><br><b>
+<summary>True or False? VPC spans multiple regions ✅ </summary><br><b>
 
 False
 </b></details>
 
 <details>
-<summary>True or False? It's possible to have multiple VPCs in one region</summary><br><b>
+<summary>True or False? It's possible to have multiple VPCs in one region ✅ </summary><br><b>
 
 True. As of today, the soft limit is 5.
 </b></details>
 
 <details>
-<summary>True or False? Subnets belong to the same VPC, can be in different availability zones</summary><br><b>
+<summary>True or False? Subnets belong to the same VPC, can be in different availability zones ✅</summary><br><b>
 
 True. Just to clarify, a single subnet resides entirely in one AZ.
 </b></details>
 
 <details>
-<summary>You have noticed your VPC's subnets (which use x.x.x.x/20 CIDR) have 4096 available IP addresses although this CIDR should have 4096 addresses. What is the reason for that?</summary><br><b>
+<summary>You have noticed your VPC's subnets (which use x.x.x.x/20 CIDR) have 4096 available IP addresses although this CIDR should have 4096 addresses. What is the reason for that? :grey_exclamation: </summary><br><b>
 
 AWS reserves 5 IP addresses in each subnet - first 4 and the last one, and so they aren't available for use.
 </b></details>
 
 <details>
-<summary>What AWS uses the 5 reserved IP addresses for?</summary><br><b>
+<summary>What AWS uses the 5 reserved IP addresses for? ❎ </summary><br><b>
 
 x.x.x.0 - network address
 x.x.x.1 - VPC router
@@ -1070,7 +1070,7 @@ x.x.x.255 - broadcast address
 </b></details>
 
 <details>
-<summary>What is an Internet Gateway?</summary><br><b>
+<summary>What is an Internet Gateway? ✅ </summary><br><b>
 
 [AWS Docs](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html): "component that allows communication between instances in your VPC and the internet"
 
@@ -1081,31 +1081,31 @@ In addition it's good to know that IGW is:
 </b></details>
 
 <details>
-<summary>True or False? One or more VPCs can be attached to one Internet Gateway</summary><br><b>
+<summary>True or False? One or more VPCs can be attached to one Internet Gateway ❎ </summary><br><b>
 
 False. Only one VPC can be attached to one IGW and vice versa
 </b></details>
 
 <details>
-<summary>True or False? NACL allow or deny traffic on the subnet level</summary><br><b>
+<summary>True or False? NACL allow or deny traffic on the subnet level ✅ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>What is VPC peering?</summary><br><b>
+<summary>What is VPC peering? :grey_exclamation: </summary><br><b>
 
 [docs.aws](https://docs.aws.amazon.com/vpc/latest/peering/what-is-vpc-peering.html): "A VPC peering connection is a networking connection between two VPCs that enables you to route traffic between them using private IPv4 addresses or IPv6 addresses."
 </b></details>
 
 <details>
-<summary>True or False? Multiple Internet Gateways can be attached to one VPC</summary><br><b>
+<summary>True or False? Multiple Internet Gateways can be attached to one VPC ✅ </summary><br><b>
 
 False. Only one internet gateway can be attached to a single VPC.
 </b></details>
 
 <details>
-<summary>You've restarted your EC2 instance and the public IP has changed. How would you deal with it so it won't happen?</summary><br><b>
+<summary>You've restarted your EC2 instance and the public IP has changed. How would you deal with it so it won't happen? ✅ </summary><br><b>
 
 Use Elastic IP which provides you a fixed IP address.
 </b></details>
@@ -1115,43 +1115,43 @@ Use Elastic IP which provides you a fixed IP address.
 </b></details>
 
 <details>
-<summary>What is an Elastic IP address?</summary><br><b>
+<summary>What is an Elastic IP address? ✅ </summary><br><b>
 
 [AWS Docs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html): "An Elastic IP address is a static IPv4 address designed for dynamic cloud computing. An Elastic IP address is allocated to your AWS account, and is yours until you release it. By using an Elastic IP address, you can mask the failure of an instance or software by rapidly remapping the address to another instance in your account."
 </b></details>
 
 <details>
-<summary>Why would you use an Elastic IP address?</summary><br><b>
+<summary>Why would you use an Elastic IP address? ✅ </summary><br><b>
 
 Let's say you have an instance that you need to shutdown or perform some maintenance on. In that case, what you would want to do is to move the Elastic IP address to another instance that is operational, until you finish to perform the maintenance and then you can move it back to the original instance (or keep it assigned to the second one).
 </b></details>
 
 <details>
-<summary>True or False? When stopping and starting an EC2 instance, its public IP changes</summary><br><b>
+<summary>True or False? When stopping and starting an EC2 instance, its public IP changes ❎ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>What are the best practices around Elastic IP?</summary><br><b>
+<summary>What are the best practices around Elastic IP? ✅ </summary><br><b>
 
 The best practice is actually not using them in the first place. It's more common to use a load balancer without a public IP or use a random public IP and register a DNS record to it
 </b></details>
 
 <details>
-<summary>True or False? An Elastic IP is free, as long it's not associated with an EC2 instance</summary><br><b>
+<summary>True or False? An Elastic IP is free, as long it's not associated with an EC2 instance :grey_exclamation: </summary><br><b>
 
 False. An Elastic IP is free of charge as long as **it is ** associated with an EC2 instance. This instance should be running and should have only one Elastic IP.
 </b></details>
 
 <details>
-<summary>True or False? Route Tables used to allow or deny traffic from the internet to AWS instances</summary><br><b>
+<summary>True or False? Route Tables used to allow or deny traffic from the internet to AWS instances ✅ </summary><br><b>
 
 False.
 </b></details>
 
 <details>
-<summary>Explain Security Groups and Network ACLs</summary><br><b>
+<summary>Explain Security Groups and Network ACLs ✅ </summary><br><b>
 
 * NACL - security layer on the subnet level.
 * Security Group - security layer on the instance level.
@@ -1160,19 +1160,19 @@ Read more about it [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec
 </b></details>
 
 <details>
-<summary>What is AWS Direct Connect?</summary><br><b>
+<summary>What is AWS Direct Connect? ✅ </summary><br><b>
 
 Allows you to connect your corporate network to AWS network.
 </b></details>
 
 <details>
-<summary>What would you use if you need a fixed public IP for your EC2 instance?</summary><br><b>
+<summary>What would you use if you need a fixed public IP for your EC2 instance? ✅ </summary><br><b>
 
 Elastic IP
 </b></details>
 
 <details>
-<summary>Kratos, your colleague, decided to use a subnet of /27 because he needs 29 IP addresses for EC2 instances. Is Kratos right?</summary><br><b>
+<summary>Kratos, your colleague, decided to use a subnet of /27 because he needs 29 IP addresses for EC2 instances. Is Kratos right? ✅ </summary><br><b>
 
 No. Since AWS reserves 5 IP addresses for every subnet, Kratos will have 32-5=27 addresses and this is less than what he needs (29).
 
