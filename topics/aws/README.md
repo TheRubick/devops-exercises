@@ -673,7 +673,7 @@ Performance Mode (General Purpose): Used for web serving, CMS, ... anything that
 #### Pricing Models
 
 <details>
-<summary>What EC2 pricing models are there?</summary><br><b>
+<summary>What EC2 pricing models are there? ✅ </summary><br><b>
 
 On Demand - pay a fixed rate by the hour/second with no commitment. You can provision and terminate it at any given time.
 Reserved - you get capacity reservation, basically purchase an instance for a fixed time of period. The longer, the cheaper.
@@ -682,13 +682,13 @@ Dedicated Hosts - physical EC2 server dedicated for your use.
 </b></details>
 
 <details>
-<summary>True or False? Reserved instance has to be used for a minimum of 1 year</summary><br><b>
+<summary>True or False? Reserved instance has to be used for a minimum of 1 year ✅ </summary><br><b>
 
 True.
 </b></details>
 
 <details>
-<summary>Explain the following types of reserved instances:
+<summary>Explain the following types of reserved instances: ❎
 
   * Convertible Reserved Instances
   * Scheduled Reserved Instances</summary><br><b>
@@ -698,56 +698,56 @@ True.
 </b></details>
 
 <details>
-<summary>True or False? In EC2 On Demand, you pay per hour when using Linux or Windows and per second (after first minute) when using any other operating system</summary><br><b>
+<summary>True or False? In EC2 On Demand, you pay per hour when using Linux or Windows and per second (after first minute) when using any other operating system :grey_exclamation: </summary><br><b>
 
 False. You pay per second (after the first minute) when using Windows or Linux and per hour for any other OS.
 </b></details>
 
 <details>
-<summary>You need an instance for short-term and the workload running on instance must not be interrupted. Which pricing model would you use?</summary><br><b>
+<summary>You need an instance for short-term and the workload running on instance must not be interrupted. Which pricing model would you use? ✅ </summary><br><b>
 
 On Demand is good for short-term non-interrupted workloads (but it also has the highest cost).
 </b></details>
 
 <details>
-<summary>You need an instance for running an application for a period of 2 years continuously, without changing instance type. Which pricing model would you use?</summary><br><b>
+<summary>You need an instance for running an application for a period of 2 years continuously, without changing instance type. Which pricing model would you use? ✅ </summary><br><b>
 
 Reserved instances: they are cheaper than on-demand and the instance is yours for the chosen period of time.
 </b></details>
 
 <details>
-<summary>Which pricing model has potentially the biggest discount and what its advantage</summary><br><b>
+<summary>Which pricing model has potentially the biggest discount and what its advantage :grey_exclamation: </summary><br><b>
 
 Spot instances provide the biggest discount but has the disadvantage of risking losing them due bigger bid price.
 </b></details>
 
 <details>
-<summary>You need an instance for two years, but only between 10:00-15:00 every day. Which pricing model would you use?</summary><br><b>
+<summary>You need an instance for two years, but only between 10:00-15:00 every day. Which pricing model would you use? :grey_exclamation: </summary><br><b>
 
 Reserved instances from the "Scheduled Reserved Instances" type which allows you to reserve for specific time window (like 10:00-15:00 every day).
 </b></details>
 
 <details>
-<summary>You need an instance for running workloads. You don't care if they fail for a given moment as long as they run eventually. Which pricing model would you use?</summary><br><b>
+<summary>You need an instance for running workloads. You don't care if they fail for a given moment as long as they run eventually. Which pricing model would you use? ✅ </summary><br><b>
 
 Spot instances. The discount potential is the highest compared to all other pricing models. The disadvantage is that you can lose the instance at any point so, you must run only workloads that you are fine with them failing suddenly.
 </b></details>
 
 <details>
-<summary>You need a physical server only for your use. Which pricing model are you going to use?</summary><br><b>
+<summary>You need a physical server only for your use. Which pricing model are you going to use? ✅ </summary><br><b>
 
 EC2 Dedicated Host
 </b></details>
 
 <details>
-<summary>What are some of the differences between dedicated hosts and dedicated instances?</summary><br><b>
+<summary>What are some of the differences between dedicated hosts and dedicated instances? ✅ </summary><br><b>
 
 In dedicated hosts you have per host billing, you have more visibility (sockets, cores, ...) and you can control where instance will be placed.<br>
 In dedicated instances the billing is per instance but you can't control placement and you don't have visibility of sockets, cores, ...
 </b></details>
 
 <details>
-<summary>For what use cases, EC2 dedicated hosts are useful for?</summary><br><b>
+<summary>For what use cases, EC2 dedicated hosts are useful for? :grey_exclamation: </summary><br><b>
 
 * Compliance needs
 * When the software license is complex (Bring Your Own License) and doesn't support cloud or multi-tenants
@@ -755,38 +755,38 @@ In dedicated instances the billing is per instance but you can't control placeme
 </b></details>
 
 <details>
-<summary>What are Security Groups?</summary><br><b>
+<summary>What are Security Groups? ✅ </summary><br><b>
 
 "A security group acts as a virtual firewall that controls the traffic for one or more instances"
 More on this subject [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-security-groups.html)
 </b></details>
 
 <details>
-<summary>True or False? Security groups only contain deny rules</summary><br><b>
+<summary>True or False? Security groups only contain deny rules :grey_exclamation: </summary><br><b>
 
 False. Security groups only contain allow rules.
 </b></details>
 
 <details>
-<summary>True or False? One security group can be attached to multiple instances</summary><br><b>
+<summary>True or False? One security group can be attached to multiple instances ✅ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>True or False? Security groups are not locked down to a region and VPC (meaning you don't have to create a new one when switching regions)</summary><br><b>
+<summary>True or False? Security groups are not locked down to a region and VPC (meaning you don't have to create a new one when switching regions) ✅ </summary><br><b>
 
 False. They are locked down to regions and VPC.
 </b></details>
 
 <details>
-<summary>True or False? By default, when using security groups, all inbound traffic to an EC2 instance is blocked and all outbound traffic is allowed</summary><br><b>
+<summary>True or False? By default, when using security groups, all inbound traffic to an EC2 instance is blocked and all outbound traffic is allowed ✅ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>What is the advantage of referencing security groups from a given security group?</summary><br><b>
+<summary>What is the advantage of referencing security groups from a given security group? ❎ </summary><br><b>
 
 Imagine you have an instance referencing two security groups, allowing to get inbound traffic from them.<br>
 Now imagine you have two instances, each using one of the security groups referenced in the instance we've just mentioned. This means you can get traffic from these two instances because they use security groups which referenced in the instance mentioned at the beginning. No need to use IPs.
@@ -797,13 +797,13 @@ Now imagine you have two instances, each using one of the security groups refere
 </b></details>
 
 <details>
-<summary>What can you attach to an EC2 instance in order to store data?</summary><br><b>
+<summary>What can you attach to an EC2 instance in order to store data? ✅ </summary><br><b>
 
 EBS
 </b></details>
 
 <details>
-<summary>What EC2 reserved instance types are there?</summary><br><b>
+<summary>What EC2 reserved instance types are there? ✅ </summary><br><b>
 
 Standard RI - most significant discount + suited for steady-state usage
 Convertible RI - discount + change attribute of RI + suited for steady-state usage
@@ -813,58 +813,58 @@ Learn more about EC2 RI [here](https://aws.amazon.com/ec2/pricing/reserved-insta
 </b></details>
 
 <details>
-<summary>For how long can reserved instances be reserved?</summary><br><b>
+<summary>For how long can reserved instances be reserved? ✅ </summary><br><b>
 
 1 or 3 years.
 </b></details>
 
 <details>
-<summary>What allows you to control inbound and outbound instance traffic?</summary><br><b>
+<summary>What allows you to control inbound and outbound instance traffic? ✅ </summary><br><b>
 
 Security Groups
 </b></details>
 
 <details>
-<summary>What bootstrapping means and how to use it in AWS EC2?</summary><br><b>
+<summary>What bootstrapping means and how to use it in AWS EC2? ❎ </summary><br><b>
 
 Bootstrapping is about launching commands when a machine starts for the first time.
 In AWS EC2 this is done using the EC2 user data script.
 </b></details>
 
 <details>
-<summary>You get time out when trying reach your application which runs on an EC2 instance. Specify one reason why it would possibly happen</summary><br><b>
+<summary>You get time out when trying reach your application which runs on an EC2 instance. Specify one reason why it would possibly happen ✅ </summary><br><b>
 
 Security group isn't configured properly.
 </b></details>
 
 <details>
-<summary>What is the AWS Instance Connect?</summary><br><b>
+<summary>What is the AWS Instance Connect? ✅ </summary><br><b>
 
 [AWS](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Connect-using-EC2-Instance-Connect.html): "Amazon EC2 Instance Connect provides a simple and secure way to connect to your Linux instances using Secure Shell (SSH)."
 </b></details>
 
 <details>
-<summary>You try to run EC2 commands in an EC2 instance you've just created but it fails due to missing credentials. What would you do?</summary><br><b>
+<summary>You try to run EC2 commands in an EC2 instance you've just created but it fails due to missing credentials. What would you do? ✅ </summary><br><b>
 
 DO NOT configure AWS credentials on the instance (this means anyone else in your account would be able to use and see your credentials).<br>
 The best practice is to attach an IAM role with sufficient permissions (like `IAMReadOnlyAccess`)
 </b></details>
 
 <details>
-<summary>True or False? Cancelling a Spot instance request terminates the instance</summary><br><b>
+<summary>True or False? Cancelling a Spot instance request terminates the instance :grey_exclamation: </summary><br><b>
 
 False. When you cancel a Spot instance request, you are not terminating the instances created by it.<br>
 To terminate such instances, you must cancel the Spot instance request first.
 </b></details>
 
 <details>
-<summary>What are Spot Fleets?</summary><br><b>
+<summary>What are Spot Fleets? ❎ </summary><br><b>
 
 Set of Spot instances and if you would like, also on-demand instances.
 </b></details>
 
 <details>
-<summary>What strategies are there to allocate Spot instances?</summary><br><b>
+<summary>What strategies are there to allocate Spot instances? ❎ </summary><br><b>
 
 * lowestPrice: launch instances from the pool that has the lowest price
 * diversified: distributed across all pools
@@ -872,25 +872,25 @@ Set of Spot instances and if you would like, also on-demand instances.
 </b></details>
 
 <details>
-<summary>From networking perspective, what do you get by default when running an EC2 instance?</summary><br><b>
+<summary>From networking perspective, what do you get by default when running an EC2 instance? ✅ </summary><br><b>
 
 A private IP and a public IP.
 </b></details>
 
 <details>
-<summary>Explain EC2 hibernate</summary><br><b>
+<summary>Explain EC2 hibernate ❎ </summary><br><b>
 
 [AWS Docs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Hibernate.html: "Hibernation saves the contents from the instance memory (RAM) to your Amazon Elastic Block Store (Amazon EBS) root volume."
 </b></details>
 
 <details>
-<summary>True or False? Using EC2 hibernate option results in having faster instance boot</summary><br><b>
+<summary>True or False? Using EC2 hibernate option results in having faster instance boot </summary><br><b>
 
 True. This is because the operating system isn't restarted or stopped.
 </b></details>
 
 <details>
-<summary>What are some use cases for using EC2 hibernate option?</summary><br><b>
+<summary>What are some use cases for using EC2 hibernate option? ❎ </summary><br><b>
 
 * Save RAM state
 * Service with long time initialization
@@ -898,7 +898,7 @@ True. This is because the operating system isn't restarted or stopped.
 </b></details>
 
 <details>
-<summary>What are some limitations of EC2 hibernate option?</summary><br><b>
+<summary>What are some limitations of EC2 hibernate option? ❎ </summary><br><b>
 
 * Instance RAM size is limited
 * Root volume must be encrypted EBS
@@ -909,7 +909,7 @@ True. This is because the operating system isn't restarted or stopped.
 </b></details>
 
 <details>
-<summary>Explain what is EC2 Nitro</summary><br><b>
+<summary>Explain what is EC2 Nitro ❎ </summary><br><b>
 
 * Next generation EC2 instances using new virtualization technology
 * Better EBS: 64,000 EBS IOPS
@@ -918,14 +918,14 @@ True. This is because the operating system isn't restarted or stopped.
 </b></details>
 
 <details>
-<summary>What CPU customization is available with EC2?</summary><br><b>
+<summary>What CPU customization is available with EC2? ❎ </summary><br><b>
 
 * Modifying number of CPU cores (useful for high RAM and low CPU applications)
 * Modifying number of threads per cure (useful for HPC workloads)
 </b></details>
 
 <details>
-<summary>Explain EC2 Capacity Reservations</summary><br><b>
+<summary>Explain EC2 Capacity Reservations :grey_exclamation: </summary><br><b>
 
 * Allows you to ensure you have EC2 capacity when you need it
 * Usually combined with Reserved Instances and Saving Plans to achieve cost saving
@@ -934,13 +934,13 @@ True. This is because the operating system isn't restarted or stopped.
 #### Launch Template
 
 <details>
-<summary>What is a launch template?</summary><br><b>
+<summary>What is a launch template? ✅ </summary><br><b>
 
 [AWS Docs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-launch-templates.html): "You can create a launch template that contains the configuration information to launch an instance. You can use launch templates to store launch parameters so that you do not have to specify them every time you launch an instance"
 </b></details>
 
 <details>
-<summary>What is the difference between Launch Configuration and Launch Template?</summary><br><b>
+<summary>What is the difference between Launch Configuration and Launch Template? ❎ </summary><br><b>
 
 Launch configuration is a legacy form of Launch Template that must be recreated every time you would like to update the configuration.
 
@@ -950,7 +950,7 @@ In addition, launch template has the clear benefits of:
   * support creating parameters subsets (used for re-use and inheritance)
 </b></details>
 
-#### ENI
+#### ENI ❎
 
 <details>
 <summary>Explain Elastic Network Interfaces (ENI)</summary><br><b>
@@ -981,13 +981,13 @@ True. They can be attached later on and on the fly (for failover purposes).
 #### Placement Groups
 
 <details>
-<summary>What are "Placement Groups"?</summary><br><b>
+<summary>What are "Placement Groups"? ✅ </summary><br><b>
 
 [AWS Docs](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html): "When you launch a new EC2 instance, the EC2 service attempts to place the instance in such a way that all of your instances are spread out across underlying hardware to minimize correlated failures. You can use placement groups to influence the placement of a group of interdependent instances to meet the needs of your workload."
 </b></details>
 
 <details>
-<summary>What Placement Groups strategies are there?</summary><br><b>
+<summary>What Placement Groups strategies are there? :grey_exclamation: </summary><br><b>
 
 * Cluster: places instance close together in an AZ.
 * Spread: spreads the instance across the hardware
@@ -995,7 +995,7 @@ True. They can be attached later on and on the fly (for failover purposes).
 </b></details>
 
 <details>
-<summary>For each of the following scenarios choose a placement group strategy:
+<summary>For each of the following scenarios choose a placement group strategy: :grey_exclamation:
 
   * High availability is top priority
   * Low latency between instances
@@ -1011,14 +1011,14 @@ True. They can be attached later on and on the fly (for failover purposes).
 </b></details>
 
 <details>
-<summary>What are the cons and pros of the "Cluster" placement group strategy?</summary><br><b> 
+<summary>What are the cons and pros of the "Cluster" placement group strategy? ✅ </summary><br><b> 
 
 Cons: if the hardware fails, all instances fail
 Pros: Low latency & high throughput network
 </b></details>
 
 <details>
-<summary>What are the cons and pros of the "Spread" placement group strategy?</summary><br><b> 
+<summary>What are the cons and pros of the "Spread" placement group strategy? :grey_exclamation: </summary><br><b> 
 
 Cons:
   * Current limitation is 7 instances per AZ (per replacement group)
