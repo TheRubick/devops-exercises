@@ -1182,13 +1182,13 @@ It's better if Kratos uses a subnet of size /26 but good luck telling him that.
 #### Default VPC
 
 <details>
-<summary>True or False? By default, any new account has a default VPC</summary><br><b>
+<summary>True or False? By default, any new account has a default VPC ✅ </summary><br><b>
 
 True.
 </b></details>
 
 <details>
-<summary>True or False? Default VPC doesn't have internet connectivity and any launched EC2 will only have a private IP assigned</summary><br><b>
+<summary>True or False? Default VPC doesn't have internet connectivity and any launched EC2 will only have a private IP assigned ❎ </summary><br><b>
 
 False. The default VPC has internet connectivity and any launched EC2 instance gets a public IPv4 address.
 
@@ -1196,7 +1196,7 @@ In addition, any launched EC2 instance gets a public and private DNS names.
 </b></details>
 
 <details>
-<summary>Which of the following is included with default VPC?
+<summary>Which of the following is included with default VPC? ❎
 
 * Internet gateway connected to the default VPC
 * A route to main route table that points all traffic to internet gateway
@@ -1208,7 +1208,7 @@ All of them :)
 ### Lambda
 
 <details>
-<summary>Explain what is AWS Lambda</summary><br><b>
+<summary>Explain what is AWS Lambda ✅ </summary><br><b>
 
 AWS definition: "AWS Lambda lets you run code without provisioning or managing servers. You pay only for the compute time you consume."
 
@@ -1216,13 +1216,13 @@ Read more on it [here](https://aws.amazon.com/lambda)
 </b></details>
 
 <details>
-<summary>True or False? In AWS Lambda, you are charged as long as a function exists, regardless of whether it's running or not</summary><br><b>
+<summary>True or False? In AWS Lambda, you are charged as long as a function exists, regardless of whether it's running or not ❎ </summary><br><b>
 
 False. Charges are being made when the function is executed for the time it takes to execute and compute resources it uses.
 </b></details>
 
 <details>
-<summary>Which of the following set of languages Lambda supports?
+<summary>Which of the following set of languages Lambda supports? ✅
 
 - R, Swift, Rust, Kotlin
 - Python, Ruby, Go, Kotlin, Bash
@@ -1235,13 +1235,13 @@ False. Charges are being made when the function is executed for the time it take
 </b></details>
 
 <details>
-<summary>True or False? Basic lambda permissions allow you only to upload logs to Amazon CloudWatch Logs</summary><br><b>
+<summary>True or False? Basic lambda permissions allow you only to upload logs to Amazon CloudWatch Logs ✅ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>What's one of the issues with the current architecture?
+<summary>What's one of the issues with the current architecture? ❎
 
 <img src="images/lambda/aws_lambda_direct_access.png"/>
 </summary><br><b>
@@ -1252,7 +1252,7 @@ This not only provides enhanced security but also easier access for the user whe
 </b></details>
 
 <details>
-<summary>Specify one or more use cases for using AWS Lambda</summary><br><b>
+<summary>Specify one or more use cases for using AWS Lambda ❎ </summary><br><b>
 
 - Uploading images to S3 and tagging them or inserting information on the images to a database
 - Uploading videos to S3 and edit them or add subtitles/captions to them and store the result in S3
@@ -1261,7 +1261,7 @@ This not only provides enhanced security but also easier access for the user whe
 </b></details>
 
 <details>
-<summary>You run an architecture where you have a Lambda function that uploads images to S3 bucket and stores information on the images in DynamoDB. You would like to expose the function to users so they can invoke it. Your friend Carlos suggests you expose the credentials to the Lambda function. What's your take on that?</summary><br><b>
+<summary>You run an architecture where you have a Lambda function that uploads images to S3 bucket and stores information on the images in DynamoDB. You would like to expose the function to users so they can invoke it. Your friend Carlos suggests you expose the credentials to the Lambda function. What's your take on that? ✅ </summary><br><b>
 
 That's a big no. You shouldn't let users direct access to your Lambda function.
 
