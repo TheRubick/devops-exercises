@@ -1268,7 +1268,7 @@ That's a big no. You shouldn't let users direct access to your Lambda function.
 The way to go here and expose the Lambda function to users is to to an API Gateway endpoint.
 </b></details>
 
-### Containers
+### Containers ❎
 
 #### ECS
 
@@ -1345,7 +1345,7 @@ True.
 #### Basics
 
 <details>
-<summary>Explain what is AWS S3?</summary><br><b>
+<summary>Explain what is AWS S3? ✅ </summary><br><b>
 
 - S3 is a object storage service which is fast, scalable and durable. S3 enables customers to upload, download or store any file or object that is up to 5 TB in size.<br>
 - S3 stands for: Simple Storage Service
@@ -1355,25 +1355,25 @@ True.
 #### Buckets 101
 
 <details>
-<summary>What is a bucket?</summary><br><b>
+<summary>What is a bucket? ✅ </summary><br><b>
 
 An S3 bucket is a resource which is similar to folders in a file system and allows storing objects, which consist of data.
 </b></details>
 
 <details>
-<summary>True or False? Buckets are defined globally</summary><br><b>
+<summary>True or False? Buckets are defined globally ❎ </summary><br><b>
 
 False. They are defined at the region level.
 </b></details>
 
 <details>
-<summary>True or False? A bucket name must be globally unique</summary><br><b>
+<summary>True or False? A bucket name must be globally unique ✅ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>How to rename a bucket in S3?</summary><br><b>
+<summary>How to rename a bucket in S3? ✅ </summary><br><b>
 
 A S3 bucket name is immutable. That means it's not possible to change it, without removing and creating a new bucket.
 
@@ -1396,13 +1396,13 @@ $ aws s3 rb --force s3://[OLD_BUCKET_NAME]
 </b></details>
 
 <details>
-<summary>True or False? The max object size a user can upload in one go, is 5TB</summary><br><b>
+<summary>True or False? The max object size a user can upload in one go, is 5TB ✅ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>Explain "Multi-part upload"</summary><br><b>
+<summary>Explain "Multi-part upload" ❎ </summary><br><b>
 
 [Amazon docs](https://docs.aws.amazon.com/AmazonS3/latest/userguide/mpuoverview.html): "Multipart upload allows you to upload a single object as a set of parts. Each part is a contiguous portion of the object's data...In general, when your object size reaches 100 MB, you should consider using multipart uploads instead of uploading the object in a single operation."
 </b></details>
@@ -1410,7 +1410,7 @@ True
 #### Objects
 
 <details>
-<summary>Explain "Object Versioning"</summary><br><b>
+<summary>Explain "Object Versioning" ✅ </summary><br><b>
 
 When enabled at a bucket level, versioning allows you to upload new version of files, overriding previous version and so be able to easily roll-back and protect your data from being permanently deleted.
 </b></details>
@@ -1419,14 +1419,14 @@ When enabled at a bucket level, versioning allows you to upload new version of f
 <summary>Explain the following:
 
   - Object Lifecycles
-  - Object Sharing</summary><br><b>
+  - Object Sharing ❎ </summary><br><b>
 
   * Object Lifecycles - Transfer objects between storage classes based on defined rules of time periods
   * Object Sharing - Share objects via a URL link
 </b></details>
 
 <details>
-<summary>Explain Object Durability and Object Availability</summary><br><b>
+<summary>Explain Object Durability and Object Availability ✅ </summary><br><b>
 
 Object Durability: The percent over a one-year time period that a file will not be lost
 Object Availability: The percent over a one-year time period that a file will be accessible
@@ -1435,13 +1435,13 @@ Object Availability: The percent over a one-year time period that a file will be
 #### S3 Security
 
 <details>
-<summary>True or False? Every new S3 bucket is public by default</summary><br><b>
+<summary>True or False? Every new S3 bucket is public by default ✅ </summary><br><b>
 
 False. A newly created bucket is private unless it was configured to be public.
 </b></details>
 
 <details>
-<summary>What's a presigned URL?</summary><br><b>
+<summary>What's a presigned URL? ❎ </summary><br><b>
 
 Since every newly created bucket is by default private it doesn't allows to share files with users. Even if the person who uploaded them tries to view them, it gets denied.
 
@@ -1449,7 +1449,7 @@ A presigned URL is a way to bypass that and allow sharing the files with users b
 </b></details>
 
 <details>
-<summary>What security measures have you taken in context of S3?</summary><br><b>
+<summary>What security measures have you taken in context of S3? ✅ </summary><br><b>
 	* Don't make a bucket public.
 	* Enable encryption if it's disabled.
     * Define an access policy
@@ -1457,7 +1457,7 @@ A presigned URL is a way to bypass that and allow sharing the files with users b
 
 
 <details>
-<summary>What encryption types supported by S3?</summary><br><b>
+<summary>What encryption types supported by S3? ❎ </summary><br><b>
 
 * SSE-S3
 * SSE-KMS
@@ -1465,7 +1465,7 @@ A presigned URL is a way to bypass that and allow sharing the files with users b
 </b></details>
 
 <details>
-<summary>Describe shortly how SSE-S3 (AES) encryption works</summary><br><b>
+<summary>Describe shortly how SSE-S3 (AES) encryption works ❎ </summary><br><b>
 
 1. You upload a file to S3 using HTTP (or HTTPS) and header
 2. S3 uses the managed data key to encrypt it
@@ -1473,37 +1473,37 @@ A presigned URL is a way to bypass that and allow sharing the files with users b
 </b></details>
 
 <details>
-<summary>True or False? In case of SSE-S3 (AES-256) encryption, you manage the key</summary><br><b>
+<summary>True or False? In case of SSE-S3 (AES-256) encryption, you manage the key ❎ </summary><br><b>
 
 False. S3 manages the key and uses AES-256 algorithm for the encryption.
 </b></details>
 
 <details>
-<summary>Who or what manages the keys in the case of SSE-KMS encryption?</summary><br><b>
+<summary>Who or what manages the keys in the case of SSE-KMS encryption? ❎ </summary><br><b>
 
 The KMS service.
 </b></details>
 
 <details>
-<summary>Why would someone choose to use SSE-KMS instead of SSE-S3?</summary><br><b>
+<summary>Why would someone choose to use SSE-KMS instead of SSE-S3? ❎ </summary><br><b>
 
 SS3-KMS provides control over who has access to the keys and you can also enabled audit trail.
 </b></details>
 
 <details>
-<summary>True or False? In case of SSE-C encryption, both S3 and you manage the keys</summary><br><b>
+<summary>True or False? In case of SSE-C encryption, both S3 and you manage the keys ❎ </summary><br><b>
 
 False. You manage the keys. It's customer provided keys.
 </b></details>
 
 <details>
-<summary>True or False? In case of SSE-C HTTPS must be used and encryption key must be provided in headers for every HTTP request</summary><br><b>
+<summary>True or False? In case of SSE-C HTTPS must be used and encryption key must be provided in headers for every HTTP request ❎ </summary><br><b>
 
 True.
 </b></details>
 
 <details>
-<summary>Describe shortly how SSE-C encryption works</summary><br><b>
+<summary>Describe shortly how SSE-C encryption works ❎ </summary><br><b>
 
 1. User uploads a file to S3 using HTTPS while providing data key in the header
 2. AWS S3 performs the encryption using the provided data key and encrypted object is stored in the bucket
@@ -1512,7 +1512,7 @@ If a user would like to get the object, the same data key would have to be provi
 </b></details>
 
 <details>
-<summary>With which string an header starts?
+<summary>With which string an header starts? ❎
 
 * x-zmz
 * x-amz
@@ -1525,7 +1525,7 @@ x-amz
 #### Misc
 
 <details>
-<summary>What is a storage class? What storage classes are there?</summary><br><b>
+<summary>What is a storage class? What storage classes are there? :grey_exclamation: </summary><br><b>
 
 Each object has a storage class assigned to, affecting its availability and durability. This also has effect on costs.
 Storage classes offered today:
@@ -1567,25 +1567,25 @@ More on storage classes [here](https://aws.amazon.com/s3/storage-classes)
 
   * One Zone-IA
   * Glacier Deep Archive
-  * Intelligent-Tiering</summary><br><b>
+  * Intelligent-Tiering ✅ </summary><br><b>
 
 Glacier Deep Archive
 </b></details>
 
 <details>
-<summary>What Glacier retrieval options are available for the user?</summary><br><b>
+<summary>What Glacier retrieval options are available for the user? ❎ </summary><br><b>
 
 Expedited, Standard and Bulk
 </b></details>
 
 <details>
-<summary>True or False? Each AWS account can store up to 500 PetaByte of data. Any additional storage will cost double</summary><br><b>
+<summary>True or False? Each AWS account can store up to 500 PetaByte of data. Any additional storage will cost double ❎ </summary><br><b>
 
 False. Unlimited capacity.
 </b></details>
 
 <details>
-<summary>Explain what is Storage Gateway</summary><br><b>
+<summary>Explain what is Storage Gateway :grey_exclamation: </summary><br><b>
 
 "AWS Storage Gateway is a hybrid cloud storage service that gives you on-premises access to virtually unlimited cloud storage".
 More on Storage Gateway [here](https://aws.amazon.com/storagegateway)
@@ -1596,20 +1596,20 @@ More on Storage Gateway [here](https://aws.amazon.com/storagegateway)
 
   * File Gateway
   * Volume Gateway
-  * Tape Gateway</summary><br><b>
+  * Tape Gateway :grey_exclamation: </summary><br><b>
 
 Explained in detail [here](https://aws.amazon.com/storagegateway/faqs)
 </b></details>
 
 <details>
-<summary>What is the difference between stored volumes and cached volumes?</summary><br><b>
+<summary>What is the difference between stored volumes and cached volumes? ❎ </summary><br><b>
 
 Stored Volumes - Data is located at customer's data center and periodically backed up to AWS
 Cached Volumes - Data is stored in AWS cloud and cached at customer's data center for quick access
 </b></details>
 
 <details>
-<summary>What is "Amazon S3 Transfer Acceleration"?</summary><br><b>
+<summary>What is "Amazon S3 Transfer Acceleration"? ✅ </summary><br><b>
 
 AWS definition: "Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of files over long distances between your client and an S3 bucket"
 
@@ -1617,19 +1617,19 @@ Learn more [here](https://docs.aws.amazon.com/AmazonS3/latest/dev/transfer-accel
 </b></details>
 
 <details>
-<summary>Explain data consistency</summary><br><b>
+<summary>Explain data consistency ❎ </summary><br><b>
 	S3 Data Consistency provides strong read-after-write consistency for PUT and DELETE requests of objects in the S3 bucket in all AWS Regions. S3 always return latest file version.
 </b></details>
 
 <details>
-<summary>Can you host dynamic websites on S3? What about static websites?</summary><br><b>
+<summary>Can you host dynamic websites on S3? What about static websites? ✅ </summary><br><b>
 	No. S3 support only statis hosts. On a static website, individual webpages include static content. They might also contain client-side scripts. By contrast, a dynamic website relies on server-side processing, including server-side scripts such as PHP, JSP, or ASP.NET. Amazon S3 does not support server-side scripting.
 </b></details>
 
 ### Disaster Recovery
 
 <details>
-<summary>In regards to disaster recovery, what is RTO and RPO?</summary><br><b>
+<summary>In regards to disaster recovery, what is RTO and RPO? ✅ </summary><br><b>
 
 RTO - The maximum acceptable length of time that your application can be offline.
 
@@ -1637,7 +1637,7 @@ RPO - The maximum acceptable length of time during which data might be lost from
 </b></details>
 
 <details>
-<summary>What types of disaster recovery techniques AWS supports?</summary><br><b>
+<summary>What types of disaster recovery techniques AWS supports? ❎ </summary><br><b>
 
 * The Cold Method - Periodically backups and sending the backups off-site<br>
 * Pilot Light - Data is mirrored to an environment which is always running
@@ -1646,7 +1646,7 @@ RPO - The maximum acceptable length of time during which data might be lost from
 </b></details>
 
 <details>
-<summary>Which disaster recovery option has the highest downtime and which has the lowest?</summary><br><b>
+<summary>Which disaster recovery option has the highest downtime and which has the lowest? ✅ </summary><br><b>
 
 Lowest - Multi-site
 Highest - The cold method
@@ -1655,7 +1655,7 @@ Highest - The cold method
 ### CloudFront
 
 <details>
-<summary>Explain what is CloudFront</summary><br><b>
+<summary>Explain what is CloudFront ✅ </summary><br><b>
 
 AWS definition: "Amazon CloudFront is a fast content delivery network (CDN) service that securely delivers data, videos, applications, and APIs to customers globally with low latency, high transfer speeds, all within a developer-friendly environment."
 
@@ -1675,13 +1675,13 @@ More on CloudFront [here](https://aws.amazon.com/cloudfront)
 </b></details>
 
 <details>
-<summary>True or False?. Objects are cached for the life of TTL</summary><br><b>
+<summary>True or False?. Objects are cached for the life of TTL ✅ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>What is AWS Snowball?</summary><br><b>
+<summary>What is AWS Snowball? ✅ </summary><br><b>
 
 A transport solution which was designed for transferring large amounts of data (petabyte-scale) into and out the AWS cloud.
 </b></details>
