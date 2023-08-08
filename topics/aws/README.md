@@ -1689,19 +1689,19 @@ A transport solution which was designed for transferring large amounts of data (
 ### ELB
 
 <details>
-<summary>What is ELB (Elastic Load Balancing)?</summary><br><b>
+<summary>What is ELB (Elastic Load Balancing)? ✅ </summary><br><b>
 
 [AWS Docs](https://aws.amazon.com/elasticloadbalancing): "Elastic Load Balancing automatically distributes incoming application traffic across multiple targets, such as Amazon EC2 instances, containers, IP addresses, and Lambda functions."
 </b></details>
 
 <details>
-<summary>True or False? Elastic Load Balancer is a managed resource (= AWS takes care of it)</summary><br><b>
+<summary>True or False? Elastic Load Balancer is a managed resource (= AWS takes care of it) ✅ </summary><br><b>
 
 True. AWS responsible for making sure ELB is operational and takes care of lifecycle operations like upgrades, maintenance and high availability.
 </b></details>
 
 <details>
-<summary>What types of AWS load balancers are there?</summary><br><b>
+<summary>What types of AWS load balancers are there? :grey_exclamation: </summary><br><b>
 
 * Classic Load Balancer (CLB): Mainly for TCP (layer 4) and HTTP, HTTPS (layer 7)
 * Application Load Balancer (ALB): Mainly for HTTP, HTTPS and WebSocket
@@ -1718,13 +1718,13 @@ True. AWS responsible for making sure ELB is operational and takes care of lifec
 </b></details>
 
 <details>
-<summary>Which load balancer would you use for services which use HTTP or HTTPS traffic?</summary><br><b>
+<summary>Which load balancer would you use for services which use HTTP or HTTPS traffic? ✅ </summary><br><b>
 
 Application Load Balancer (ALB).
 </b></details>
 
 <details>
-<summary>What are some use cases for using Gateway Load Balancer?</summary><br><b>
+<summary>What are some use cases for using Gateway Load Balancer? ❎ </summary><br><b>
 
 * Intrusion Detection
 * Firewall
@@ -1732,14 +1732,14 @@ Application Load Balancer (ALB).
 </b></details>
 
 <details>
-<summary>Explain "health checks" in the context of AWS ELB</summary><br><b>
+<summary>Explain "health checks" in the context of AWS ELB ✅ </summary><br><b>
 
 Health checks used by ELB to check whether EC2 instance(s) are properly working.<br>
 If health checks fail, ELB knows to not forward traffic to that specific EC2 instance where the health checks failed.
 </b></details>
 
 <details>
-<summary>True or False? AWS ELB health checks are done on a port and a route</summary><br><b>
+<summary>True or False? AWS ELB health checks are done on a port and a route ✅ </summary><br><b>
 
 True.
 
@@ -1747,7 +1747,7 @@ For example, port `2017` and endpoint `/health`.
 </b></details>
 
 <details>
-<summary>What types of load balancers are supported in EC2 and what are they used for?</summary><br><b>
+<summary>What types of load balancers are supported in EC2 and what are they used for? ✅ </summary><br><b>
 
 * Application LB - layer 7 traffic<br>
 * Network LB - ultra-high performances or static IP address (layer 4)<br>
@@ -1756,7 +1756,7 @@ For example, port `2017` and endpoint `/health`.
 </b></details>
 
 <details>
-<summary>Which type of AWS load balancer is used in the following drawing?<br>
+<summary>Which type of AWS load balancer is used in the following drawing? ✅ <br>
 <img src="../../images/aws/identify_load_balancer.png"/>
 </summary><br><b>
 
@@ -1764,7 +1764,7 @@ Application Load Balancer (routing based on different endpoints + HTTP is used).
 </b></details>
 
 <details>
-<summary>What are possible target groups for ALB (Application Load Balancer)?</summary><br><b>
+<summary>What are possible target groups for ALB (Application Load Balancer)? :grey_exclamation: </summary><br><b>
 
 * EC2 tasks
 * ECS instances
@@ -1773,31 +1773,31 @@ Application Load Balancer (routing based on different endpoints + HTTP is used).
 </b></details>
 
 <details>
-<summary>True or False? ALB can route only to a single route group</summary><br><b>
+<summary>True or False? ALB can route only to a single route group ✅ </summary><br><b>
 
 False. ALB can route to multiple target groups.
 </b></details>
 
 <details>
-<summary>If you wanted to analyze network traffic, you would use the `____ load balancer`</summary><br><b>
+<summary>If you wanted to analyze network traffic, you would use the `____ load balancer` ❎ </summary><br><b>
 
 Gateway Load Balancer
 </b></details>
 
 <details>
-<summary>Who has better latency? Application Load Balancer or Network Load Balancer?</summary><br><b>
+<summary>Who has better latency? Application Load Balancer or Network Load Balancer? ❎ </summary><br><b>
 
 Network Load Balancer (~100 ms) as ALB has a latency of ~400 ms
 </b></details>
 
 <details>
-<summary>True or False? Network load balancer has one static IP per availability zone</summary><br><b>
+<summary>True or False? Network load balancer has one static IP per availability zone ❎ </summary><br><b>
 
 True.
 </b></details>
 
 <details>
-<summary>What are the supported target groups for network load balancer?</summary><br><b>
+<summary>What are the supported target groups for network load balancer? :grey_exclamation: </summary><br><b>
 
 * EC2 instance
 * IP addresses
@@ -1805,63 +1805,63 @@ True.
 </b></details>
 
 <details>
-<summary>What are the supported target groups for gateway load balancer?</summary><br><b>
+<summary>What are the supported target groups for gateway load balancer? :grey_exclamation: </summary><br><b>
 
 * EC2 instance
 * IP addresses (must be private IPs)
 </b></details>
 
 <details>
-<summary>Name one use case for using application load balancer as a target group for network load balancer</summary><br><b>
+<summary>Name one use case for using application load balancer as a target group for network load balancer ✅ </summary><br><b>
 
 You might want to have a fixed IP address (NLB) and then forward HTTP traffic based on path, query, ... which is then done by ALB
 </b></details>
 
 <details>
-<summary>What are some use cases for using Network Load Balancer?</summary><br><b>
+<summary>What are some use cases for using Network Load Balancer? ❎ </summary><br><b>
 
 * TCP, UDP traffic
 * Extreme performance
 </b></details>
 
 <details>
-<summary>True or False? Network load balancers operate in layer 4</summary><br><b>
+<summary>True or False? Network load balancers operate in layer 4 ✅ </summary><br><b>
 
 True. They forward TCP, UDP traffic.
 </b></details>
 
 <details>
-<summary>True or False? It's possible to enable sticky session for network load balancer so the same client is always redirected to the same instance</summary><br><b>
+<summary>True or False? It's possible to enable sticky session for network load balancer so the same client is always redirected to the same instance ❎ </summary><br><b>
 
 False. This is only supported in Classic Load Balancer and Application Load Balancer.
 </b></details>
 
 <details>
-<summary>Explain Cross Zone Load Balancing</summary><br><b>
+<summary>Explain Cross Zone Load Balancing ✅ </summary><br><b>
 
 With cross zone load balancing, traffic distributed evenly across all (registered) instances in all the availability zones.
 </b></details>
 
 <details>
-<summary>True or False? For network load balancer, cross zone load balancing is always on and can't be disabled </summary><br><b>
+<summary>True or False? For network load balancer, cross zone load balancing is always on and can't be disabled ❎ </summary><br><b>
 
 False. It's disabled by default
 </b></details>
 
 <details>
-<summary>True or False? In regards to cross zone load balancing, AWS charges you for inter AZ data in network load balancer but no in application load balancer</summary><br><b>
+<summary>True or False? In regards to cross zone load balancing, AWS charges you for inter AZ data in network load balancer but no in application load balancer ❎ </summary><br><b>
 
 False. It charges for inter AZ data in network load balancer, but not in application load balancer
 </b></details>
 
 <details>
-<summary>True or False? Both ALB and NLB support multiple listeners with multiple SSL certificates </summary><br><b>
+<summary>True or False? Both ALB and NLB support multiple listeners with multiple SSL certificates ✅ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>Explain Deregistration Delay (or Connection Draining) in regards to ELB</summary><br><b>
+<summary>Explain Deregistration Delay (or Connection Draining) in regards to ELB ❎ </summary><br><b>
 
 The period of time or process of "draining" instances from requests/traffic (basically let it complete all active connections but don't start new ones) so it can be de-registered eventually and ELB won't send requests/traffic to it anymore.
 </b></details>
@@ -1869,7 +1869,7 @@ The period of time or process of "draining" instances from requests/traffic (bas
 #### NLB
 
 <details>
-<summary>At what network level/layer a Network Load Balancer operates?</summary><br><b>
+<summary>At what network level/layer a Network Load Balancer operates? ✅ </summary><br><b>
 
 Layer 4
 </b></details>
@@ -1877,13 +1877,13 @@ Layer 4
 #### ALB
 
 <details>
-<summary>True or False? With ALB (Application Load Balancer) it's possible to do routing based on query string and/or headers</summary><br><b>
+<summary>True or False? With ALB (Application Load Balancer) it's possible to do routing based on query string and/or headers ✅ </summary><br><b>
 
 True.
 </b></details>
 
 <details>
-<summary>True or False? For application load balancer, cross zone load balancing is always on and can't be disabled</summary><br><b>
+<summary>True or False? For application load balancer, cross zone load balancing is always on and can't be disabled ❎ </summary><br><b>
 
 True
 </b></details>
@@ -1891,25 +1891,25 @@ True
 ### Auto Scaling Group
 
 <details>
-<summary>Explain Auto Scaling Group</summary><br><b>
+<summary>Explain Auto Scaling Group ✅ </summary><br><b>
 
 [Amazon Docs](https://docs.aws.amazon.com/autoscaling/ec2/userguide/AutoScalingGroup.html): "An Auto Scaling group contains a collection of Amazon EC2 instances that are treated as a logical grouping for the purposes of automatic scaling and management. An Auto Scaling group also enables you to use Amazon EC2 Auto Scaling features such as health check replacements and scaling policies"
 </b></details>
 
 <details>
-<summary>You have two instance running as part of ASG. You change the desired capacity to 1. What will be the outcome of this change?</summary><br><b>
+<summary>You have two instance running as part of ASG. You change the desired capacity to 1. What will be the outcome of this change? ✅ </summary><br><b>
 
 One of the instances will be terminated.
 </b></details>
 
 <details>
-<summary>How can you customize the trigger for the scaling in/out of an auto scaling group?</summary><br><b>
+<summary>How can you customize the trigger for the scaling in/out of an auto scaling group? ❎ </summary><br><b>
 
 One way is to use CloudWatch alarms where an alarm will monitor a metric and based on a certain value (or range) you can choose to scale-in or scale-out the ASG.
 </b></details>
 
 <details>
-<summary>What are some metrics/rules used for auto scaling</summary><br><b>
+<summary>What are some metrics/rules used for auto scaling :grey_exclamation: </summary><br><b>
 
 * Network In/Out
 * Number of requests on ELB per instance
@@ -1917,7 +1917,7 @@ One way is to use CloudWatch alarms where an alarm will monitor a metric and bas
 </b></details>
 
 <details>
-<summary>What is dynamic Scaling policy in regards to Auto Scaling Groups?</summary><br><b>
+<summary>What is dynamic Scaling policy in regards to Auto Scaling Groups? ❎ </summary><br><b>
 
 A policy in which scaling will occur automatically based on different metrics.
 
@@ -1929,44 +1929,44 @@ There are 3 types:
 </b></details>
 
 <details>
-<summary>What is a predictive scaling policy in regards to Auto Scaling Groups?</summary><br><b>
+<summary>What is a predictive scaling policy in regards to Auto Scaling Groups? :grey_exclamation: </summary><br><b>
 
 Scale by analyzing historical load and schedule scaling based on forecast load.
 </b></details>
 
 <details>
-<summary>Explain scaling cooldowns in regards to Auto Scaling Groups</summary><br><b>
+<summary>Explain scaling cooldowns in regards to Auto Scaling Groups ❎ </summary><br><b>
 
 During a scaling cooldown, ASG will not terminate or launch additional instances. The cooldown happens after scaling activity and the reason for this behaviour is that some metrics have to be collected and stabilize before another scaling operating can take place.
 </b></details>
 
 <details>
-<summary>Explain the default ASG termination policy</summary><br><b>
+<summary>Explain the default ASG termination policy ❎ </summary><br><b>
 
 1. It finds the AZ which the most number of EC2 instances
 2. If number of instances > 1, choose the one with oldest launch configuration, template and terminate it
 </b></details>
 
 <details>
-<summary>True or False? by default, ASG tries to balance the number of instances across AZ</summary><br><b>
+<summary>True or False? by default, ASG tries to balance the number of instances across AZ ✅ </summary><br><b>
 
 True, this is why when it terminates instances, it chooses the AZ with the most instances.
 </b></details>
 
 <details>
-<summary>Explain Lifecycle hooks in regards to Auto Scaling Groups</summary><br><b>
+<summary>Explain Lifecycle hooks in regards to Auto Scaling Groups ❎ </summary><br><b>
 
 Lifecycle hooks allows you perform extra steps before the instance goes in service (During pending state) or before it terminates (during terminating state).
 </b></details>
 
 <details>
-<summary>If you use ASG and you would like to run extra steps before the instance goes in service, what will you use? </summary><br><b>
+<summary>If you use ASG and you would like to run extra steps before the instance goes in service, what will you use? ✅ </summary><br><b>
 
 Lifecycle hooks in pending state.
 </b></details>
 
 <details>
-<summary>Describe one way to test ASG actually works</summary><br><b>
+<summary>Describe one way to test ASG actually works ✅ </summary><br><b>
 
 In Linux instances, you can install the 'stress' package and run stress to load the system for certain period of time and see if ASG kicks in by adding additional capacity (= more instances).
 
