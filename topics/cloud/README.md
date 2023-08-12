@@ -1,7 +1,7 @@
 ## Cloud
 
 <details>
-<summary>What is Cloud Computing? What is a Cloud Provider?</summary><br><b>
+<summary>What is Cloud Computing? What is a Cloud Provider? ✅ </summary><br><b>
 
 Cloud computing refers to the delivery of on-demand computing services 
 over the internet on a pay-as-you-go basis.
@@ -15,7 +15,7 @@ Cloud service providers are companies that establish public clouds, manage priva
 </b></details>
 
 <details>
-<summary>What are the advantages of cloud computing? Mention at least 3 advantages</summary><br><b>
+<summary>What are the advantages of cloud computing? Mention at least 3 advantages ✅ </summary><br><b>
 
 * Pay as you go: you are paying only for what you are using. No upfront payments and payment stops when resources are no longer used.
 * Scalable: resources are scaled down or up based on demand
@@ -24,13 +24,13 @@ Cloud service providers are companies that establish public clouds, manage priva
 </b></details>
 
 <details>
-<summary>True or False? Cloud computing is a consumption-based model (users only pay for for resources they use)</summary><br><b>
+<summary>True or False? Cloud computing is a consumption-based model (users only pay for for resources they use) ✅ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>What types of Cloud Computing services are there?</summary><br><b>
+<summary>What types of Cloud Computing services are there? ❎ </summary><br><b>
 
 IAAS - Infrastructure as a Service
 PAAS - Platform as a Service
@@ -38,7 +38,7 @@ SAAS - Software as a Service
 </b></details>
 
 <details>
-<summary>Explain each of the following and give an example:
+<summary>Explain each of the following and give an example: ✅ 
 
   * IAAS
   * PAAS
@@ -49,7 +49,7 @@ SAAS - Software as a Service
 </b></details>
 
 <details>
-<summary>What types of clouds (or cloud deployments) are there?</summary><br><b>
+<summary>What types of clouds (or cloud deployments) are there? ✅ </summary><br><b>
 
   * Public - Cloud services sharing computing resources among multiple customers
   * Private - Cloud services having computing resources limited to specific customer or organization, managed by third party or organizations itself
@@ -57,7 +57,7 @@ SAAS - Software as a Service
 </b></details>
 
 <details>
-<summary>What are the differences between Cloud Providers and On-Premise solution?</summary><br><b>
+<summary>What are the differences between Cloud Providers and On-Premise solution? ❎ </summary><br><b>
 
 In cloud providers, someone else owns and manages the hardware, hire the relevant infrastructure teams and pays for real-estate (for both hardware and people). You can focus on your business.
 
@@ -65,7 +65,7 @@ In On-Premise solution, it's quite the opposite. You need to take care of hardwa
 </b></details>
 
 <details>
-<summary>What is Serverless Computing?</summary><br><b>
+<summary>What is Serverless Computing? ✅ </summary><br><b>
 
 The main idea behind serverless computing is that you don't need to manage the creation and configuration of server. All you need to focus on is splitting your app into multiple functions which will be triggered by some actions.
 
@@ -84,7 +84,7 @@ It's important to note that:
 </b></details>
 
 <details>
-<summary>What is auto scaling?</summary><br><b>
+<summary>What is auto scaling? ✅ </summary><br><b>
 
 AWS definition: "AWS Auto Scaling monitors your applications and automatically adjusts capacity to maintain steady, predictable performance at the lowest possible cost"
 
@@ -92,7 +92,7 @@ Read more about auto scaling [here](https://aws.amazon.com/autoscaling)
 </b></details>
 
 <details>
-<summary>True or False? Auto Scaling is about adding resources (such as instances) and not about removing resource</summary><br><b>
+<summary>True or False? Auto Scaling is about adding resources (such as instances) and not about removing resource ✅ </summary><br><b>
 
 False. Auto scaling adjusts capacity and this can mean removing some resources based on usage and performances.
 </b></details>
@@ -100,7 +100,7 @@ False. Auto scaling adjusts capacity and this can mean removing some resources b
 #### Cloud - Security
 
 <details>
-<summary>How to secure instances in the cloud?</summary><br><b>
+<summary>How to secure instances in the cloud? ❎ </summary><br><b>
 
   * Instance should have minimal permissions needed. You don't want an instance-level incident to become an account-level incident
   * Instances should be accessed through load balancers or bastion hosts. In other words, they should be off the internet (in a private subnet behind a NAT). 
