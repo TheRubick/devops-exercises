@@ -2116,7 +2116,7 @@ Learn more [here](https://aws.amazon.com/certificate-manager)
 #### RDS
 
 <details>
-<summary>What is AWS RDS?</summary><br><b>
+<summary>What is AWS RDS? ✅ </summary><br><b>
 
 * Relational Database Service
 * Managed DB service (you can't ssh the machine)
@@ -2124,7 +2124,7 @@ Learn more [here](https://aws.amazon.com/certificate-manager)
 </b></details>
 
 <details>
-<summary>Why to use AWS RDS instead of launching an EC2 instance and install a database on it?</summary><br><b>
+<summary>Why to use AWS RDS instead of launching an EC2 instance and install a database on it? ✅ </summary><br><b>
 
 AWS RDS is a managed service, that means it's automatically provisioned and patched for you.
 
@@ -2132,7 +2132,7 @@ In addition, it provides you with continuous backup (and the ability to restore 
 </b></details>
 
 <details>
-<summary>What do you know about RDS backups?</summary><br><b>
+<summary>What do you know about RDS backups? :grey_exclamation: </summary><br><b>
 
 * Automated backups
 * Full daily backup (done during maintenance window)
@@ -2141,7 +2141,7 @@ In addition, it provides you with continuous backup (and the ability to restore 
 </b></details>
 
 <details>
-<summary>Explain AWS RDS Storage Auto Scaling</summary><br><b>
+<summary>Explain AWS RDS Storage Auto Scaling :grey_exclamation: </summary><br><b>
 
 * RDS storage can automatically be increased upon lack in storage
 * The user needs to set "Maximum Storage Threshold" to have some limit on storage scaling
@@ -2150,7 +2150,7 @@ In addition, it provides you with continuous backup (and the ability to restore 
 </b></details>
 
 <details>
-<summary>Explain Amazon RDS Read Replicas</summary><br><b>
+<summary>Explain Amazon RDS Read Replicas :grey_exclamation: </summary><br><b>
 
 [AWS Docs](https://aws.amazon.com/rds/features/read-replicas): "Amazon RDS Read Replicas provide enhanced performance and durability for RDS database (DB) instances. They make it easy to elastically scale out beyond the capacity constraints of a single DB instance for read-heavy database workloads."
 
@@ -2158,31 +2158,31 @@ In simpler words, it allows you to scale your reads.
 </b></details>
 
 <details>
-<summary>True or False? RDS read replicas are supported within az, cross az and cross region</summary><br><b>
+<summary>True or False? RDS read replicas are supported within az, cross az and cross region ❎ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>True or False? RDS read replicas are asynchronous</summary><br><b>
+<summary>True or False? RDS read replicas are asynchronous ❎ </summary><br><b>
 
 True. This is done so the reads are consistent.
 </b></details>
 
 <details>
-<summary>True or False? Amazon RDS supports MongoDB</summary><br><b>
+<summary>True or False? Amazon RDS supports MongoDB ✅ </summary><br><b>
 
 False. RDS is relational database and MongoDB is a NoSQL db.
 </b></details>
 
 <details>
-<summary>What are some use cases for using RDS read replicas?</summary><br><b>
+<summary>What are some use cases for using RDS read replicas? ✅ </summary><br><b>
 
 You have a main application which works against your database but you would like to add additional app, one used for logging, analytics, ... so you prefer it won't use the same database. In this case, you create a read replica instance and the second application works against that instance.
 </b></details>
 
 <details>
-<summary>Explain RDS Multi Availability Zone</summary><br><b>
+<summary>Explain RDS Multi Availability Zone ❎ </summary><br><b>
 
 * RDS multi AZ used mainly for disaster recovery purposes
 * There is an RDS master instance and in another AZ an RDS standby instance
@@ -2191,13 +2191,13 @@ You have a main application which works against your database but you would like
 </b></details>
 
 <details>
-<summary>True or False? Moving AWS RDS from single AZ to multi AZ is an operation with downtime (meaning there is a need to stop the DB)</summary><br><b>
+<summary>True or False? Moving AWS RDS from single AZ to multi AZ is an operation with downtime (meaning there is a need to stop the DB) ✅ </summary><br><b>
 
 False. It's a zero downtime operation = no need to stop the database.
 </b></details>
 
 <details>
-<summary>How AWS RDS switches from single AZ to multi AZ?</summary><br><b>
+<summary>How AWS RDS switches from single AZ to multi AZ? ✅ </summary><br><b>
 
 1. Snapshot is taken by RDS
 2. The snapshot is restored to another, standby, RDS instance
@@ -2205,32 +2205,32 @@ False. It's a zero downtime operation = no need to stop the database.
 </b></details>
 
 <details>
-<summary>True or False? RDS encryption should be defined at launch time</summary><br><b>
+<summary>True or False? RDS encryption should be defined at launch time ✅ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>True or False? in regards to RDS, replicas can be encrypted even if the master isn't encrypted</summary><br><b>
+<summary>True or False? in regards to RDS, replicas can be encrypted even if the master isn't encrypted ❎ </summary><br><b>
 
 False
 </b></details>
 
 <details>
-<summary>How to make RDS snapshots encrypted?</summary><br><b>
+<summary>How to make RDS snapshots encrypted? ✅ </summary><br><b>
 
 * If RDS database is encrypted then, the snapshot itself is also encrypted
 * If RDS database isn't encrypted then, the snapshot itself isn't encrypted and then you can copy the un-encrypted snapshot to created an encrypted copy
 </b></details>
 
 <details>
-<summary>How to encrypt an un-encrypted RDS instance?</summary><br><b>
+<summary>How to encrypt an un-encrypted RDS instance? ✅ </summary><br><b>
 
 Create a copy of the un-encrypted instance -> copy the snapshot to create an encrypted copy -> restore the database from the encrypted snapshot -> migrate the application to work against the copied instance -> remove the original DB instance
 </b></details>
 
 <details>
-<summary>How IAM authentication works with RDS?</summary><br><b>
+<summary>How IAM authentication works with RDS? ❎ </summary><br><b>
 
 For example:
 
@@ -2241,12 +2241,12 @@ Note: The token has a lifetime of 15 minutes
 </b></details>
 
 <details>
-<summary>True or False? In case of RDS (not Aurora), read replicas require you to change the SQL connection string</summary><br><b>
+<summary>True or False? In case of RDS (not Aurora), read replicas require you to change the SQL connection string ❎ </summary><br><b>
 
 True. Since read replicas add endpoints, each with its own DNS name, you need to modify your app to reference these new endpoints to balance the load read.
 </b></details>
 
-#### Aurora
+#### Aurora ❎
 
 <details>
 <summary>What do you know about Amazon Aurora?</summary><br><b>
@@ -2298,7 +2298,7 @@ True. If your read replica instances exhaust their CPU, you can scale by adding 
 Aurora multi-master is perfect for a use case where you want to have instant failover for write node.
 </b></details>
 
-#### DynamoDB
+#### DynamoDB ❎
 
 <details>
 <summary>What is AWS DynamoDB?</summary><br><b>
@@ -2328,7 +2328,7 @@ Amazon definition: "Amazon DynamoDB Accelerator (DAX) is a fully managed, highly
 Learn more [here](https://aws.amazon.com/dynamodb/dax)
 </b></details>
 
-#### ElastiCache
+#### ElastiCache ❎
 
 <details>
 <summary>What is AWS ElastiCache? In what use case should it be used?</summary><br><b>
@@ -2388,13 +2388,13 @@ True.
 #### RedShift
 
 <details>
-<summary>What is AWS Redshift and how is it different than RDS?</summary><br><b>
+<summary>What is AWS Redshift and how is it different than RDS? ✅ </summary><br><b>
 
 cloud data warehouse
 </b></details>
 
 <details>
-<summary>What do you if you suspect AWS Redshift performs slowly?</summary><br><b>
+<summary>What do you if you suspect AWS Redshift performs slowly? ❎ </summary><br><b>
 
 * You can confirm your suspicion by going to AWS Redshift console and see running queries graph. This should tell you if there are any long-running queries.
 * If confirmed, you can query for running queries and cancel the irrelevant queries
@@ -2403,7 +2403,7 @@ cloud data warehouse
 </b></details>
 
 <details>
-<summary>What is Amazon DocumentDB?</summary><br><b>
+<summary>What is Amazon DocumentDB? ✅ </summary><br><b>
 
 Amazon definition: "Amazon DocumentDB (with MongoDB compatibility) is a fast, scalable, highly available, and fully managed document database service that supports MongoDB workloads. As a document database, Amazon DocumentDB makes it easy to store, query, and index JSON data."
 
@@ -2415,7 +2415,7 @@ Learn more [here](https://aws.amazon.com/documentdb)
 </b></details>
 
 <details>
-<summary>What type of storage is used by Amazon RDS?</summary><br><b>
+<summary>What type of storage is used by Amazon RDS? ✅ </summary><br><b>
 
 EBS
 </b></details>
@@ -2881,7 +2881,7 @@ False. DNS service can be Route 53 (where you manage DNS records) while the doma
 ### SQS
 
 <details>
-<summary>What is Simple Queue Service (SQS)?</summary><br><b>
+<summary>What is Simple Queue Service (SQS)? ✅ </summary><br><b>
 
 AWS definition: "Amazon Simple Queue Service (SQS) is a fully managed message queuing service that enables you to decouple and scale microservices, distributed systems, and serverless applications".
 
@@ -2889,7 +2889,7 @@ Learn more about it [here](https://aws.amazon.com/sqs)
 </b></details>
 
 <details>
-<summary>Explain "producer" and "consumer" in regards to messaging queue</summary><br><b>
+<summary>Explain "producer" and "consumer" in regards to messaging queue ✅ </summary><br><b>
 
 Producer is the application or in general, the source that sends messages to the queue.
 
@@ -2897,7 +2897,7 @@ Consumer is the process or application that pulls the messages from the queue.
 </b></details>
 
 <details>
-<summary>What "default retention of messages" means?</summary><br><b>
+<summary>What "default retention of messages" means? ✅ </summary><br><b>
 
 It refers to a retention period in which a message has to consumed/processed and deleted from the queue.
 
@@ -2905,7 +2905,7 @@ As of today, the retention of a message is 4 days by default and the maximum all
 </b></details>
 
 <details>
-<summary>What's the limitation on message size in SQS?
+<summary>What's the limitation on message size in SQS? ❎
 
 * 128KB
 * 128MB
@@ -2916,31 +2916,31 @@ As of today, the retention of a message is 4 days by default and the maximum all
 </b></details>
 
 <details>
-<summary>True or False? It's possible to have duplicated messages in the queue</summary><br><b>
+<summary>True or False? It's possible to have duplicated messages in the queue ✅ </summary><br><b>
 
 True. It's referred to as "at least once delivery".
 </b></details>
 
 <details>
-<summary>True or False? "Consumers" can be only EC2 instances</summary><br><b>
+<summary>True or False? "Consumers" can be only EC2 instances ✅ </summary><br><b>
 
 False. They can be Lambda functions and even on-premise instances
 </b></details>
 
 <details>
-<summary>True or False? Processes/Applications use from the SDK the SendMessage API in order to send messages to the queue</summary><br><b>
+<summary>True or False? Processes/Applications use from the SDK the SendMessage API in order to send messages to the queue ✅ </summary><br><b>
 
 True.
 </b></details>
 
 <details>
-<summary>What it means "best effort ordering" in regards to SQS?</summary><br><b>
+<summary>What it means "best effort ordering" in regards to SQS? ❎ </summary><br><b>
 
 It means messages in the queue can be out of order.
 </b></details>
 
 <details>
-<summary>What is "Delay Queue" in regards to SQS?</summary><br><b>
+<summary>What is "Delay Queue" in regards to SQS? ❎ </summary><br><b>
 
 It's the time in seconds to delay the delivery of new messages (when they reached the queue already).
 
@@ -2948,7 +2948,7 @@ The limit as of today is 15 minutes.
 </b></details>
 
 <details>
-<summary>What is "Visibility Timeout?"</summary><br><b>
+<summary>What is "Visibility Timeout?" ✅ </summary><br><b>
 
 The time in seconds for a message to not be visible for consumers.
 
@@ -2956,7 +2956,7 @@ The limit as of today is 12 hours
 </b></details>
 
 <details>
-<summary>Give an example of architecture or workflow that involves SQS and EC2 & S3</summary><br><b>
+<summary>Give an example of architecture or workflow that involves SQS and EC2 & S3 ✅ </summary><br><b>
 
 A website that allows users to upload videos and adds subtitles to them:
 
@@ -2974,7 +2974,7 @@ A website that allows users to upload videos and adds subtitles to them:
 ### SNS
 
 <details>
-<summary>What is Simply Notification Service?</summary><br><b>
+<summary>What is Simply Notification Service? ✅ </summary><br><b>
 
 AWS definition: "a highly available, durable, secure, fully managed pub/sub messaging service that enables you to decouple microservices, distributed systems, and serverless applications."
 
@@ -2982,7 +2982,7 @@ Read more about it [here](https://aws.amazon.com/sns)
 </b></details>
 
 <details>
-<summary>Explain the following in regards to SNS:
+<summary>Explain the following in regards to SNS: ✅
 
   - Topics
   - Subscribers
@@ -2994,7 +2994,7 @@ Read more about it [here](https://aws.amazon.com/sns)
 </b></details>
 
 <details>
-<summary>How SNS is different from SQS?</summary><br><b>
+<summary>How SNS is different from SQS? ✅ </summary><br><b>
 
 SNS, as opposed to SQS, works in a publisher/subscriber model. Where's SQS works in  Producer/Consumer model.
 
@@ -3002,7 +3002,7 @@ SQS delivers the message to one consumer where's SNS will send a message to mult
 </b></details>
 
 <details>
-<summary>What's a Fan-Out pattern?</summary><br><b>
+<summary>What's a Fan-Out pattern? ❎ </summary><br><b>
 
 A messaging pattern where a single message is send to multiple destinations (often simultaneously). So one-to-many broadcast message.
 </b></details>
