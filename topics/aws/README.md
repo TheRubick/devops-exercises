@@ -3009,7 +3009,7 @@ SQS delivers the message to one consumer where's SNS will send a message to mult
 A messaging pattern where a single message is send to multiple destinations (often simultaneously). So one-to-many broadcast message.
 </b></details>
 
-### Monitoring and Logging
+### Monitoring and Logging ✅
 
 <details>
 <summary>What is AWS CloudWatch?</summary><br><b>
