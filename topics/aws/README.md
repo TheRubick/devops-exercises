@@ -1978,7 +1978,7 @@ For example: `sudo stress --cpu 100 --timeout 20`
 ### Security
 
 <details>
-<summary>What is the shared responsibility model? What AWS is responsible for and what the user is responsible for based on the shared responsibility model?</summary><br><b>
+<summary>What is the shared responsibility model? What AWS is responsible for and what the user is responsible for based on the shared responsibility model? ✅ </summary><br><b>
 
 The shared responsibility model defines what the customer is responsible for and what AWS is responsible for.
 
@@ -1986,13 +1986,13 @@ More on the shared responsibility model [here](https://aws.amazon.com/compliance
 </b></details>
 
 <details>
-<summary>True or False? Based on the shared responsibility model, Amazon is responsible for physical CPUs and security groups on instances</summary><br><b>
+<summary>True or False? Based on the shared responsibility model, Amazon is responsible for physical CPUs and security groups on instances ✅ </summary><br><b>
 
 False. It is responsible for Hardware in its sites but not for security groups which created and managed by the users.
 </b></details>
 
 <details>
-<summary>Explain "Shared Controls" in regards to the shared responsibility model</summary><br><b>
+<summary>Explain "Shared Controls" in regards to the shared responsibility model ❎ </summary><br><b>
 
 AWS definition: "apply to both the infrastructure layer and customer layers, but in completely separate contexts or perspectives. In a shared control, AWS provides the requirements for the infrastructure and the customer must provide their own control implementation within their use of AWS services"
 
@@ -2004,7 +2004,7 @@ Learn more about it [here](https://aws.amazon.com/compliance/shared-responsibili
 </b></details>
 
 <details>
-<summary>How to secure instances in AWS?</summary><br><b>
+<summary>How to secure instances in AWS? :grey_exclamation: </summary><br><b>
 
   * Instance IAM roles should have minimal permissions needed. You don't want an instance-level incident to become an account-level incident
   * Use "AWS System Manager Session Manager" for SSH
@@ -2012,7 +2012,7 @@ Learn more about it [here](https://aws.amazon.com/compliance/shared-responsibili
 </b></details>
 
 <details>
-<summary>What is AWS Artifact?</summary><br><b>
+<summary>What is AWS Artifact? ✅ </summary><br><b>
 
 AWS definition: "AWS Artifact is your go-to, central resource for compliance-related information that matters to you. It provides on-demand access to AWS’ security and compliance reports and select online agreements."
 
@@ -2020,7 +2020,7 @@ Read more about it [here](https://aws.amazon.com/artifact)
 </b></details>
 
 <details>
-<summary>What is AWS Inspector?</summary><br><b>
+<summary>What is AWS Inspector? ✅ </summary><br><b>
 
 AWS definition: "Amazon Inspector is an automated security assessment service that helps improve the security and compliance of applications deployed on AWS. Amazon Inspector automatically assesses applications for exposure, vulnerabilities, and deviations from best practices.""
 
@@ -2028,13 +2028,13 @@ Learn more [here](https://aws.amazon.com/inspector)
 </b></details>
 
 <details>
-<summary>What is AWS Guarduty?</summary><br><b>
+<summary>What is AWS Guarduty? ✅ </summary><br><b>
 AWS definition: "Amazon GuardDuty is a threat detection service that continuously monitors for malicious activity and unauthorized behavior to protect your Amazon Web Services accounts, workloads, and data stored in Amazon S3" <br>
 Monitor VPC Flow lows, DNS logs, CloudTrail S3 events and CloudTrail Mgmt events.
 </b></details>
 
 <details>
-<summary>What is AWS Shield?</summary><br><b>
+<summary>What is AWS Shield? ✅ </summary><br><b>
 
 AWS definition: "AWS Shield is a managed Distributed Denial of Service (DDoS) protection service that safeguards applications running on AWS."
 </b></details>
@@ -2052,7 +2052,7 @@ AWS definition: "AWS Shield is a managed Distributed Denial of Service (DDoS) pr
 </b></details>
 
 <details>
-<summary>What is AWS CloudHSM?</summary><br><b>
+<summary>What is AWS CloudHSM? ❎ </summary><br><b>
 
 Amazon definition: "AWS CloudHSM is a cloud-based hardware security module (HSM) that enables you to easily generate and use your own encryption keys on the AWS Cloud."
 
@@ -2060,45 +2060,45 @@ Learn more [here](https://aws.amazon.com/cloudhsm)
 </b></details>
 
 <details>
-<summary>True or False? AWS Inspector can perform both network and host assessments</summary><br><b>
+<summary>True or False? AWS Inspector can perform both network and host assessments ❎ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>What is AWS Key Management Service (KMS)?</summary><br><b>
+<summary>What is AWS Key Management Service (KMS)? :grey_exclamation: </summary><br><b>
 
 AWS definition: "KMS makes it easy for you to create and manage cryptographic keys and control their use across a wide range of AWS services and in your applications."
 More on KMS [here](https://aws.amazon.com/kms)
 </b></details>
 
 <details>
-<summary>What is AWS Acceptable Use Policy?</summary><br><b>
+<summary>What is AWS Acceptable Use Policy? ❎ </summary><br><b>
 
 It describes prohibited uses of the web services offered by AWS.
 More on AWS Acceptable Use Policy [here](https://aws.amazon.com/aup)
 </b></details>
 
 <details>
-<summary>True or False? A user is not allowed to perform penetration testing on any of the AWS services</summary><br><b>
+<summary>True or False? A user is not allowed to perform penetration testing on any of the AWS services ✅ </summary><br><b>
 
 False. On some services, like EC2, CloudFront and RDS, penetration testing is allowed.
 </b></details>
 
 <details>
-<summary>True or False? DDoS attack is an example of allowed penetration testing activity</summary><br><b>
+<summary>True or False? DDoS attack is an example of allowed penetration testing activity ✅ </summary><br><b>
 
 False.
 </b></details>
 
 <details>
-<summary>True or False? AWS Access Key is a type of MFA device used for AWS resources protection</summary><br><b>
+<summary>True or False? AWS Access Key is a type of MFA device used for AWS resources protection ✅ </summary><br><b>
 
 False. Security key is an example of an MFA device.
 </b></details>
 
 <details>
-<summary>What is Amazon Cognito?</summary><br><b>
+<summary>What is Amazon Cognito? ❎ </summary><br><b>
 
 Amazon definition: "Amazon Cognito handles user authentication and authorization for your web and mobile apps."
 
@@ -2106,7 +2106,7 @@ Learn more [here](https://docs.aws.amazon.com/cognito/index.html)
 </b></details>
 
 <details>
-<summary>What is AWS ACM?</summary><br><b>
+<summary>What is AWS ACM? ❎ </summary><br><b>
 
 Amazon definition: "AWS Certificate Manager is a service that lets you easily provision, manage, and deploy public and private Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with AWS services and your internal connected resources."
 
