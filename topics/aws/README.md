@@ -3030,7 +3030,7 @@ Read more on CloudTrail [here](https://aws.amazon.com/cloudtrail)
 ### Billing and Support
 
 <details>
-<summary>What are Service Control Policies and to what service they belong?</summary><br><b>
+<summary>What are Service Control Policies and to what service they belong? ❎ </summary><br><b>
 
 AWS organizations service and the definition by Amazon: "SCPs offer central control over the maximum available permissions for all accounts in your organization, allowing you to ensure your accounts stay within your organization’s access control guidelines."
 
@@ -3038,7 +3038,7 @@ Learn more [here](https://docs.aws.amazon.com/organizations/latest/userguide/org
 </b></details>
 
 <details>
-<summary>Explain AWS pricing model</summary><br><b>
+<summary>Explain AWS pricing model ✅ </summary><br><b>
 
 It mainly works on "pay-as-you-go" meaning you pay only for what are using and when you are using it.
 In s3 you pay for 1. How much data you are storing 2. Making requests (PUT, POST, ...)
@@ -3048,7 +3048,7 @@ More on AWS pricing model [here](https://aws.amazon.com/pricing)
 </b></details>
 
 <details>
-<summary>How do you estimate AWS costs?</summary><br><b>
+<summary>How do you estimate AWS costs? ✅ </summary><br><b>
 
 * TCO calculator
 * AWS simple calculator
@@ -3058,7 +3058,7 @@ More on AWS pricing model [here](https://aws.amazon.com/pricing)
 </b></details>
 
 <details>
-<summary>What basic support in AWS includes?</summary><br><b>
+<summary>What basic support in AWS includes? ✅ </summary><br><b>
 
 * 24x7 customer service
 * Trusted Advisor
@@ -3074,7 +3074,7 @@ More on AWS pricing model [here](https://aws.amazon.com/pricing)
 </b></details>
 
 <details>
-<summary>What is Amazon Connect?</summary><br><b>
+<summary>What is Amazon Connect? ❎ </summary><br><b>
 
 Amazon definition: "Amazon Connect is an easy to use omnichannel cloud contact center that helps companies provide superior customer service at a lower cost."
 
@@ -3082,7 +3082,7 @@ Learn more [here](https://aws.amazon.com/connect)
 </b></details>
 
 <details>
-<summary>What are "APN Consulting Partners"?</summary><br><b>
+<summary>What are "APN Consulting Partners"? ❎ </summary><br><b>
 
 Amazon definition: "APN Consulting Partners are professional services firms that help customers of all types and sizes design, architect, build, migrate, and manage their workloads and applications on AWS, accelerating their journey to the cloud."
 
@@ -3090,7 +3090,7 @@ Learn more [here](https://aws.amazon.com/partners/consulting)
 </b></details>
 
 <details>
-<summary>Which of the following are AWS accounts types (and are sorted by order)?
+<summary>Which of the following are AWS accounts types (and are sorted by order)? ✅
 
   - Basic, Developer, Business, Enterprise
   - Newbie, Intermediate, Pro, Enterprise
@@ -3102,20 +3102,20 @@ Learn more [here](https://aws.amazon.com/partners/consulting)
 </b></details>
 
 <details>
-<summary>True or False? Region is a factor when it comes to EC2 costs/pricing</summary><br><b>
+<summary>True or False? Region is a factor when it comes to EC2 costs/pricing ✅ </summary><br><b>
 
 True. You pay differently based on the chosen region.
 </b></details>
 
 <details>
-<summary>What is "AWS Infrastructure Event Management"?</summary><br><b>
+<summary>What is "AWS Infrastructure Event Management"? ❎ </summary><br><b>
 
 AWS Definition: "AWS Infrastructure Event Management is a structured program available to Enterprise Support customers (and Business Support customers for an additional fee) that helps you plan for large-scale events such as product or application launches, infrastructure migrations, and marketing events."
 </b></details>
 #### AWS Organizations
 
 <details>
-<summary>What is "AWS Organizations"?</summary><br><b>
+<summary>What is "AWS Organizations"? ✅ </summary><br><b>
 
 AWS definition: "AWS Organizations helps you centrally govern your environment as you grow and scale your workloads on AWS."
 
@@ -3123,7 +3123,7 @@ Read more on Organizations [here](https://aws.amazon.com/organizations)
 </b></details>
 
 <details>
-<summary>What's an OU in regards to AWS Organizations?'</summary><br><b>
+<summary>What's an OU in regards to AWS Organizations?' ✅ </summary><br><b>
 
 OU (Organizational Units) is a way to group multiple accounts together so you can treat them as a single unit.
 
