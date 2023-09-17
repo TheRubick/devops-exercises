@@ -119,7 +119,7 @@ What's your goal?
 ### Kubernetes 101
 
 <details>
-<summary>What is Kubernetes? Why organizations are using it?</summary><br><b>
+<summary>What is Kubernetes? Why organizations are using it? ✅ </summary><br><b>
 
 Kubernetes is an open-source system that provides users with the ability to manage, scale and deploy containerized applications.
 
@@ -132,7 +132,7 @@ To understand what Kubernetes is good for, let's look at some examples:
 </b></details>
 
 <details>
-<summary>When or why NOT to use Kubernetes?</summary><br><b>
+<summary>When or why NOT to use Kubernetes? ❎ </summary><br><b>
 
   - If you manage low level infrastructure or baremetals, Kubernetes is probably not what you need or want
   - If you are a small team (like less than 20 engineers) running less than a dozen of containers, Kubernetes might be an overkill (even if you need scale, rolling out updates, etc.). You might still enjoy the benefits of using managed Kubernetes, but you definitely want to think about it carefully before making a decision on whether to adopt it.
@@ -140,7 +140,7 @@ To understand what Kubernetes is good for, let's look at some examples:
 </b></details>
 
 <details>
-<summary>What are some of Kubernetes features?</summary><br><b>
+<summary>What are some of Kubernetes features? :grey_exclamation: </summary><br><b>
 
   - Self-Healing: Kubernetes uses health checks to monitor containers and run certain actions upon failure or other type of events, like restarting the container
   - Load Balancing: Kubernetes can split and/or balance requests to applications running in the cluster, based on the state of the Pods running the application
@@ -152,7 +152,7 @@ To understand what Kubernetes is good for, let's look at some examples:
 </b></details>
 
 <details>
-<summary>What Kubernetes objects are there?</summary><br><b>
+<summary>What Kubernetes objects are there? ✅ </summary><br><b>
 
   * Pod
   * Service
@@ -165,21 +165,21 @@ To understand what Kubernetes is good for, let's look at some examples:
 </b></details>
 
 <details>
-<summary>What fields are mandatory with any Kubernetes object?</summary><br><b>
+<summary>What fields are mandatory with any Kubernetes object? :grey_exclamation: </summary><br><b>
 
 metadata, kind and apiVersion
 
 </b></details>
 
 <details>
-<summary>What is kubectl?</summary><br><b>
+<summary>What is kubectl? ✅ </summary><br><b>
 
 Kubectl is the Kubernetes command line tool that allows you to run commands against Kubernetes clusters. For example, you can use kubectl to deploy applications, inspect and manage cluster resources, and view logs.
 
 </b></details>
 
 <details>
-<summary>What Kubernetes objects do you usually use when deploying applications in Kubernetes?</summary><br><b>
+<summary>What Kubernetes objects do you usually use when deploying applications in Kubernetes? :grey_exclamation: </summary><br><b>
 
 * Deployment - creates the Pods () and watches them
 * Service: route traffic to Pods internally
@@ -188,14 +188,14 @@ Kubectl is the Kubernetes command line tool that allows you to run commands agai
 </b></details>
 
 <details>
-<summary>Why there is no such command in Kubernetes? <code>kubectl get containers</code></summary><br><b>
+<summary>Why there is no such command in Kubernetes? <code>kubectl get containers</code> ✅ </summary><br><b>
 
 Becaused container is not a Kubernetes object. The smallest object unit in Kubernetes is a Pod. In a single Pod you can find one or more containers.
 
 </b></details>
 
 <details>
-<summary>What actions or operations you consider as best practices when it comes to Kubernetes?</summary><br><b>
+<summary>What actions or operations you consider as best practices when it comes to Kubernetes? ❎ </summary><br><b>
 
   - Always make sure Kubernetes YAML files are valid. Applying automated checks and pipelines is recommended.
   - Always specify requests and limits to prevent situation where containers are using the entire cluster memory which may lead to OOM issue
@@ -206,7 +206,7 @@ Becaused container is not a Kubernetes object. The smallest object unit in Kuber
 ### Cluster and Architecture
 
 <details>
-<summary>What is a Kubernetes Cluster?</summary><br><b>
+<summary>What is a Kubernetes Cluster? ✅ </summary><br><b>
 
 Red Hat Definition: "A Kubernetes cluster is a set of node machines for running containerized applications. If you’re running Kubernetes, you’re running a cluster.
 At a minimum, a cluster contains a worker node and a master node."
@@ -215,14 +215,14 @@ Read more [here](https://www.redhat.com/en/topics/containers/what-is-a-kubernete
 </b></details>
 
 <details>
-<summary>What is a Node?</summary><br><b>
+<summary>What is a Node? ✅ </summary><br><b>
 
 A node is a virtual or a physical machine that serves as a worker for running the applications.<br>
 It's recommended to have at least 3 nodes in a production environment.
 </b></details>
 
 <details>
-<summary>What the master node is responsible for?</summary><br><b>
+<summary>What the master node is responsible for? ✅ </summary><br><b>
 
 The master coordinates all the workflows in the cluster:
 
@@ -233,7 +233,7 @@ The master coordinates all the workflows in the cluster:
 </b></details>
 
 <details>
-<summary>Describe shortly and in high-level, what happens when you run <code>kubectl get nodes</code></summary><br><b>
+<summary>Describe shortly and in high-level, what happens when you run <code>kubectl get nodes</code> :grey_exclamation: </summary><br><b>
 
 1. Your user is getting authenticated
 2. Request is validated by the kube-apiserver
@@ -241,14 +241,14 @@ The master coordinates all the workflows in the cluster:
 </b></details>
 
 <details>
-<summary>True or False? Every cluster must have 0 or more master nodes and at least 1 worker</summary><br><b>
+<summary>True or False? Every cluster must have 0 or more master nodes and at least 1 worker ✅ </summary><br><b>
 
 False. A Kubernetes cluster consists of at least 1 master and can have 0 workers (although that wouldn't be very useful...)
 
 </b></details> 
 
 <details>
-<summary>What are the components of the master node (aka control plane)?</summary><br><b>
+<summary>What are the components of the master node (aka control plane)? ✅ </summary><br><b>
 
   * API Server - the Kubernetes API. All cluster components communicate through it
   * Scheduler - assigns an application with a worker node it can run on
@@ -258,7 +258,7 @@ False. A Kubernetes cluster consists of at least 1 master and can have 0 workers
 </b></details>
 
 <details>
-<summary>What are the components of a worker node (aka data plane)?</summary><br><b>
+<summary>What are the components of a worker node (aka data plane)? ✅ </summary><br><b>
 
   * Kubelet - an agent responsible for node communication with the master.
   * Kube-proxy - load balancing traffic between app components
@@ -267,7 +267,7 @@ False. A Kubernetes cluster consists of at least 1 master and can have 0 workers
 </b></details>
 
 <details>
-<summary>Place the components on the right side of the image in the right place in the drawing<br>
+<summary>Place the components on the right side of the image in the right place in the drawing ✅ <br>
 <img src="images/cluster_architecture_exercise.png"/>
 </summary><br><b>
 <img src="images/cluster_architecture_solution.png"/>
@@ -275,19 +275,19 @@ False. A Kubernetes cluster consists of at least 1 master and can have 0 workers
 </b></details>
 
 <details>
-<summary>You are managing multiple Kubernetes clusters. How do you quickly change between the clusters using kubectl?</summary><br><b>
+<summary>You are managing multiple Kubernetes clusters. How do you quickly change between the clusters using kubectl? ❎ </summary><br><b>
 
 `kubectl config use-context`
 </b></details>
 
 <details>
-<summary>How do you prevent high memory usage in your Kubernetes cluster and possibly issues like memory leak and OOM?</summary><br><b>
+<summary>How do you prevent high memory usage in your Kubernetes cluster and possibly issues like memory leak and OOM? ✅ </summary><br><b>
 
 Apply requests and limits, especially on third party applications (where the uncertainty is even bigger)
 </b></details>
 
 <details>
-<summary>Do you have experience with deploying a Kubernetes cluster? If so, can you describe the process in high-level?</summary><br><b>
+<summary>Do you have experience with deploying a Kubernetes cluster? If so, can you describe the process in high-level? ❎ </summary><br><b>
 
 1. Create multiple instances you will use as Kubernetes nodes/workers. Create also an instance to act as the Master. The instances can be provisioned in a cloud or they can be virtual machines on bare metal hosts.
 2. Provision a certificate authority that will be used to generate TLS certificates for the different components of a Kubernetes cluster (kubelet, etcd, ...)
@@ -298,13 +298,13 @@ Apply requests and limits, especially on third party applications (where the unc
 </b></details>
 
 <details>
-<summary>Which command will list all the object types in a cluster?</summary><br><b>
+<summary>Which command will list all the object types in a cluster? ❎ </summary><br><b>
 
 `kubectl api-resources`
 </b></details>
 
 <details>
-<summary>What <code>kubectl get componentstatus</code> does?</summary><br><b>
+<summary>What <code>kubectl get componentstatus</code> does? ❎ </summary><br><b>
 
 Outputs the status of each of the control plane components.
 </b></details>
@@ -319,7 +319,7 @@ Outputs the status of each of the control plane components.
 #### Nodes Commands
 
 <details>
-<summary>Run a command to view all nodes of the cluster</summary><br><b>
+<summary>Run a command to view all nodes of the cluster ✅ </summary><br><b>
 
 `kubectl get nodes`
 
@@ -327,13 +327,13 @@ Note: You might want to create an alias (`alias k=kubectl`) and get used to `k g
 </b></details>
 
 <details>
-<summary>Create a list of all nodes in JSON format and store it in a file called "some_nodes.json"</summary><br><b>
+<summary>Create a list of all nodes in JSON format and store it in a file called "some_nodes.json" ✅ </summary><br><b>
 
 `k get nodes -o json > some_nodes.json`
 </b></details>
 
 <details>
-<summary>Check what labels one of your nodes in the cluster has</summary><br><b>
+<summary>Check what labels one of your nodes in the cluster has ❎ </summary><br><b>
 
 `k get no minikube --show-labels`
 </b></details>
