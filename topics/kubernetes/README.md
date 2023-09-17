@@ -341,7 +341,7 @@ Note: You might want to create an alias (`alias k=kubectl`) and get used to `k g
 ### Pods
 
 <details>
-<summary>Explain what is a Pod</summary><br><b>
+<summary>Explain what is a Pod ✅ </summary><br><b>
 
 A Pod is a group of one or more containers, with shared storage and network resources, and a specification for how to run the containers.
 
@@ -350,7 +350,7 @@ Pods are the smallest deployable units of computing that you can create and mana
 </b></details>
 
 <details>
-<summary>Deploy a pod called "my-pod" using the nginx:alpine image</summary><br><b>
+<summary>Deploy a pod called "my-pod" using the nginx:alpine image ❎ </summary><br><b>
 
 `kubectl run my-pod --image=nginx:alpine`
 
@@ -360,7 +360,7 @@ In addition, Pods and/or Deployments are usually defined in files rather than ex
 </b></details>
 
 <details>
-<summary>What are your thoughts on "Pods are not meant to be created directly"?</summary><br><b>
+<summary>What are your thoughts on "Pods are not meant to be created directly"? ✅ </summary><br><b>
 
 Pods are usually indeed not created directly. You'll notice that Pods are usually created as part of another entities such as Deployments or ReplicaSets.
 
@@ -368,7 +368,7 @@ If a Pod dies, Kubernetes will not bring it back. This is why it's more useful f
 </b></details>
 
 <details>
-<summary>How many containers can a pod contain?</summary><br><b>
+<summary>How many containers can a pod contain? ✅ </summary><br><b>
 
 A pod can include multiple containers but in most cases it would probably be one container per pod.
 
@@ -376,14 +376,14 @@ There are some patterns where it makes to run more than one container like the "
 </b></details>
 
 <details>
-<summary>What use cases exist for running multiple containers in a single pod?</summary><br><b>
+<summary>What use cases exist for running multiple containers in a single pod? :grey_exclamation: </summary><br><b>
 
 A web application with separate (= in their own containers) logging and monitoring components/adapters is one examples.<br>
 A CI/CD pipeline (using Tekton for example) can run multiple containers in one Pod if a Task contains multiple commands.
 </b></details>
 
 <details>
-<summary>What are the possible Pod phases?</summary><br><b>
+<summary>What are the possible Pod phases? :grey_exclamation: </summary><br><b>
 
   * Running - The Pod bound to a node and at least one container is running
   * Failed/Error - At least one container in the Pod terminated with a failure
@@ -393,19 +393,19 @@ A CI/CD pipeline (using Tekton for example) can run multiple containers in one P
 </b></details>
 
 <details>
-<summary>True or False? By default, pods are isolated. This means they are unable to receive traffic from any source</summary><br><b>
+<summary>True or False? By default, pods are isolated. This means they are unable to receive traffic from any source ❎ </summary><br><b>
 
 False. By default, pods are non-isolated = pods accept traffic from any source.
 </b></details>
 
 <details>
-<summary>True or False? The "Pending" phase means the Pod was not yet accepted by the Kubernetes cluster so the scheduler can't run it unless it's accepted</summary><br><b>
+<summary>True or False? The "Pending" phase means the Pod was not yet accepted by the Kubernetes cluster so the scheduler can't run it unless it's accepted ✅ </summary><br><b>
 
 False. "Pending" is after the Pod was accepted by the cluster, but the container can't run for different reasons like images not yet downloaded.
 </b></details>
 
 <details>
-<summary>True or False? A single Pod can be split across multiple nodes</summary><br><b>
+<summary>True or False? A single Pod can be split across multiple nodes ✅ </summary><br><b>
 
 False. A single Pod can run on a single node.
 </b></details>
@@ -415,13 +415,13 @@ False. A single Pod can run on a single node.
 </b></details>
 
 <details>
-<summary>True or False? A volume defined in Pod can be accessed by all the containers of that Pod</summary><br><b>
+<summary>True or False? A volume defined in Pod can be accessed by all the containers of that Pod ✅ </summary><br><b>
 
 True.
 </b></details>
 
 <details>
-<summary>What happens when you run a Pod with kubectl?</summary><br><b>
+<summary>What happens when you run a Pod with kubectl? :grey_exclamation: </summary><br><b>
 
 1. Kubectl sends a request to the API server (kube-apiserver) to create the Pod
    1. In the the process the user gets authenticated and the request is being validated.
@@ -437,7 +437,7 @@ True.
 </b></details>
 
 <details>
-<summary>How to confirm a container is running after running the command <code>kubectl run web --image nginxinc/nginx-unprivileged</code></summary><br><b>
+<summary>How to confirm a container is running after running the command <code>kubectl run web --image nginxinc/nginx-unprivileged :grey_exclamation: </code></summary><br><b>
 
 * When you run `kubectl describe pods <POD_NAME>` it will tell whether the container is running:
 `Status:       Running`
@@ -445,7 +445,7 @@ True.
 </b></details>
 
 <details>
-<summary>After running <code>kubectl run database --image mongo</code> you see the status is "CrashLoopBackOff". What could possibly went wrong and what do you do to confirm?</summary><br><b>
+<summary>After running <code>kubectl run database --image mongo</code> you see the status is "CrashLoopBackOff". What could possibly went wrong and what do you do to confirm? ❎ </summary><br><b>
 
 "CrashLoopBackOff" means the Pod is starting, crashing, starting...and so it repeats itself.<br>
 There are many different reasons to get this error - lack of permissions, init-container misconfiguration, persistent volume connection issue, etc.
@@ -462,7 +462,7 @@ Another way to check what's going on, is to run `kubectl logs <POD_NAME>`. This 
 </b></details>
 
 <details>
-<summary>Explain the purpose of the following lines
+<summary>Explain the purpose of the following lines :grey_exclamation:
 
 ```
 livenessProbe:
@@ -480,7 +480,7 @@ In this case, if the command `cat /appStatus` fails, Kubernetes will kill the co
 </b></details>
 
 <details>
-<summary>Explain the purpose of the following lines
+<summary>Explain the purpose of the following lines ✅
 
 ```
 readinessProbe:
@@ -495,14 +495,14 @@ They define a readiness probe where the Pod will not be marked as "Ready" before
 </b></details>
 
 <details>
-<summary>What does the "ErrImagePull" status of a Pod means?</summary><br><b>
+<summary>What does the "ErrImagePull" status of a Pod means? ✅ </summary><br><b>
 
 It wasn't able to pull the image specified for running the container(s). This can happen if the client didn't authenticated for example.<br>
 More details can be obtained with `kubectl describe po <POD_NAME>`.
 </b></details>
 
 <details>
-<summary>What happens when you delete a Pod?</summary><br><b>
+<summary>What happens when you delete a Pod? ❎ </summary><br><b>
 
 1. The `TERM` signal is sent to kill the main processes inside the containers of the given Pod
 2. Each container is given a period of 30 seconds to shut down the processes gracefully
@@ -510,7 +510,7 @@ More details can be obtained with `kubectl describe po <POD_NAME>`.
 </b></details>
 
 <details>
-<summary>Explain liveness probes</summary><br><b>
+<summary>Explain liveness probes ✅ </summary><br><b>
 
 Liveness probes is a useful mechanism used for restarting the container when a certain check/probe, the user has defined, fails.<br>
 For example, the user can define that the command `cat /app/status` will run every X seconds and the moment this command fails, the container will be restarted.
@@ -519,7 +519,7 @@ You can read more about it in [kubernetes.io](https://kubernetes.io/docs/tasks/c
 </b></details>
 
 <details>
-<summary>Explain readiness probes</summary><br><b>
+<summary>Explain readiness probes ✅ </summary><br><b>
 
 readiness probes used by Kubelet to know when a container is ready to start running, accepting traffic.<br>
 For example, a readiness probe can be to connect port 8080 on a container. Once Kubelet manages to connect it, the Pod is marked as ready
@@ -528,32 +528,32 @@ You can read more about it in [kubernetes.io](https://kubernetes.io/docs/tasks/c
 </b></details>
 
 <details>
-<summary>How readiness probe status affect Services when they are combined?</summary><br><b>
+<summary>How readiness probe status affect Services when they are combined? ✅ </summary><br><b>
 
 Only containers whose state set to Success will be able to receive requests sent to the Service.
 </b></details>
 
 <details>
-<summary>Why it's common to have only one container per Pod in most cases?</summary><br><b>
+<summary>Why it's common to have only one container per Pod in most cases? ❎ </summary><br><b>
 
 One reason is that it makes it harder to scale when you need to scale only one of the containers in a given Pod.
 </b></details>
 
 <details>
-<summary>True or False? Once a Pod is assisgned to a worker node, it will only run on that node, even if it fails at some point and spins up a new Pod</summary><br><b>
+<summary>True or False? Once a Pod is assisgned to a worker node, it will only run on that node, even if it fails at some point and spins up a new Pod ✅ </summary><br><b>
 
 True.
 </b></details>
 
 <details>
-<summary>True or False? Each Pod, when created, gets its own public IP address</summary><br><b>
+<summary>True or False? Each Pod, when created, gets its own public IP address ✅ </summary><br><b>
 
 False. Each Pod gets an IP address but an internal one and not publicly accessible.
 
 To make a Pod externally accessible, we need to use an object called Service in Kubernetes.
 </b></details>
 
-#### Static Pods
+#### Static Pods ❎
 
 <details>
 <summary>What are Static Pods?</summary><br><b>
@@ -613,19 +613,19 @@ Go to that directory and remove the manifest/definition of the staic Pod (`rm <S
 #### Pods Commands
 
 <details>
-<summary>How to check to which worker node the pods were scheduled to? In other words, how to check on which node a certain Pod is running?</summary><br><b>
+<summary>How to check to which worker node the pods were scheduled to? In other words, how to check on which node a certain Pod is running? ✅</summary><br><b>
 
 `kubectl get pods -o wide`
 </b></details>
 
 <details>
-<summary>How to delete a pod?</summary><br><b>
+<summary>How to delete a pod? ✅ </summary><br><b>
 
 `kubectl delete pod pod_name`
 </b></details>
 
 <details>
-<summary>List all the pods with the label "env=prod"</summary><br><b>
+<summary>List all the pods with the label "env=prod" :grey_exclamation: </summary><br><b>
 
 `k get po -l env=prod`
 
@@ -633,13 +633,13 @@ To count them: `k get po -l env=prod --no-headers | wc -l`
 </b></details>
 
 <details>
-<summary>How to list the pods in the current namespace?</summary><br><b>
+<summary>How to list the pods in the current namespace? ✅ </summary><br><b>
 
 `kubectl get po`
 </b></details>
 
 <details>
-<summary>How view all the pods running in all the namespaces?</summary><br><b>
+<summary>How view all the pods running in all the namespaces? :grey_exclamation: </summary><br><b>
 
 `kubectl get pods --all-namespaces`
 </b></details>
@@ -647,25 +647,25 @@ To count them: `k get po -l env=prod --no-headers | wc -l`
 #### Pods Troubleshooting and Debugging
 
 <details>
-<summary>You try to run a Pod but it's in "Pending" state. What might be the reason?</summary><br><b>
+<summary>You try to run a Pod but it's in "Pending" state. What might be the reason? ❎ </summary><br><b>
 
 One possible reason is that the scheduler which supposed to schedule Pods on nodes, is not running. To verify it, you can run `kubectl get po -A | grep scheduler` or check directly in `kube-system` namespace.
 </b></details>
 
 <details>
-<summary>What <code>kubectl logs [pod-name]</code> command does?</summary><br><b>
+<summary>What <code>kubectl logs [pod-name]</code> command does? ✅ </summary><br><b>
 
 Prints the logs for a container in a pod.
 </b></details>
 
 <details>
-<summary>What <code>kubectl describe pod [pod name] does?</code> command does?</summary><br><b>
+<summary>What <code>kubectl describe pod [pod name] does?</code> command does? ✅ </summary><br><b>
 
 Show details of a specific resource or group of resources.
 </b></details>
 
 <details>
-<summary>Create a static pod with the image <code>python</code> that runs the command <code>sleep 2017</code></summary><br><b>
+<summary>Create a static pod with the image <code>python</code> that runs the command <code>sleep 2017</code> ❎ </summary><br><b>
 
 First change to the directory tracked by kubelet for creating static pod: `cd /etc/kubernetes/manifests` (you can verify path by reading kubelet conf file)
 
