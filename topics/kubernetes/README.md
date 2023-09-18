@@ -1322,7 +1322,7 @@ You can specify any other number, given that your application knows how to scale
 ### ReplicaSets
 
 <details>
-<summary>What is the purpose of ReplicaSet?</summary><br><b>
+<summary>What is the purpose of ReplicaSet? :grey_exclamation: </summary><br><b>
 
 [kubernetes.io](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset): "A ReplicaSet's purpose is to maintain a stable set of replica Pods running at any given time. As such, it is often used to guarantee the availability of a specified number of identical Pods."
 
@@ -1330,7 +1330,7 @@ In simpler words, a ReplicaSet will ensure the specified number of Pods replicas
 </b></details>
 
 <details>
-<summary>What the following block of lines does?
+<summary>What the following block of lines does? ✅
 
 ```
 spec:
@@ -1353,19 +1353,19 @@ It defines a replicaset for Pods whose type is set to "backend" so at any given 
 </b></details>
 
 <details>
-<summary>What will happen when a Pod, created by ReplicaSet, is deleted directly with <code>kubectl delete po ...</code>?</summary><br><b>
+<summary>What will happen when a Pod, created by ReplicaSet, is deleted directly with <code>kubectl delete po ...</code>? ✅ </summary><br><b>
 
 The ReplicaSet will create a new Pod in order to reach the desired number of replicas.
 </b></details>
 
 <details>
-<summary>True or False? If a ReplicaSet defines 2 replicas but there 3 Pods running matching the ReplicaSet selector, it will do nothing</summary><br><b>
+<summary>True or False? If a ReplicaSet defines 2 replicas but there 3 Pods running matching the ReplicaSet selector, it will do nothing ❎ </summary><br><b>
 
 False. It will terminate one of the Pods to reach the desired state of 2 replicas.
 </b></details>
 
 <details>
-<summary>Describe the sequence of events in case of creating a ReplicaSet</summary><br><b>
+<summary>Describe the sequence of events in case of creating a ReplicaSet ❎ </summary><br><b>
 
 * The client (e.g. kubectl) sends a request to the API server to create a ReplicaSet
 * The Controller detects there is a new event requesting for a ReplicaSet
@@ -1377,13 +1377,13 @@ False. It will terminate one of the Pods to reach the desired state of 2 replica
 </b></details>
 
 <details>
-<summary>How to list ReplicaSets in the current namespace?</summary><br><b>
+<summary>How to list ReplicaSets in the current namespace? ✅ </summary><br><b>
 
 `kubectl get rs`
 </b></details>
 
 <details>
-<summary>Is it possible to delete ReplicaSet without deleting the Pods it created?</summary><br><b>
+<summary>Is it possible to delete ReplicaSet without deleting the Pods it created? ✅ </summary><br><b>
 
 Yes, with `--cascase=false`.
 
@@ -1391,13 +1391,13 @@ Yes, with `--cascase=false`.
 </b></details>
 
 <details>
-<summary>What is the default number of replicas if not explicitly specified?</summary><br><b>
+<summary>What is the default number of replicas if not explicitly specified? ✅ </summary><br><b>
 
 1
 </b></details>
 
 <details>
-<summary>What the following output of <code>kubectl get rs</code> means?
+<summary>What the following output of <code>kubectl get rs</code> means? ✅
 
 NAME                    DESIRED   CURRENT   READY   AGE
 web                     2         2         0       2m23s
@@ -1407,25 +1407,25 @@ The replicaset `web` has 2 replicas. It seems that the containers inside the Pod
 </b></details>
 
 <details>
-<summary>True or False? Pods specified by the selector field of ReplicaSet must be created by the ReplicaSet itself</summary><br><b>
+<summary>True or False? Pods specified by the selector field of ReplicaSet must be created by the ReplicaSet itself ✅ </summary><br><b>
 
 False. The Pods can be already running and initially they can be created by any object. It doesn't matter for the ReplicaSet and not a requirement for it to acquire and monitor them.
 </b></details>
 
 <details>
-<summary>True or False? In case of a ReplicaSet, if Pods specified in the selector field don't exists, the ReplicaSet will wait for them to run before doing anything</summary><br><b>
+<summary>True or False? In case of a ReplicaSet, if Pods specified in the selector field don't exists, the ReplicaSet will wait for them to run before doing anything ✅ </summary><br><b>
 
 False. It will take care of running the missing Pods.
 </b></details>
 
 <details>
-<summary>In case of a ReplicaSet, Which field is mandatory in the spec section?</summary><br><b>
+<summary>In case of a ReplicaSet, Which field is mandatory in the spec section? ❎ </summary><br><b>
 
 The field `template` in spec section is mandatory. It's used by the ReplicaSet to create new Pods when needed.
 </b></details>
 
 <details>
-<summary>You've created a ReplicaSet, how to check whether the ReplicaSet found matching Pods or it created new Pods?</summary><br><b>
+<summary>You've created a ReplicaSet, how to check whether the ReplicaSet found matching Pods or it created new Pods? ✅ </summary><br><b>
 
 `kubectl describe rs <ReplicaSet Name>`
 
@@ -1433,31 +1433,31 @@ It will be visible under `Events` (the very last lines)
 </b></details>
 
 <details>
-<summary>True or False? Deleting a ReplicaSet will delete the Pods it created</summary><br><b>
+<summary>True or False? Deleting a ReplicaSet will delete the Pods it created ✅ </summary><br><b>
 
 True (and not only the Pods but anything else it created).
 </b></details>
 
 <details>
-<summary>True or False? Removing the label from a Pod that is tracked by a ReplicaSet, will cause the ReplicaSet to create a new Pod</summary><br><b>
+<summary>True or False? Removing the label from a Pod that is tracked by a ReplicaSet, will cause the ReplicaSet to create a new Pod ✅ </summary><br><b>
 
 True. When the label, used by a ReplicaSet in the selector field, removed from a Pod, that Pod no longer controlled by the ReplicaSet and the ReplicaSet will create a new Pod to compensate for the one it "lost".
 </b></details>
 
 <details>
-<summary>How to scale a deployment to 8 replicas?</code></summary><br><b>
+<summary>How to scale a deployment to 8 replicas?</code> ❎ </summary><br><b>
 
 kubectl scale deploy <DEPLOYMENT_NAME> --replicas=8
 </b></details>
 
 <details>
-<summary>ReplicaSets are running the moment the user executed the command to create them (like <code>kubectl create -f rs.yaml</code>)</summary><br><b>
+<summary>ReplicaSets are running the moment the user executed the command to create them (like <code>kubectl create -f rs.yaml</code>) ✅ </summary><br><b>
 
 False. It can take some time, depends on what exactly you are running. To see if they are up and running, run `kubectl get rs` and watch the 'READY' column.
 </b></details>
 
 <details>
-<summary>How to expose a ReplicaSet as a new service?</summary><br><b>
+<summary>How to expose a ReplicaSet as a new service? :grey_exclamation: </summary><br><b>
 
 `kubectl expose rs <ReplicaSet Name> --name=<Service Name> --target-port=<Port to expose> --type=NodePort`
 
@@ -1467,7 +1467,7 @@ Few notes:
 </b></details>
 
 <details>
-<summary>Fix the following ReplicaSet definition
+<summary>Fix the following ReplicaSet definition ✅
 
 ```yaml
 apiVersion: apps/v1
@@ -1496,7 +1496,7 @@ kind should be ReplicaSet and not ReplicaCet :)
 </b></details>
 
 <details>
-<summary>Fix the following ReplicaSet definition
+<summary>Fix the following ReplicaSet definition ✅
 
 ```yaml
 apiVersion: apps/v1
@@ -1525,37 +1525,37 @@ The selector doesn't match the label (cache vs cachy). To solve it, fix cachy so
 </b></details>
 
 <details>
-<summary>How to check which container image was used as part of replica set called "repli"?</summary><br><b>
+<summary>How to check which container image was used as part of replica set called "repli"? ✅ </summary><br><b>
 
 `k describe rs repli | grep -i image`
 </b></details>
 
 <details>
-<summary>How to check how many Pods are ready as part of a replica set called "repli"?</summary><br><b>
+<summary>How to check how many Pods are ready as part of a replica set called "repli"? ✅ </summary><br><b>
 
 `k describe rs repli | grep -i "Pods Status"`
 </b></details>
 
 <details>
-<summary>How to delete a replica set called "rori"?</summary><br><b>
+<summary>How to delete a replica set called "rori"? ✅ </summary><br><b>
 
 `k delete rs rori`
 </b></details>
 
 <details>
-<summary>How to modify a replica set called "rori" to use a different image?</summary><br><b>
+<summary>How to modify a replica set called "rori" to use a different image? ✅ </summary><br><b>
 
 `k edis rs rori`
 </b></details>
 
 <details>
-<summary>Scale up a replica set called "rori" to run 5 Pods instead of 2</summary><br><b>
+<summary>Scale up a replica set called "rori" to run 5 Pods instead of 2 ✅ </summary><br><b>
 
 `k scale rs rori --replicas=5`
 </b></details>
 
 <details>
-<summary>Scale down a replica set called "rori" to run 1 Pod instead of 5</summary><br><b>
+<summary>Scale down a replica set called "rori" to run 1 Pod instead of 5 ✅ </summary><br><b>
 
 `k scale rs rori --replicas=1`
 </b></details>
