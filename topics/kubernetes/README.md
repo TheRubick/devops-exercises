@@ -77,8 +77,8 @@ What's your goal?
 
 |Name|Topic|Objective & Instructions|Solution|Comments|
 |--------|--------|------|----|----|
-| My First Pod | Pods | [Exercise](pods_01.md) | [Solution](solutions/pods_01_solution.md)
-| "Killing" Containers | Pods | [Exercise](killing_containers.md) | [Solution](solutions/killing_containers.md)
+| My First Pod | Pods | [Exercise](pods_01.md) | [Solution](solutions/pods_01_solution.md) | ✅ |
+| "Killing" Containers | Pods | [Exercise](killing_containers.md) | [Solution](solutions/killing_containers.md) | ❎ |
 
 ### Service
 
@@ -90,16 +90,16 @@ What's your goal?
 
 |Name|Topic|Objective & Instructions|Solution|Comments|
 |--------|--------|------|----|----|
-| Creating a ReplicaSet | ReplicaSet | [Exercise](replicaset_01.md) | [Solution](solutions/replicaset_01_solution.md)
-| Operating ReplicaSets | ReplicaSet | [Exercise](replicaset_02.md) | [Solution](solutions/replicaset_02_solution.md)
-| ReplicaSets Selectors | ReplicaSet | [Exercise](replicaset_03.md) | [Solution](solutions/replicaset_03_solution.md)
+| Creating a ReplicaSet | ReplicaSet | [Exercise](replicaset_01.md) | [Solution](solutions/replicaset_01_solution.md) | ✅ |
+| Operating ReplicaSets | ReplicaSet | [Exercise](replicaset_02.md) | [Solution](solutions/replicaset_02_solution.md) | ✅ |
+| ReplicaSets Selectors | ReplicaSet | [Exercise](replicaset_03.md) | [Solution](solutions/replicaset_03_solution.md) | ✅ |
 
 ### Labels and Selectors
 
 |Name|Topic|Objective & Instructions|Solution|Comments|
 |--------|--------|------|----|----|
-| Labels and Selectors 101 | Labels, Selectors | [Exercise](exercises/labels_and_selectors/exercise.md) | [Solution](exercises/labels_and_selectors/solution.md)
-| Node Selectors | Labels, Selectors | [Exercise](exercises/node_selectors/exercise.md) | [Solution](exercises/node_selectors/solution.md)
+| Labels and Selectors 101 | Labels, Selectors | [Exercise](exercises/labels_and_selectors/exercise.md) | [Solution](exercises/labels_and_selectors/solution.md) | :grey_exclamation: |
+| Node Selectors | Labels, Selectors | [Exercise](exercises/node_selectors/exercise.md) | [Solution](exercises/node_selectors/solution.md) | :grey_exclamation: |
 
 
 ### Scheduler
@@ -676,13 +676,13 @@ Now create the definition/manifest in that directory
 ### Labels and Selectors
 
 <details>
-<summary>Explain Labels</summary><br><b>
+<summary>Explain Labels :grey_exclamation: </summary><br><b>
 
 [Kubernetes.io](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/): "Labels are key/value pairs that are attached to objects, such as pods. Labels are intended to be used to specify identifying attributes of objects that are meaningful and relevant to users, but do not directly imply semantics to the core system. Labels can be used to organize and to select subsets of objects. Labels can be attached to objects at creation time and subsequently added and modified at any time. Each object can have a set of key/value labels defined. Each Key must be unique for a given object."
 </b></details>
 
 <details>
-<summary>Explain selectors</summary><br><b>
+<summary>Explain selectors ❎ </summary><br><b>
 
 [Kubernetes.io](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#label-selectors): "Unlike names and UIDs, labels do not provide uniqueness. In general, we expect many objects to carry the same label(s).
 
@@ -692,32 +692,32 @@ The API currently supports two types of selectors: equality-based and set-based.
 </b></details>
 
 <details>
-<summary>Provide some actual examples of how labels are used</summary><br><b>
+<summary>Provide some actual examples of how labels are used :grey_exclamation: </summary><br><b>
 
 * Can be used by the scheduler to place certain Pods (with certain labels) on specific nodes
 * Used by replicasets to track pods which have to be scaled
 </b></details>
 
 <details>
-<summary>What are Annotations?</summary><br><b>
+<summary>What are Annotations? ❎ </summary><br><b>
 
 [Kubernetes.io](https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/): "You can use Kubernetes annotations to attach arbitrary non-identifying metadata to objects. Clients such as tools and libraries can retrieve this metadata."
 </b></details>
 
 <details>
-<summary>How annotations different from labels?</summary><br><b>
+<summary>How annotations different from labels? ✅ </summary><br><b>
 
 [Kuberenets.io](Labels can be used to select objects and to find collections of objects that satisfy certain conditions. In contrast, annotations are not used to identify and select objects. The metadata in an annotation can be small or large, structured or unstructured, and can include characters not permitted by labels.): "Labels can be used to select objects and to find collections of objects that satisfy certain conditions. In contrast, annotations are not used to identify and select objects. The metadata in an annotation can be small or large, structured or unstructured, and can include characters not permitted by labels."
 </b></details>
 
 <details>
-<summary>How to view the logs of a container running in a Pod?</summary><br><b>
+<summary>How to view the logs of a container running in a Pod? ✅ </summary><br><b>
 
 `k logs POD_NAME`
 </b></details>
 
 <details>
-<summary>There are two containers inside a Pod called "some-pod". What will happen if you run <code>kubectl logs some-pod</code></summary><br><b>
+<summary>There are two containers inside a Pod called "some-pod". What will happen if you run <code>kubectl logs some-pod </code> ❎ </summary><br><b>
 
 It won't work because there are two containers inside the Pod and you need to specify one of them with `kubectl logs POD_NAME -c CONTAINER_NAME`
 </b></details>
@@ -725,7 +725,7 @@ It won't work because there are two containers inside the Pod and you need to sp
 ### Deployments
 
 <details>
-<summary>What is a "Deployment" in Kubernetes?</summary><br><b>
+<summary>What is a "Deployment" in Kubernetes? :grey_exclamation: </summary><br><b>
 
 A Kubernetes Deployment is used to tell Kubernetes how to create or modify instances of the pods that hold a containerized application.
 Deployments can scale the number of replica pods, enable rollout of updated code in a controlled manner, or roll back to an earlier deployment version if necessary. 
@@ -734,7 +734,7 @@ A Deployment is a declarative statement for the desired state for Pods and Repli
 </b></details>
 
 <details>
-<summary>How to create a deployment with the image "nginx:alpine"?</code></summary><br><b>
+<summary>How to create a deployment with the image "nginx:alpine"?</code> ✅ </summary><br><b>
 
 `kubectl create deployment my_first_deployment --image=nginx:alpine`
 
@@ -755,7 +755,7 @@ EOF
 </b></details>
 
 <details>
-<summary>How to verify a deployment was created?</code></summary><br><b>
+<summary>How to verify a deployment was created?</code> ✅ </summary><br><b>
 
 `kubectl get deployments` or `kubectl get deploy`
 
@@ -763,13 +763,13 @@ This command lists all the Deployment objects created and exist in the cluster. 
 </b></details>
 
 <details>
-<summary>How to edit a deployment?</code></summary><br><b>
+<summary>How to edit a deployment?</code> ✅ </summary><br><b>
 
 `kubectl edit deployment <DEPLOYMENT_NAME>`
 </b></details>
 
 <details>
-<summary>What happens after you edit a deployment and change the image?</summary><br><b>
+<summary>What happens after you edit a deployment and change the image? :grey_exclamation: </summary><br><b>
 
 The pod will terminate and another, new pod, will be created.
 
@@ -777,7 +777,7 @@ Also, when looking at the replicaset, you'll see the old replica doesn't have an
 </b></details>
 
 <details>
-<summary>How to delete a deployment?</summary><br><b>
+<summary>How to delete a deployment? ✅ </summary><br><b>
 
 One way is by specifying the deployment name: `kubectl delete deployment [deployment_name]`
 
@@ -785,13 +785,13 @@ Another way is using the deployment configuration file: `kubectl delete -f deplo
 </b></details>
 
 <details>
-<summary>What happens when you delete a deployment?</summary><br><b>
+<summary>What happens when you delete a deployment? ✅ </summary><br><b>
 
 The pod related to the deployment will terminate and the replicaset will be removed.
 </b></details>
 
 <details>
-<summary>What happens behind the scenes when you create a Deployment object?</summary><br><b>
+<summary>What happens behind the scenes when you create a Deployment object? :grey_exclamation: </summary><br><b>
 
 The following occurs when you run `kubectl create deployment some_deployment --image=nginx`
 
@@ -802,7 +802,7 @@ The following occurs when you run `kubectl create deployment some_deployment --i
 </b></details>
 
 <details>
-<summary>How make an app accessible on private or external network?</summary><br><b>
+<summary>How make an app accessible on private or external network? ✅ </summary><br><b>
 
 Using a Service.
 </b></details>
@@ -812,7 +812,7 @@ Using a Service.
 </b></details>
 
 <details>
-<summary>Fix the following deployment manifest
+<summary>Fix the following deployment manifest ✅
 
 ```yaml
 apiVersion: apps/v1
@@ -846,7 +846,7 @@ Change `kind: Deploy` to `kind: Deployment`
 </b></details>
 
 <details>
-<summary>Fix the following deployment manifest
+<summary>Fix the following deployment manifest ✅
 
 ```yaml
 apiVersion: apps/v1
@@ -882,21 +882,21 @@ The selector doesn't match the label (dep vs depdep). To solve it, fix depdep so
 #### Deployments Commands
 
 <details>
-<summary>Create a file definition/manifest of a deployment called "dep", with 3 replicas that uses the image 'redis'</summary><br><b>
+<summary>Create a file definition/manifest of a deployment called "dep", with 3 replicas that uses the image 'redis' ❎ </summary><br><b>
 
 `k create deploy dep -o yaml --image=redis --dry-run=client --replicas 3 > deployment.yaml `
 
 </b></details>
 
 <details>
-<summary>Delete the deployment `depdep`</summary><br><b>
+<summary>Delete the deployment `depdep` ✅ </summary><br><b>
 
 `k delete deploy depdep`
 
 </b></details>
 
 <details>
-<summary>Create a deployment called "pluck" using the image "redis" and make sure it runs 5 replicas</summary><br><b>
+<summary>Create a deployment called "pluck" using the image "redis" and make sure it runs 5 replicas ✅ </summary><br><b>
 
 `kubectl create deployment pluck --image=redis`
 
@@ -904,7 +904,7 @@ The selector doesn't match the label (dep vs depdep). To solve it, fix depdep so
 </b></details>
 
 <details>
-<summary>Create a deployment with the following properties:
+<summary>Create a deployment with the following properties: ❎
 
 * called "blufer"
 * using the image "python"
