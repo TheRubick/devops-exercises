@@ -84,7 +84,7 @@ What's your goal?
 
 |Name|Topic|Objective & Instructions|Solution|Comments|
 |--------|--------|------|----|----|
-| Creating a Service | Service | [Exercise](services_01.md) | [Solution](solutions/services_01_solution.md)
+| Creating a Service | Service | [Exercise](services_01.md) | [Solution](solutions/services_01_solution.md) | ✅ |
 
 ### ReplicaSet
 
@@ -933,7 +933,7 @@ spec:
 ### Services
 
 <details>
-<summary>What is a Service in Kubernetes?</summary><br><b>
+<summary>What is a Service in Kubernetes? :grey_exclamation: </summary><br><b>
 
 "An abstract way to expose an application running on a set of Pods as a network service." - read more [here](https://kubernetes.io/docs/concepts/services-networking/service)
 
@@ -941,7 +941,7 @@ In simpler words, it allows you to add an internal or external connectivity to a
 </b></details>
 
 <details>
-<summary>Place the components in the right placeholders in regards to Kubernetes service<br>
+<summary>Place the components in the right placeholders in regards to Kubernetes service ✅ <br>
 <img src="images/service_exercise.png"/>
 </summary><br><b>
 
@@ -951,7 +951,7 @@ In simpler words, it allows you to add an internal or external connectivity to a
 
 
 <details>
-<summary>How to create a service for an existing deployment called "alle" on port 8080 so the Pod(s) accessible via a Load Balancer?</summary><br><b>
+<summary>How to create a service for an existing deployment called "alle" on port 8080 so the Pod(s) accessible via a Load Balancer? :grey_exclamation: </summary><br><b>
 
 The imperative way:
 
@@ -959,25 +959,25 @@ The imperative way:
 </b></details>
 
 <details>
-<summary>True or False? The lifecycle of Pods and Services isn't connected so when a Pod dies, the Service still stays </summary><br><b>
+<summary>True or False? The lifecycle of Pods and Services isn't connected so when a Pod dies, the Service still stays ✅ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>After creating a service, how to check it was created?</summary><br><b>
+<summary>After creating a service, how to check it was created? ✅ </summary><br><b>
 
 `kubectl get svc`
 </b></details>
 
 <details>
-<summary>What's the default Service type?</summary><br><b>
+<summary>What's the default Service type? ✅ </summary><br><b>
 
 ClusterIP - used for internal communication.
 </b></details>
 
 <details>
-<summary>What Service types are there?</summary><br><b>
+<summary>What Service types are there? :grey_exclamation: </summary><br><b>
 
 * ClusterIP
 * NodePort
@@ -988,13 +988,13 @@ More on this topic [here](https://kubernetes.io/docs/concepts/services-networkin
 </b></details>
 
 <details>
-<summary>How Service and Deployment are connected?</summary><br><b>
+<summary>How Service and Deployment are connected? ❎ </summary><br><b>
 
 The truth is they aren't connected. Service points to Pod(s) directly, without connecting to the Deployment in any way.
 </b></details>
 
 <details>
-<summary>What are important steps in defining/adding a Service?</summary><br><b>
+<summary>What are important steps in defining/adding a Service? :grey_exclamation: </summary><br><b>
 
 1. Making sure that targetPort of the Service is matching the containerPort of the Pod
 2. Making sure that selector matches at least one of the Pod's labels
@@ -1002,14 +1002,14 @@ The truth is they aren't connected. Service points to Pod(s) directly, without c
 </b></details>
 
 <details>
-<summary>What is the default service type in Kubernetes and what is it used for?</summary><br><b>
+<summary>What is the default service type in Kubernetes and what is it used for? ✅ </summary><br><b>
 
 The default is ClusterIP and it's used for exposing a port internally. It's useful when you want to enable internal communication between Pods and prevent any external access.
 
 </b></details>
 
 <details>
-<summary>How to get information on a certain service?</summary><br><b>
+<summary>How to get information on a certain service? ✅ </summary><br><b>
 
 `kubctl describe service <SERVICE_NAME>`
 
@@ -1018,7 +1018,7 @@ It's more common to use `kubectl describe svc ...`
 </b></details>
 
 <details>
-<summary>What the following command does?
+<summary>What the following command does? ✅
 
 ```
 kubectl expose rs some-replicaset --name=replicaset-svc --target-port=2017 --type=NodePort
@@ -1029,7 +1029,7 @@ It exposes a ReplicaSet by creating a service called 'replicaset-svc'. The expos
 </b></details>
 
 <details>
-<summary>True or False? the target port, in the case of running the following command, will be exposed only on one of the Kubernetes cluster nodes but it will routed to all the pods
+<summary>True or False? the target port, in the case of running the following command, will be exposed only on one of the Kubernetes cluster nodes but it will routed to all the pods ✅
 
 ```
 kubectl expose rs some-replicaset --name=replicaset-svc --target-port=2017 --type=NodePort
@@ -1040,13 +1040,13 @@ False. It will be exposed on every node of the cluster and will be routed to one
 </b></details>
 
 <details>
-<summary>How to verify that a certain service configured to forward the requests to a given pod</summary><br><b>
+<summary>How to verify that a certain service configured to forward the requests to a given pod ❎ </summary><br><b>
 
 Run `kubectl describe service` and see if the IPs from "Endpoints" match any IPs from the output of `kubectl get pod -o wide`
 </b></details>
 
 <details>
-<summary>Explain what will happen when running apply on the following block
+<summary>Explain what will happen when running apply on the following block ✅
 
 ```
 apiVersion: v1
@@ -1072,7 +1072,7 @@ The selector used by the Service to know to which Pods to forward the requests. 
 </b></details>
 
 <details>
-<summary>How to turn the following service into an external one?
+<summary>How to turn the following service into an external one? ❎
 
 ```
 spec:
@@ -1101,31 +1101,31 @@ spec:
 </b></details>
 
 <details>
-<summary>What would you use to route traffic from outside the Kubernetes cluster to services within a cluster?</summary><br><b>
+<summary>What would you use to route traffic from outside the Kubernetes cluster to services within a cluster? ✅  </summary><br><b>
 
 Ingress
 </b></details>
 
 <details>
-<summary>True or False? When "NodePort" is used, "ClusterIP" will be created automatically?</summary><br><b>
+<summary>True or False? When "NodePort" is used, "ClusterIP" will be created automatically? ❎ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>When would you use the "LoadBalancer" type</summary><br><b>
+<summary>When would you use the "LoadBalancer" type ❎ </summary><br><b>
 
 Mostly when you would like to combine it with cloud provider's load balancer
 </b></details>
 
 <details>
-<summary>How would you map a service to an external address?</summary><br><b>
+<summary>How would you map a service to an external address? ✅ </summary><br><b>
 
 Using the 'ExternalName' directive.
 </b></details>
 
 <details>
-<summary>Describe in detail what happens when you create a service</summary><br><b>
+<summary>Describe in detail what happens when you create a service ❎ </summary><br><b>
 
 1. Kubectl sends a request to the API server to create a Service
 2. The controller detects there is a new Service
@@ -1136,20 +1136,20 @@ Using the 'ExternalName' directive.
 </b></details>
 
 <details>
-<summary>How to list the endpoints of a certain app?</summary><br><b>
+<summary>How to list the endpoints of a certain app? ❎ </summary><br><b>
 
 `kubectl get ep <name>`
 </b></details>
 
 <details>
-<summary>How can you find out information on a Service related to a certain Pod if all you can use is <code>kubectl exec <POD_NAME> -- </code></summary><br><b>
+<summary>How can you find out information on a Service related to a certain Pod if all you can use is <code>kubectl exec <POD_NAME> -- </code> ❎ </summary><br><b>
 
 You can run `kubectl exec <POD_NAME> -- env` which will give you a couple environment variables related to the Service.<br>
 Variables such as `[SERVICE_NAME]_SERVICE_HOST`, `[SERVICE_NAME]_SERVICE_PORT`, ...
 </b></details>
 
 <details>
-<summary>Describe what happens when a container tries to connect with its corresponding Service for the first time. Explain who added each of the components you include in your description</summary><br><b>
+<summary>Describe what happens when a container tries to connect with its corresponding Service for the first time. Explain who added each of the components you include in your description ❎ </summary><br><b>
 
   - The container looks at the nameserver defined in /etc/resolv.conf
   - The container queries the nameserver so the address is resolved to the Service IP
@@ -1163,7 +1163,7 @@ Explanation as to who added them:
 </b></details>
 
 <details>
-<summary>Describe in high level what happens when you run <code>kubctl expose deployment remo --type=LoadBalancer --port 8080</code></summary><br><b>
+<summary>Describe in high level what happens when you run <code>kubctl expose deployment remo --type=LoadBalancer --port 8080</code> ❎ </summary><br><b>
 
 1. Kubectl sends a request to Kubernetes API to create a Service object
 2. Kubernetes asks the cloud provider (e.g. AWS, GCP, Azure) to provision a load balancer
@@ -1171,13 +1171,13 @@ Explanation as to who added them:
 </b></details>
 
 <details>
-<summary>After creating a service that forwards incoming external traffic to the containerized application, how to make sure it works?</summary><br><b>
+<summary>After creating a service that forwards incoming external traffic to the containerized application, how to make sure it works? ✅ </summary><br><b>
 
 You can run `curl <SERVICE IP>:<SERVICE PORT>` to examine the output.
 </b></details>
 
 <details>
-<summary>An internal load balancer in Kubernetes is called <code>____</code> and an external load balancer is called <code>____</code></summary><br><b>
+<summary>An internal load balancer in Kubernetes is called <code>____</code> and an external load balancer is called <code>____</code> ✅ </summary><br><b>
 
 An internal load balancer in Kubernetes is called Service and an external load balancer is Ingress
 </b></details>
@@ -1185,7 +1185,7 @@ An internal load balancer in Kubernetes is called Service and an external load b
 ### Ingress
 
 <details>
-<summary>What is Ingress?</summary><br><b>
+<summary>What is Ingress? ✅ </summary><br><b>
 
 From Kubernetes docs: "Ingress exposes HTTP and HTTPS routes from outside the cluster to services within the cluster. Traffic routing is controlled by rules defined on the Ingress resource."
 
@@ -1193,7 +1193,7 @@ Read more [here](https://kubernetes.io/docs/concepts/services-networking/ingress
 </b></details>
 
 <details>
-<summary>Complete the following configuration file to make it Ingress
+<summary>Complete the following configuration file to make it Ingress ❎
 
 ```
 metadata:
@@ -1221,7 +1221,7 @@ spec:
 
 
 <details>
-<summary>Explain the meaning of "http", "host" and "backend" directives
+<summary>Explain the meaning of "http", "host" and "backend" directives :grey_exclamation:
 
 ```
 apiVersion: networking.k8s.io/v1
@@ -1245,13 +1245,13 @@ backend is referencing the internal service (serviceName is the name under metad
 </b></details>
 
 <details>
-<summary>Why using a wildcard in ingress host may lead to issues?</summary><br><b>
+<summary>Why using a wildcard in ingress host may lead to issues? :grey_exclamation: </summary><br><b>
 
 The reason you should not wildcard value in a host (like `- host: *`) is because you basically tell your Kubernetes cluster to forward all the traffic to the container where you used this ingress. This may cause the entire cluster to go down.
 </b></details>
 
 <details>
-<summary>What is Ingress Controller?</summary><br><b>
+<summary>What is Ingress Controller? ❎ </summary><br><b>
 
 An implementation for Ingress. It's basically another pod (or set of pods) that does evaluates and processes Ingress rules and this it manages all the redirections. 
 
@@ -1259,32 +1259,32 @@ There are multiple Ingress Controller implementations (the one from Kubernetes i
 </b></details>
 
 <details>
-<summary>What are some use cases for using Ingress?</summary><br><b>
+<summary>What are some use cases for using Ingress? ✅ </summary><br><b>
 
 * Multiple sub-domains (multiple host entries, each with its own service)
 * One domain with multiple services (multiple paths where each one is mapped to a different service/application)
 </b></details>
 
 <details>
-<summary>How to list Ingress in your namespace?</summary><br><b>
+<summary>How to list Ingress in your namespace? ✅ </summary><br><b>
 
 kubectl get ingress
 </b></details>
 
 <details>
-<summary>What is Ingress Default Backend?</summary><br><b>
+<summary>What is Ingress Default Backend? ❎ </summary><br><b>
 
 It specifies what do with an incoming request to the Kubernetes cluster that isn't mapped to any backend (= no rule to for mapping the request to a service). If the default backend service isn't defined, it's recommended to define so users still see some kind of message instead of nothing or unclear error.
 </b></details>
 
 <details>
-<summary>How to configure a default backend?</summary><br><b>
+<summary>How to configure a default backend? ❎ </summary><br><b>
 
 Create Service resource that specifies the name of the default backend as reflected in `kubectl describe ingress ...` and the port under the ports section.
 </b></details>
 
 <details>
-<summary>How to configure TLS with Ingress?</summary><br><b>
+<summary>How to configure TLS with Ingress? ❎ </summary><br><b>
 
 Add tls and secretName entries.
 
@@ -1298,19 +1298,19 @@ spec:
 </b></details>
 
 <details>
-<summary>True or False? When configuring Ingress with TLS, the Secret component must be in the same namespace as the Ingress component</summary><br><b>
+<summary>True or False? When configuring Ingress with TLS, the Secret component must be in the same namespace as the Ingress component ✅ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>Which Kubernetes concept would you use to control traffic flow at the IP address or port level? </summary><br><b>
+<summary>Which Kubernetes concept would you use to control traffic flow at the IP address or port level? ❎ </summary><br><b>
 
 Network Policies
 </b></details>
 
 <details>
-<summary>How to scale an application (deplyoment) so it runs more than one instance of the application?</summary><br><b>
+<summary>How to scale an application (deplyoment) so it runs more than one instance of the application? ✅ </summary><br><b>
 
 To run two instances of the applicaation?
 
