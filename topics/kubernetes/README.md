@@ -1563,20 +1563,20 @@ The selector doesn't match the label (cache vs cachy). To solve it, fix cachy so
 ### DaemonSet
 
 <details>
-<summary>What's a DaemonSet?</summary><br><b>
+<summary>What's a DaemonSet? ❎ </summary><br><b>
 
 [Kubernetes.io](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset): "A DaemonSet ensures that all (or some) Nodes run a copy of a Pod. As nodes are added to the cluster, Pods are added to them. As nodes are removed from the cluster, those Pods are garbage collected. Deleting a DaemonSet will clean up the Pods it created."
 </b></details>
 
 <details>
-<summary>What's the difference between a ReplicaSet and DaemonSet?</summary><br><b>
+<summary>What's the difference between a ReplicaSet and DaemonSet? :grey_exclamation: </summary><br><b>
 
 A ReplicaSet's purpose is to maintain a stable set of replica Pods running at any given time.
 A DaemonSet ensures that all Nodes run a copy of a Pod. 
 </b></details>
 
 <details>
-<summary>What are some use cases for using a DaemonSet?</summary><br><b>
+<summary>What are some use cases for using a DaemonSet? :grey_exclamation: </summary><br><b>
 
 * Monitoring: You would like to perform monitoring on every node part of cluster. For example datadog pod runs on  every node using a daemonset
 * Logging: You would like to having logging set up on every node part of your cluster
@@ -1594,7 +1594,7 @@ Starting 1.12, it's achieved with regular scheduler and node affinity.
 #### DaemonSet - Commands
 
 <details>
-<summary>How to list all daemonsets in the current namespace?</summary><br><b>
+<summary>How to list all daemonsets in the current namespace? ✅ </summary><br><b>
 
 `kubectl get ds`
 </b></details>
@@ -1602,7 +1602,7 @@ Starting 1.12, it's achieved with regular scheduler and node affinity.
 ### StatefulSet
 
 <details>
-<summary>Explain StatefulSet</summary><br><b>
+<summary>Explain StatefulSet ✅ </summary><br><b>
 
 StatefulSet is the workload API object used to manage stateful applications. Manages the deployment and scaling of a set of Pods, and provides guarantees about the ordering and uniqueness of these Pods.[Learn more](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
 </b></details>
@@ -1612,14 +1612,14 @@ StatefulSet is the workload API object used to manage stateful applications. Man
 #### Volumes
 
 <details>
-<summary>What is a volume in regards to Kubernetes?</summary><br><b>
+<summary>What is a volume in regards to Kubernetes? ❎ </summary><br><b>
 
 A directory accessible by the containers inside a certain Pod and containers. The mechanism responsible for creating the directory, managing it, ... mainly depends on the volume type.
 
 </b></details>
 
 <details>
-<summary>What volume types are you familiar with?</summary><br><b>
+<summary>What volume types are you familiar with? ❎ </summary><br><b>
 
 * emptyDir: created when a Pod assigned to a node and ceases to exist when the Pod is no longer running on that node
 * hostPath: mounts a path from the host itself. Usually not used due to security risks but has multiple use-cases where it's needed like access to some internal host paths (`/sys`, `/var/lib`, etc.)
@@ -1627,7 +1627,7 @@ A directory accessible by the containers inside a certain Pod and containers. Th
 </b></details>
 
 <details>
-<summary>Which problems, volumes in Kubernetes solve?</summary><br><b>
+<summary>Which problems, volumes in Kubernetes solve? ✅ </summary><br><b>
 
 1. Sharing files between containers running in the same Pod
 2. Storage in containers is ephemeral - it usually doesn't last for long. For example, when a container crashes, you lose all on-disk data. Certain volumes allows to manage such situation by persistent volumes
@@ -1635,14 +1635,14 @@ A directory accessible by the containers inside a certain Pod and containers. Th
 </b></details>
 
 <details>
-<summary>Explain ephemeral volume types vs. persistent volumes in regards to Pods</summary><br><b>
+<summary>Explain ephemeral volume types vs. persistent volumes in regards to Pods ✅ </summary><br><b>
 
 Ephemeral volume types have the lifetime of a pod as opposed to persistent volumes which exist beyond the lifetime of a Pod.
 
 </b></details>
 
 <details>
-<summary>Provide at least one use-case for each of the following volume types:
+<summary>Provide at least one use-case for each of the following volume types: ✅
 
 * emptyDir
 * hostPath
@@ -1655,7 +1655,7 @@ Ephemeral volume types have the lifetime of a pod as opposed to persistent volum
 ### Networking
 
 <details>
-<summary>True or False? By default there is no communication between two Pods in two different namespaces</summary><br><b>
+<summary>True or False? By default there is no communication between two Pods in two different namespaces ❎ </summary><br><b>
 
 False. By default two Pods in two different namespaces are able to communicate with each other.
 
@@ -1675,7 +1675,7 @@ And ping the IP of test-prod Pod you get earlier.You'll see that there is commun
 ### Network Policies
 
 <details>
-<summary>Explain Network Policies</summary><br><b>
+<summary>Explain Network Policies ❎ </summary><br><b>
 
 [kubernetes.io](https://kubernetes.io/docs/concepts/services-networking/network-policies): "NetworkPolicies are an application-centric construct which allow you to specify how a pod is allowed to communicate with various network "entities"..."
 
@@ -1684,7 +1684,7 @@ In simpler words, Network Policies specify how pods are allowed/disallowed to co
 </b></details>
 
 <details>
-<summary>What are some use cases for using Network Policies?</summary><br><b>
+<summary>What are some use cases for using Network Policies? :grey_exclamation: </summary><br><b>
 
   - Security:  You want to prevent from everyone to communicate with a certain pod for security reasons
   - Controlling network traffic: You would like to deny network flow between two specific nodes
@@ -1692,19 +1692,19 @@ In simpler words, Network Policies specify how pods are allowed/disallowed to co
 </b></details>
 
 <details>
-<summary>True or False? If no network policies are applied to a pod, then no connections to or from it are allowed</summary><br><b>
+<summary>True or False? If no network policies are applied to a pod, then no connections to or from it are allowed ✅ </summary><br><b>
 
 False. By default pods are non-isolated.
 </b></details>
 
 <details>
-<summary>In case of two pods, if there is an egress policy on the source denining traffic and ingress policy on the destination that allows traffic then, traffic will be allowed or denied?</summary><br><b>
+<summary>In case of two pods, if there is an egress policy on the source denining traffic and ingress policy on the destination that allows traffic then, traffic will be allowed or denied? ✅ </summary><br><b>
 
 Denied. Both source and destination policies has to allow traffic for it to be allowed.
 </b></details>
 
 <details>
-<summary>Where Kubernetes cluster stores the cluster state?</summary><br><b>
+<summary>Where Kubernetes cluster stores the cluster state? ✅ </summary><br><b>
 
 etcd
 </b></details>
@@ -1712,7 +1712,7 @@ etcd
 ### etcd
 
 <details>
-<summary>What is etcd?</summary><br><b>
+<summary>What is etcd? ✅ </summary><br><b>
 
 etcd is an open source distributed key-value store used to hold and manage the critical information that distributed systems need to keep running.
 
@@ -1721,25 +1721,25 @@ etcd is an open source distributed key-value store used to hold and manage the c
 </b></details>
 
 <details>
-<summary>True or False? Etcd holds the current status of any kubernetes component</summary><br><b>
+<summary>True or False? Etcd holds the current status of any kubernetes component ✅ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>True or False? The API server is the only component which communicates directly with etcd</summary><br><b>
+<summary>True or False? The API server is the only component which communicates directly with etcd ✅ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>True or False? application data is not stored in etcd</summary><br><b>
+<summary>True or False? application data is not stored in etcd ✅ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>Why etcd? Why not some SQL or NoSQL database?</summary><br><b>
+<summary>Why etcd? Why not some SQL or NoSQL database? ❎ </summary><br><b>
 
 When chosen as the data store etcd was (and still is of course):
 
@@ -1753,13 +1753,13 @@ When chosen as the data store etcd was (and still is of course):
 ### Namespaces
 
 <details>
-<summary>What are namespaces?</summary><br><b>
+<summary>What are namespaces? ✅ </summary><br><b>
 
 Namespaces allow you split your cluster into virtual clusters where you can group your applications in a way that makes sense and is completely separated from the other groups (so you can for example create an app with the same name in two different namespaces)
 </b></details>
 
 <details>
-<summary>Why to use namespaces? What is the problem with using one default namespace?</summary><br><b>
+<summary>Why to use namespaces? What is the problem with using one default namespace? ✅ </summary><br><b>
 
 When using the default namespace alone, it becomes hard over time to get an overview of all the applications you manage in your cluster. Namespaces make it easier to organize the applications into groups that makes sense, like a namespace of all the monitoring applications and a namespace for all the security applications, etc.
 
@@ -1769,13 +1769,13 @@ Another use case for namespaces is one cluster, multiple teams. When multiple te
 </b></details>
 
 <details>
-<summary>True or False? When a namespace is deleted all resources in that namespace are not deleted but moved to another default namespace</summary><br><b>
+<summary>True or False? When a namespace is deleted all resources in that namespace are not deleted but moved to another default namespace ✅ </summary><br><b>
 
 False. When a namespace is deleted, the resources in that namespace are deleted as well.
 </b></details>
 
 <details>
-<summary>What special namespaces are there by default when creating a Kubernetes cluster?</summary><br><b>
+<summary>What special namespaces are there by default when creating a Kubernetes cluster? ❎ </summary><br><b>
 
 * default
 * kube-system
@@ -1784,14 +1784,14 @@ False. When a namespace is deleted, the resources in that namespace are deleted 
 </b></details>
 
 <details>
-<summary>What can you find in kube-system namespace?</summary><br><b>
+<summary>What can you find in kube-system namespace? ✅ </summary><br><b>
 
 * Master and Kubectl processes
 * System processes
 </b></details>
 
 <details>
-<summary>While namespaces do provide scope for resources, they are not isolating them</summary><br><b>
+<summary>While namespaces do provide scope for resources, they are not isolating them ✅ </summary><br><b>
 
 True. Try create two pods in two separate namespaces for example, and you'll see there is a connection between the two.
 </b></details>
@@ -1799,35 +1799,35 @@ True. Try create two pods in two separate namespaces for example, and you'll see
 #### Namespaces - commands
 
 <details>
-<summary>How to list all namespaces?</code></summary><br><b>
+<summary>How to list all namespaces? ✅ </code></summary><br><b>
 
 `kubectl get namespaces` OR `kubectl get ns`
 
 </b></details>
 
 <details>
-<summary>Create a namespace called 'alle'</summary><br><b>
+<summary>Create a namespace called 'alle' ✅ </summary><br><b>
 
 `k create ns alle`
 
 </b></details>
 
 <details>
-<summary>Check how many namespaces are there</summary><br><b>
+<summary>Check how many namespaces are there ✅ </summary><br><b>
 
 `k get ns --no-headers | wc -l`
 
 </b></details>
 
 <details>
-<summary>Check how many pods exist in the "dev" namespace</summary><br><b>
+<summary>Check how many pods exist in the "dev" namespace ✅ </summary><br><b>
 
 `k get po -n dev`
 
 </b></details>
 
 <details>
-<summary>Create a pod called "kartos" in the namespace dev. The pod should be using the "redis" image.</summary><br><b>
+<summary>Create a pod called "kartos" in the namespace dev. The pod should be using the "redis" image. ✅ </summary><br><b>
 
 If the namespace doesn't exist already: `k create ns dev`
 
@@ -1836,39 +1836,39 @@ If the namespace doesn't exist already: `k create ns dev`
 </b></details>
 
 <details>
-<summary>You are looking for a Pod called "atreus". How to check in which namespace it runs?</summary><br><b>
+<summary>You are looking for a Pod called "atreus". How to check in which namespace it runs? ✅ </summary><br><b>
 
 `k get po -A | grep atreus`
 
 </b></details>
 
 <details>
-<summary>What kube-public contains?</summary><br><b>
+<summary>What kube-public contains? ✅ </summary><br><b>
 
 * A configmap, which contains cluster information
 * Publicly accessible data
 </b></details>
 
 <details>
-<summary>How to get the name of the current namespace?</code></summary><br><b>
+<summary>How to get the name of the current namespace?</code> ❎ </summary><br><b>
 
 `kubectl config view | grep namespace`
 </b></details>
 
 <details>
-<summary>What kube-node-lease contains?</summary><br><b>
+<summary>What kube-node-lease contains? ✅ </summary><br><b>
 
 It holds information on heartbeats of nodes. Each node gets an object which holds information about its availability.
 </b></details>
 
 <details>
-<summary>True or False? With namespaces you can limit the resources consumed by the users/teams</summary><br><b>
+<summary>True or False? With namespaces you can limit the resources consumed by the users/teams ✅ </summary><br><b>
 
 True. With namespaces you can limit CPU, RAM and storage usage.
 </b></details>
 
 <details>
-<summary>How to switch to another namespace? In other words how to change active namespace?</code></summary><br><b>
+<summary>How to switch to another namespace? In other words how to change active namespace? ✅ </code></summary><br><b>
 
 `kubectl config set-context --current --namespace=some-namespace` and validate with `kubectl config view --minify | grep namespace:`
 
@@ -1880,25 +1880,25 @@ OR
 #### Resources Quota
 
 <details>
-<summary>What is Resource Quota?</code></summary><br><b>
+<summary>What is Resource Quota? ❎ </code></summary><br><b>
   
 Resource quota provides constraints that limit aggregate resource consumption per namespace. It can limit the quantity of objects that can be created in a namespace by type, as well as the total amount of compute resources that may be consumed by resources in that namespace.
 </b></details>
 
 <details>
-<summary>How to create a Resource Quota?</code></summary><br><b>
+<summary>How to create a Resource Quota? ❎ </code></summary><br><b>
 
 kubectl create quota some-quota --hard-cpu=2,pods=2
 </b></details>
 
 <details>
-<summary>Which resources are accessible from different namespaces?</code></summary><br><b>
+<summary>Which resources are accessible from different namespaces? ❎ </code></summary><br><b>
 
 Services.
 </b></details>
 
 <details>
-<summary>Which service and in which namespace the following file is referencing?
+<summary>Which service and in which namespace the following file is referencing? ❎ 
 
 ```
 apiVersion: v1
@@ -1914,19 +1914,19 @@ It's referencing the service "samurai" in the namespace called "jack".
 </b></details>
 
 <details>
-<summary>Which components can't be created within a namespace?</code></summary><br><b>
+<summary>Which components can't be created within a namespace? ❎ </code></summary><br><b>
 
 Volume and Node.
 </b></details>
 
 <details>
-<summary>How to list all the components that bound to a namespace?</code></summary><br><b>
+<summary>How to list all the components that bound to a namespace?</code> ✅ </summary><br><b>
 
 `kubectl api-resources --namespaced=true`
 </b></details>
 
 <details>
-<summary>How to create components in a namespace?</code></summary><br><b>
+<summary>How to create components in a namespace?</code> ✅ </summary><br><b>
 
 One way is by specifying --namespace like this: `kubectl apply -f my_component.yaml --namespace=some-namespace`
 Another way is by specifying it in the YAML itself:
@@ -1943,25 +1943,25 @@ and you can verify with: `kubectl get configmap -n some-namespace`
 </b></details>
 
 <details>
-<summary>How to execute the command "ls" in an existing pod?</code></summary><br><b>
+<summary>How to execute the command "ls" in an existing pod?</code> ✅ </summary><br><b>
 
 kubectl exec some-pod -it -- ls
 </b></details>
 
 <details>
-<summary>How to create a service that exposes a deployment?</code></summary><br><b>
+<summary>How to create a service that exposes a deployment?</code> ✅ </summary><br><b>
 
 kubectl expose deploy some-deployment --port=80 --target-port=8080
 </b></details>
 
 <details>
-<summary>How to create a pod and a service with one command?</code></summary><br><b>
+<summary>How to create a pod and a service with one command?</code> ✅ </summary><br><b>
 
 kubectl run nginx --image=nginx --restart=Never --port 80 --expose
 </b></details>
 
 <details>
-<summary>Describe in detail what the following command does <code>kubectl create deployment kubernetes-httpd --image=httpd</code></summary><br><b>
+<summary>Describe in detail what the following command does <code>kubectl create deployment kubernetes-httpd --image=httpd</code> ✅ </summary><br><b>
 </b></details>
 
 <details>
@@ -1969,25 +1969,25 @@ kubectl run nginx --image=nginx --restart=Never --port 80 --expose
 </b></details>
 
 <details>
-<summary>How to get list of resources which are not bound to a specific namespace?</code></summary><br><b>
+<summary>How to get list of resources which are not bound to a specific namespace?</code>✅</summary><br><b>
 
 kubectl api-resources --namespaced=false
 </b></details>
 
 <details>
-<summary>How to delete all pods whose status is not "Running"?</code></summary><br><b>
+<summary>How to delete all pods whose status is not "Running"?</code> ❎ </summary><br><b>
 
 kubectl delete pods --field-selector=status.phase!='Running'
 </b></details>
 
 <details>
-<summary>How to display the resources usages of pods?</summary><br><b>
+<summary>How to display the resources usages of pods? ❎ </summary><br><b>
 
 kubectl top pod
 </b></details>
 
 <details>
-<summary>Perhaps a general question but, you suspect one of the pods is having issues, you don't know what exactly. What do you do?</summary><br><b>
+<summary>Perhaps a general question but, you suspect one of the pods is having issues, you don't know what exactly. What do you do? :grey_exclamation: </summary><br><b>
 
 Start by inspecting the pods status. we can use the command `kubectl get pods` (--all-namespaces for pods in system namespace)<br>
 
@@ -1999,7 +1999,7 @@ Setting the replicas to 0 will shut down the process. Now start it with `kubectl
 </b></details>
 
 <details>
-<summary>What happens what pods are using too much memory? (more than its limit)</summary><br><b>
+<summary>What happens what pods are using too much memory? (more than its limit) ✅ </summary><br><b>
 
 They become candidates to for termination.
 </b></details>
@@ -2009,7 +2009,7 @@ They become candidates to for termination.
 </b></details>
 
 <details>
-<summary>True or False? Memory is a compressible resource, meaning that when a container reach the memory limit, it will keep running</summary><br><b>
+<summary>True or False? Memory is a compressible resource, meaning that when a container reach the memory limit, it will keep running :grey_exclamation: </summary><br><b>
 
 False. CPU is a compressible resource while memory is a non compressible resource - once a container reached the memory limit, it will be terminated.
 </b></details>
@@ -2131,39 +2131,39 @@ This one is based more on a personal experience and taste...
 ### Secrets
 
 <details>
-<summary>Explain Kubernetes Secrets</summary><br><b>
+<summary>Explain Kubernetes Secrets ✅ </summary><br><b>
 
 Secrets let you store and manage sensitive information (passwords, ssh keys, etc.)
 
 </b></details>
 
 <details>
-<summary>How to create a Secret from a key and value?</summary><br><b>
+<summary>How to create a Secret from a key and value? ❎ </summary><br><b>
 
 `kubectl create secret generic some-secret --from-literal=password='donttellmypassword'`
 
 </b></details>
 
 <details>
-<summary>How to create a Secret from a file?</summary><br><b>
+<summary>How to create a Secret from a file? ✅ </summary><br><b>
 
 `kubectl create secret generic some-secret --from-file=/some/file.txt`
 </b></details>
 
 <details>
-<summary>What <code>type: Opaque</code> in a secret file means? What other types are there?</summary><br><b>
+<summary>What <code>type: Opaque</code> in a secret file means? What other types are there? ✅ </summary><br><b>
 
 Opaque is the default type used for key-value pairs.
 </b></details>
 
 <details>
-<summary>True or False? storing data in a Secret component makes it automatically secured</summary><br><b>
+<summary>True or False? storing data in a Secret component makes it automatically secured ✅ </summary><br><b>
 
 False. Some known security mechanisms like "encryption" aren't enabled by default.
 </b></details>
 
 <details>
-<summary>What is the problem with the following Secret file:
+<summary>What is the problem with the following Secret file: ✅
 
 ```
 apiVersion: v1   
@@ -2182,7 +2182,7 @@ You should run something like this: `echo -n 'mySecretPassword' | base64` and pa
 </b></details>
 
 <details>
-<summary>What the following in a Deployment configuration file means? 
+<summary>What the following in a Deployment configuration file means? ✅
 
 ```
 spec:
@@ -2201,7 +2201,7 @@ In other words, you reference a value from a Kubernetes Secret.
 </b></details>
 
 <details>
-<summary>How to commit secrets to Git and in general how to use encrypted secrets?</summary><br><b>
+<summary>How to commit secrets to Git and in general how to use encrypted secrets? ❎ </summary><br><b>
 
 One possible process would be as follows:
 
