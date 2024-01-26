@@ -6,15 +6,15 @@
 
 |Name|Topic|Objective & Instructions|Solution|Comments|
 |--------|--------|------|----|----|
-| My First Task | Tasks | [Exercise](my_first_task.md) | [Solution](solutions/my_first_task.md)
-| Upgrade and Update Task | Tasks | [Exercise](update_upgrade_task.md) | [Solution](solutions/update_upgrade_task.md)
-| My First Playbook | Playbooks | [Exercise](my_first_playbook.md) | [Solution](solutions/my_first_playbook.md)
+| My First Task | Tasks | [Exercise](my_first_task.md) | [Solution](solutions/my_first_task.md) | ✅ |
+| Upgrade and Update Task | Tasks | [Exercise](update_upgrade_task.md) | [Solution](solutions/update_upgrade_task.md) | ✅ |
+| My First Playbook | Playbooks | [Exercise](my_first_playbook.md) | [Solution](solutions/my_first_playbook.md) | :grey_exclamation: |
 	
 
 ### Ansible Self Assessment
 
 <details>
-<summary>Describe each of the following components in Ansible, including the relationship between them:
+<summary>Describe each of the following components in Ansible, including the relationship between them: ✅
 
   * Task
   * Inventory	
@@ -37,7 +37,7 @@ Role – Ansible roles allows you to group resources based on certain functional
 </b></details>
 
 <details>
-<summary>How Ansible is different from other automation tools? (e.g. Chef, Puppet, etc.)</summary><br><b>
+<summary>How Ansible is different from other automation tools? (e.g. Chef, Puppet, etc.) :grey_exclamation: </summary><br><b>
 
 Ansible is:
 
@@ -49,20 +49,20 @@ Ansible is:
 
 
 <details>
-<summary>True or False? Ansible follows the mutable infrastructure paradigm</summary><br><b>
+<summary>True or False? Ansible follows the mutable infrastructure paradigm :grey_exclamation: </summary><br><b>
 
 True. In immutable infrastructure approach, you'll replace infrastructure instead of modifying it.<br>
 Ansible rather follows the mutable infrastructure paradigm where it allows you to change the configuration of different components, but this approach is not perfect and has its own disadvantages like "configuration drift" where different components may reach different state for different reasons.
 </b></details>
 
 <details>
-<summary>True or False? Ansible uses declarative style to describe the expected end state</summary><br><b>
+<summary>True or False? Ansible uses declarative style to describe the expected end state ❎ </summary><br><b>
 
 False. It uses a procedural style.
 </b></details>
 
 <details>
-<summary>What kind of automation you wouldn't do with Ansible and why?</summary><br><b>
+<summary>What kind of automation you wouldn't do with Ansible and why? :grey_exclamation: </summary><br><b>
 
 While it's possible to provision resources with Ansible, some prefer to use tools that follow immutable infrastructure paradigm.
 Ansible doesn't saves state by default. So a task that creates 5 instances for example, when executed again will create additional 5 instances (unless
@@ -70,7 +70,7 @@ additional check is implemented or explicit names are provided) while other tool
 </b></details>
 
 <details>
-<summary>How do you list all modules and how can you see details on a specific module?</summary><br><br>
+<summary>How do you list all modules and how can you see details on a specific module? ❎ </summary><br><br>
 
 1. Ansible online docs
 2. `ansible-doc -l` for list of modules and `ansible-doc [module_name]` for detailed information on a specific module
@@ -79,7 +79,7 @@ additional check is implemented or explicit names are provided) while other tool
 #### Ansible - Inventory
 
 <details>
-<summary>What is an inventory file and how do you define one?</summary><br><b>
+<summary>What is an inventory file and how do you define one? ✅ </summary><br><b>
 
 An inventory file defines hosts and/or groups of hosts on which Ansible tasks executed upon.
 
@@ -98,7 +98,7 @@ An example of inventory file:
 </b></details>
 
 <details>
-<summary>What is a dynamic inventory file? When you would use one?</summary><br><br>
+<summary>What is a dynamic inventory file? When you would use one? ❎ </summary><br><br>
 
 A dynamic inventory file tracks hosts from one or more sources like cloud providers and CMDB systems.
 
@@ -109,7 +109,7 @@ spun up and shut down, without you tracking every change in these sources.
 #### Ansible - Variables
 
 <details>
-<summary>Modify the following task to use a variable instead of the value "zlib" and have "zlib" as the default in case the variable is not defined
+<summary>Modify the following task to use a variable instead of the value "zlib" and have "zlib" as the default in case the variable is not defined ❎
 
 ```
 - name: Install a package
@@ -128,7 +128,7 @@ spun up and shut down, without you tracking every change in these sources.
 </b></details>
 
 <details>
-<summary>How to make the variable "use_var" optional?
+<summary>How to make the variable "use_var" optional? ❎
 
 ```
 - name: Install a package
@@ -151,7 +151,7 @@ With "default(omit)"
 </b></details>
 
 <details>
-<summary>What would be the result of the following play?</summary><br><b>
+<summary>What would be the result of the following play? ✅ </summary><br><b>
 
 ```
 ---
@@ -168,19 +168,19 @@ When given a written code, always inspect it thoroughly. If your answer is “th
 </b></details>
 
 <details>
-<summary>When the value '2017'' will be used in this case: `{{ lookup('env', 'BEST_YEAR') | default('2017', true) }}`?</summary><br><b>
+<summary>When the value '2017'' will be used in this case: `{{ lookup('env', 'BEST_YEAR') | default('2017', true) }}`? ✅ </summary><br><b>
 
 when the environment variable 'BEST_YEAR' is empty or false.
 </b></details>
 
 <details>
-<summary>If the value of certain variable is 1, you would like to use the value "one", otherwise, use "two". How would you do it?</summary><br><b>
+<summary>If the value of certain variable is 1, you would like to use the value "one", otherwise, use "two". How would you do it? :grey_exclamation: </summary><br><b>
 
 `{{ (certain_variable == 1) | ternary("one", "two") }}`
 </b></details>
 
 <details>
-<summary>The value of a certain variable you use is the string "True". You would like the value to be a boolean. How would you cast it?</summary><br><b>
+<summary>The value of a certain variable you use is the string "True". You would like the value to be a boolean. How would you cast it? ✅ </summary><br><b>
 
 `{{ some_string_var | bool }}`
 </b></details>
@@ -232,7 +232,7 @@ when the environment variable 'BEST_YEAR' is empty or false.
 </b></details>
 
 <details>
-<summary>Write a playbook to install ‘zlib’ and ‘vim’ on all hosts if the file ‘/tmp/mario’ exists on the system.</summary><br><b>
+<summary>Write a playbook to install ‘zlib’ and ‘vim’ on all hosts if the file ‘/tmp/mario’ exists on the system. ✅ </summary><br><b>
 
 ```
 ---
@@ -259,7 +259,7 @@ when the environment variable 'BEST_YEAR' is empty or false.
 </b></details>
 
 <details>
-<summary>Write a single task that verifies all the files in files_list variable exist on the host</summary><br><b>
+<summary>Write a single task that verifies all the files in files_list variable exist on the host ❎ </summary><br><b>
 
 ```
 - name: Ensure all files exist
@@ -271,7 +271,7 @@ when the environment variable 'BEST_YEAR' is empty or false.
 </b></details>
 
 <details>
-<summary>Write a playbook to deploy the file ‘/tmp/system_info’ on all hosts except for controllers group, with the following content</summary><br><b>
+<summary>Write a playbook to deploy the file ‘/tmp/system_info’ on all hosts except for controllers group, with the following content ❎ </summary><br><b>
 
   ```
   I'm <HOSTNAME> and my operating system is <OS>
