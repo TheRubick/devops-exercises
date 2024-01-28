@@ -301,7 +301,7 @@ I'm {{ ansible_hostname }} and my operating system is {{ ansible_distribution }
 </b></details>
 
 <details>
-<summary>The variable 'whoami' defined in the following places:
+<summary>The variable 'whoami' defined in the following places: :grey_exclamation:
 
   * role defaults -> whoami: mario
   * extra vars (variables you pass to Ansible CLI with -e) -> whoami: toad
@@ -358,7 +358,7 @@ A full list can be found at  [PlayBook Variables](https://docs.ansible.com/ansib
 </b></details>
 
 <details>
-<summary>Explain the Difference between Forks and Serial & Throttle.</summary><br><b>
+<summary>Explain the Difference between Forks and Serial & Throttle. ❎ </summary><br><b>
 
 `Serial` is like running the playbook for each host in turn, waiting for completion of the complete playbook before moving on to the next host. `forks`=1 means run the first task in a play on one host before running the same task on the next host, so the first task will be run for each host before the next task is touched. Default fork is 5 in ansible.
 
@@ -430,7 +430,7 @@ def cap(self, string):
 </b></details>
 
 <details>
-<summary>File '/tmp/exercise' includes the following content
+<summary>File '/tmp/exercise' includes the following content ❎
 
 ```
 Goku = 9001
@@ -466,20 +466,20 @@ Gotenks = 32
 #### Ansible - Execution and Strategy
 
 <details>
-<summary>True or False? By default, Ansible will execute all the tasks in play on a single host before proceeding to the next host</summary><br><b>
+<summary>True or False? By default, Ansible will execute all the tasks in play on a single host before proceeding to the next host ✅ </summary><br><b>
 
 False. Ansible will execute a single task on all hosts before moving to the next task in a play. As for today, it uses 5 forks by default.<br>
 This behavior is described as "strategy" in Ansible and it's configurable.
 </b></details>
 
 <details>
-<summary>What is a "strategy" in Ansible? What is the default strategy?</summary><br><b>
+<summary>What is a "strategy" in Ansible? What is the default strategy? ✅ </summary><br><b>
 
 A strategy in Ansible describes how Ansible will execute the different tasks on the hosts. By default Ansible is using the "Linear strategy" which defines that each task will run on all hosts before proceeding to the next task.
 </b></details>
 
 <details>
-<summary>What strategies are you familiar with in Ansible?</summary><br><b>
+<summary>What strategies are you familiar with in Ansible? :grey_exclamation: </summary><br><b>
 
   - Linear: the default strategy in Ansible. Run each task on all hosts before proceeding.
   - Free: For each host, run all the tasks until the end of the play as soon as possible
@@ -518,7 +518,7 @@ If your group has 8 hosts. It will run the whole play on 4 hosts and then the sa
 #### Ansible - Debugging
 
 <details>
-<summary>How to find out the data type of a certain variable in one of the playbooks?</summary><br><b>
+<summary>How to find out the data type of a certain variable in one of the playbooks? ❎ </summary><br><b>
 
 "{{ some_var | type_debug }}"
 </b></details>
