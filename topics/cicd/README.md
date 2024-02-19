@@ -507,7 +507,7 @@ The Jenkins plugin ecosystem is extensive, and there are many resources availabl
 <summary>Have you written Jenkins scripts? If yes, what for and how they work?</summary><br><b>
 </b></details>
 
-#### CI/CD - GitHub Actions
+#### CI/CD - GitHub Actions ✅
 
 <details>
 <summary>What is a Workflow in GitHub Actions?</summary><br><b>
