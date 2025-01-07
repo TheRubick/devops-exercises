@@ -1020,7 +1020,7 @@ One reason is that all the workspaces are stored in one location (as in one back
 #### Lists
 
 <details>
-<summary>How to define an input variable which is a list of numbers?</summary><br><b>
+<summary>How to define an input variable which is a list of numbers? ✅ </summary><br><b>
 
 ```
 variable "list_of_nums" {
@@ -1033,7 +1033,7 @@ variable "list_of_nums" {
 </b></details>
 
 <details>
-<summary>How to create a number of resources based on the length of a list?</summary><br><b>
+<summary>How to create a number of resources based on the length of a list? ✅ </summary><br><b>
 
 ```
 resource "some_resource" "some_name" {
@@ -1044,14 +1044,14 @@ resource "some_resource" "some_name" {
 </b></details>
 
 <details>
-<summary>You have a list variable called "users". How to access the second item in that list and attribute called "name"?</summary><br><b>
+<summary>You have a list variable called "users". How to access the second item in that list and attribute called "name"? ✅ </summary><br><b>
 
 `users[1].name`
 
 </b></details>
 
 <details>
-<summary>You have a list variable called "users". How to access attribute "name" of all items?</summary><br><b>
+<summary>You have a list variable called "users". How to access attribute "name" of all items? ✅ </summary><br><b>
 
 `users[*].name`
 
@@ -1060,14 +1060,14 @@ resource "some_resource" "some_name" {
 #### Loops
 
 <details>
-<summary>What loops are useful for in Terraform?</summary><br><b>
+<summary>What loops are useful for in Terraform? ✅ </summary><br><b>
 
 The most common use case is when you need to create multiple resources with only a slight difference (like different name). Instead of defining multiple separate resources, you can define it once and create multiple instances of it using loops.
 
 </b></details>
 
 <details>
-<summary>Demonstrate how to define a simple Terraform loop</summary><br><b>
+<summary>Demonstrate how to define a simple Terraform loop ✅ </summary><br><b>
 
 ```
 resource "aws_instance" "server" {
@@ -1080,7 +1080,7 @@ The above configuration will create 15 aws instances.
 </b></details>
 
 <details>
-<summary>How to create multiple AWS instances but each with a different name?</summary><br><b>
+<summary>How to create multiple AWS instances but each with a different name? ✅ </summary><br><b>
 
 ```
 resource "aws_instance" "server" {
@@ -1097,7 +1097,7 @@ The above configuration will create 6 instances, each with a different name.
 </b></details>
 
 <details>
-<summary>You have the following variable defined in Terraform
+<summary>You have the following variable defined in Terraform ✅
 
 ```
 variable "users" {
@@ -1120,14 +1120,14 @@ resource "aws_iam_user" "user" {
 </b></details>
 
 <details>
-<summary>Is there any limitation to "count" meta-argument?</summary><br><b>
+<summary>Is there any limitation to "count" meta-argument? ✅ </summary><br><b>
 
 * `count` isn't supported within an inline block
 * It's quite limited when it comes to lists.You'll notice that modifying items in lists or even operations like removal sometimes interpreted in a way you didn't expect. For example, removing an item from a list, may shift other items to a new position and since each position represents a resource with count, that may lead to a result where wrong resources are being modified and removed. There are ways to do deal it, but still using count with lists is not always straightforward
 </b></details>
 
 <details>
-<summary>What's a for_each loop? How is it different from "count"?</summary><br><b>
+<summary>What's a for_each loop? How is it different from "count"? ✅ </summary><br><b>
 
 * for_each can applied only on collections like maps or sets (as opposed to count that can be applied on lists)
 * for_each helps to deal with the limitation of `count` which isn't optimal for use cases of modifying lists
@@ -1135,7 +1135,7 @@ resource "aws_iam_user" "user" {
 </b></details>
 
 <details>
-<summary>Demonstrate how to use the for_each loop</summary><br><b>
+<summary>Demonstrate how to use the for_each loop ✅ </summary><br><b>
 
 ```
 resource “google_compute_instance” “instances” {
@@ -1147,7 +1147,7 @@ resource “google_compute_instance” “instances” {
 </b></details>
 
 <details>
-<summary>The following resource tries to use for_each loop on a list of string but it fails, why?
+<summary>The following resource tries to use for_each loop on a list of string but it fails, why? ✅
 
 ```
 resource “google_compute_instance” “instances” {
@@ -1163,7 +1163,7 @@ for_each can applied only on collections like maps or sets so the list should be
 </b></details>
 
 <details>
-<summary>How to use for_each loop for inline blocks?</summary><br><b>
+<summary>How to use for_each loop for inline blocks? ❎ </summary><br><b>
 
 
 ```
@@ -1183,7 +1183,7 @@ dynamic "tag" {
 </b></details>
 
 <details>
-<summary>There is a list variable called "users". You would like to define an output variable with a value of all users in uppercase. How to achieve that?</summary><br><b>
+<summary>There is a list variable called "users". You would like to define an output variable with a value of all users in uppercase. How to achieve that? ✅ </summary><br><b>
 
 ```
 output "users" {
@@ -1194,7 +1194,7 @@ output "users" {
 </b></details>
 
 <details>
-<summary>What's the result of the following code?
+<summary>What's the result of the following code? ❎
 
 ```
 resource "random_integer" "num" {
@@ -1209,12 +1209,12 @@ resource "aws_instance" "instances" {
 
 </summary><br><b>
 
-The above code will fail as it's not possible to reference resource outputs with count, because Terraform has to compute count before any resources are created (or modified).
+The above code will fail as it's not possible to reference resource outputs with count, because Terraform has to compute count before any resources are created (or modified). 
 
 </b></details>
 
 <details>
-<summary>There is a variable called "values" with the following value: ["mario", "luigi", "peach"]. How to create an output variable with the string value of the items in the list: "mario, luigi, peach," ?</summary><br><b>
+<summary>There is a variable called "values" with the following value: ["mario", "luigi", "peach"]. How to create an output variable with the string value of the items in the list: "mario, luigi, peach," ? ❎ </summary><br><b>
 
 ```
 output "users" {
@@ -1225,7 +1225,7 @@ output "users" {
 </b></details>
 
 <details>
-<summary>There is a list variable called "users". You would like to define an output variable with a value of all users in uppercase but only if the name is longer than 3 characters. How to achieve that?</summary><br><b>
+<summary>There is a list variable called "users". You would like to define an output variable with a value of all users in uppercase but only if the name is longer than 3 characters. How to achieve that? ✅ </summary><br><b>
 
 ```
 output "users" {
@@ -1238,7 +1238,7 @@ output "users" {
 #### Maps
 
 <details>
-<summary>There is a map called "instances"
+<summary>There is a map called "instances" ❎
 
 * How to extract only the values of that map?
 * How to extract only the attribute "name" from each value?
@@ -1250,7 +1250,7 @@ output "users" {
 </b></details>
 
 <details>
-<summary>You have a map variable, called "users", with the keys "name" and "age". Define an output list variable with the following "my name is {name} and my age is {age}"</summary><br><b>
+<summary>You have a map variable, called "users", with the keys "name" and "age". Define an output list variable with the following "my name is {name} and my age is {age}" ✅ </summary><br><b>
 
 ```
 output "name_and_age" {
@@ -1261,7 +1261,7 @@ output "name_and_age" {
 </b></details>
 
 <details>
-<summary>You have a map variable, called "users", with the keys "name" (string) and "age" (float). Define an output map variable with the key being name in uppercase and value being age in the closest whole number </summary><br><b>
+<summary>You have a map variable, called "users", with the keys "name" (string) and "age" (float). Define an output map variable with the key being name in uppercase and value being age in the closest whole number ✅ </summary><br><b>
 
 ```
 output "name_and_age" {
@@ -1274,28 +1274,28 @@ output "name_and_age" {
 #### Conditionals
 
 <details>
-<summary>How to use conditional expressions in Terraform?</summary><br><b>
+<summary>How to use conditional expressions in Terraform? ✅ </summary><br><b>
 
 `some_condition ? "value_if_true" : "value_if_false"`
 
 </b></details>
 
 <details>
-<summary>Explain the following condition: <code>var.x ? 1 : 0</code></summary><br><b>
+<summary>Explain the following condition: <code>var.x ? 1 : 0</code> ✅ </summary><br><b>
 
 If `x` evaluated to true, the result is 1, otherwise (if false) the result is 0.
 
 </b></details>
 
 <details>
-<summary>Explain the following condition: <code>var.x != "" ? var.x : "yay"</code></summary><br><b>
+<summary>Explain the following condition: <code>var.x != "" ? var.x : "yay"</code> ✅ </summary><br><b>
 
 If `x` is an empty string the result is "yay", otherwise it's the value of `x` variable
 
 </b></details>
 
 <details>
-<summary>Can conditionals be used with meta-arguments?</code></summary><br><b>
+<summary>Can conditionals be used with meta-arguments? ✅ </code></summary><br><b>
 
 Yes, for example the "count" meta-argument:
 
@@ -1309,7 +1309,7 @@ resource "aws_instance" "server" {
 </b></details>
 
 <details>
-<summary>Is it possible to combine conditionals and loop?</code></summary><br><b>
+<summary>Is it possible to combine conditionals and loop?</code> ✅ </summary><br><b>
 
 Yes, for example:
 
@@ -1328,7 +1328,7 @@ dynamic "tag" {
 #### Misc
 
 <details>
-<summary>What are meta-arguments in Terraform?</summary><br><b>
+<summary>What are meta-arguments in Terraform? ✅ </summary><br><b>
 
 Arguments that affect the lifecycle of a resources (its creation, modification, ...) and supported by Terraform regardless to the type of resource in which they are used.
 
@@ -1340,7 +1340,7 @@ Some examples:
 </b></details>
 
 <details>
-<summary>What meta-arguments are you familiar with?</summary><br><b>
+<summary>What meta-arguments are you familiar with? ✅ </summary><br><b>
 
 * count: how many resources to create out of one definition of a resource
 * lifecycle: how to treat resource creation or removal
@@ -1348,21 +1348,21 @@ Some examples:
 </b></details>
 
 <details>
-<summary>What <code>templatefile</code> function does?</summary><br><b>
+<summary>What <code>templatefile</code> function does? ✅ </summary><br><b>
 
 Renders a template file and returns the result as string.
 
 </b></details>
 
 <details>
-<summary>You are trying to use templatefile as part of a module and you use a relative path to load a file but sometimes it fails, especially when others try to reuse the module. How can you deal with that?</summary><br><b>
+<summary>You are trying to use templatefile as part of a module and you use a relative path to load a file but sometimes it fails, especially when others try to reuse the module. How can you deal with that? ❎ </summary><br><b>
 
 Switch relative paths with what is known as path references. These are fixes paths like module root path, module expression file path, etc.
 
 </b></details>
 
 <details>
-<summary>How do you test terraform syntax?</summary><br><b>
+<summary>How do you test terraform syntax? ✅ </summary><br><b>
 
 A valid answer could be "I write Terraform configuration and try to execute it" but this makes testing cumbersome and quite complex in general.
 
@@ -1371,21 +1371,21 @@ There is `terraform console` command which allows you to easily execute terrafor
 </b></details>
 
 <details>
-<summary>True or False? Terraform console should be used carefully as it may modify your resources</summary><br><b>
+<summary>True or False? Terraform console should be used carefully as it may modify your resources ✅ </summary><br><b>
 
 False. terraform console is ready-only.
 
 </b></details>
 
 <details>
-<summary>You need to render a template and get it as string. Which function would you use?</summary><br><b>
+<summary>You need to render a template and get it as string. Which function would you use? ✅ </summary><br><b>
 
 `templatefile` function.
 
 </b></details>
 
 <details>
-<summary>Explain what <code>depends_on</code> used for and given an example</summary><br><b>
+<summary>Explain what <code>depends_on</code> used for and given an example ✅ </summary><br><b>
 
 `depends_on` used to create a dependency between resources in Terraform. For example, there is an application you would like to deploy in a cluster. If the cluster isn't ready (and also managed by Terraform of course) then you can't deploy the app. In this case, you will define "depends_on" in the app configuration and its value will be the cluster resource.
 
@@ -1394,7 +1394,7 @@ False. terraform console is ready-only.
 ### Modules
 
 <details>
-<summary>Explain Modules</summary>
+<summary>Explain Modules ✅ </summary>
 
 [Terraform.io](https://www.terraform.io/language/modules/develop): "A module is a container for multiple resources that are used together. Modules can be used to create lightweight abstractions, so that you can describe your infrastructure in terms of its architecture, rather than directly in terms of physical objects."
 
@@ -1403,21 +1403,21 @@ In addition, modules are great for creating reusable Terraform code that can be 
 </b></details>
 
 <details>
-<summary>What makes a Terraform code module? In other words, what a module is from practical perspective?</summary>
+<summary>What makes a Terraform code module? In other words, what a module is from practical perspective? ✅ </summary>
 
 Basically any file or files in a directory is a module in Terraform. There is no special syntax to use in order to define a module.
 
 </b></details>
 
 <details>
-<summary>How do you test a Terraform module?</summary><br><b>
+<summary>How do you test a Terraform module? ❎ </summary><br><b>
 
 There are multiple answers, but the most common answer would likely to be using the tool <code>terratest</code>, and to test that a module can be initialized, can create resources, and can destroy those resources cleanly.
 
 </b></details>
 
 <details>
-<summary>When creating a module, do you prefer to use inline blocks, separate resources or both? why?</summary>
+<summary>When creating a module, do you prefer to use inline blocks, separate resources or both? why? ✅ </summary>
 
 No right or wrong here.
 
@@ -1426,7 +1426,7 @@ Personally, I prefer to use only separate resources in modules as it makes modul
 </b></details>
 
 <details>
-<summary>True or False? Module source can be only local path</summary>
+<summary>True or False? Module source can be only local path ✅ </summary>
 
 False. It can be a Git URL, HTTP URL, ... for example:
 
@@ -1440,14 +1440,14 @@ module "some_module" {
 </b></details>
 
 <details>
-<summary>Where can you obtain Terraform modules?</summary><br><b>
+<summary>Where can you obtain Terraform modules? ✅ </summary><br><b>
 
 Terraform modules can be found at the [Terrafrom registry](https://registry.terraform.io/browse/modules)
 
 </b></details>
 
 <details>
-<summary>You noticed there are relative paths in some of your modules and you would like to change that. What can you do and why is that a problem in the first place?</summary><br><b>
+<summary>You noticed there are relative paths in some of your modules and you would like to change that. What can you do and why is that a problem in the first place? ✅ </summary><br><b>
 
 Relative paths usually work fine in your own environment as you are familiar with the layout and paths used, but when sharing a module and making it reusable, you may bump into issues as it runs on different environments where the relative paths may no longer be relevant.
 
@@ -1462,7 +1462,7 @@ A better approach would be to use `path reference` like one of the following:
 #### Modules Hands-On
 
 <details>
-<summary>How to use a module?</summary><br><b>
+<summary>How to use a module? ✅ </summary><br><b>
 
 The general syntax is:
 
@@ -1478,7 +1478,7 @@ The critical part is the source which you use to tell Terraform where the module
 </b></details>
 
 <details>
-<summary>Demonstrate using a module called "amazing_modle" in the path "../modules/amazing-module"</summary><br><b>
+<summary>Demonstrate using a module called "amazing_modle" in the path "../modules/amazing-module" ✅ </summary><br><b>
 
 ```
 module "amazing_module" {
@@ -1488,20 +1488,20 @@ module "amazing_module" {
 </b></details>
 
 <details>
-<summary>What should be done every time you modify the source parameter of a module?</summary><br><b>
+<summary>What should be done every time you modify the source parameter of a module? ✅ </summary><br><b>
 
 `terraform init` should be executed as it takes care of downloading and installing the module from the new path.
 </b></details>
 
 <details>
-<summary>How to access module output variables?</summary><br><b>
+<summary>How to access module output variables? ❎ </summary><br><b>
 
 the general syntax is `module.<MODULE_NAME>.<OUTPUT_VAR_NAME>`
 
 </b></details>
 
 <details>
-<summary>You would like to load and render a file from module directory. How to do that?</summary><br><b>
+<summary>You would like to load and render a file from module directory. How to do that? ✅ </summary><br><b>
 
 script = templatesfile("${path.module}/user-data.sh", {
   ...
@@ -1509,7 +1509,7 @@ script = templatesfile("${path.module}/user-data.sh", {
 </b></details>
 
 <details>
-<summary>There is a module to create a compute instance. How would you use the module to create three separate instances?</summary><br><b>
+<summary>There is a module to create a compute instance. How would you use the module to create three separate instances? ✅ </summary><br><b>
 
 starting with Terraform 0.13, the `count` meta-argument can be used with modules. So you could use something like this:
 
@@ -1528,7 +1528,7 @@ You can also use it in outputs vars: `value = module.instances[*]`
 ### Import
 
 <details>
-<summary>Explain Terraform's import functionality</summary><br><b>
+<summary>Explain Terraform's import functionality ✅ </summary><br><b>
 
 `terraform import` is a CLI command used for importing an existing infrastructure into Terraform's state.
 
@@ -1537,7 +1537,7 @@ It's does NOT create the definitions/configuration for creating such infrastruct
 </b></details>
 
 <details>
-<summary>State two use cases where you would use <code>terraform import</code></summary><br><b>
+<summary>State two use cases where you would use <code>terraform import</code> ✅ </summary><br><b>
 
 1. You have existing resources in one of the providers and they are not managed by Terraform (as in not included in the state)
 2. You lost your tfstate file and need to rebuild it
@@ -1547,7 +1547,7 @@ It's does NOT create the definitions/configuration for creating such infrastruct
 ### Version Control
 
 <details>
-<summary>You have a Git repository with Terraform files but no .gitignore. What would you add to a .gitignore file in Terraform repository?</summary><br><b>
+<summary>You have a Git repository with Terraform files but no .gitignore. What would you add to a .gitignore file in Terraform repository? ✅ </summary><br><b>
 
 ```
 .terraform
@@ -1670,7 +1670,7 @@ provider "aws" {
 ### Validations
 
 <details>
-<summary>How would you enforce users that use your variables to provide values with certain constraints? For example, a number greater than 1</summary><br><b>
+<summary>How would you enforce users that use your variables to provide values with certain constraints? For example, a number greater than 1 ❎ </summary><br><b>
 
 Using `validation` block
 
@@ -1691,7 +1691,7 @@ variable "some_var" {
 ### Secrets
 
 <details>
-<summary>What's the issue with the following provider configuration?
+<summary>What's the issue with the following provider configuration? ✅
 
 ```
 provider "aws" {
@@ -1708,7 +1708,7 @@ It's not secure! you should never store credentials in plain text this way.
 </b></details>
 
 <details>
-<summary>What can you do to NOT store provider credentials in Terraform configuration files in plain text?</summary><br><b>
+<summary>What can you do to NOT store provider credentials in Terraform configuration files in plain text? ✅ </summary><br><b>
 
 1. Use environment variables
 2. Use password CLIs (like 1Password which is generic but there also specific provider options like aws-vault)
@@ -1716,7 +1716,7 @@ It's not secure! you should never store credentials in plain text this way.
 </b></details>
 
 <details>
-<summary>How can you manage secrets/credentials in CI/CD?</summary><br><b>
+<summary>How can you manage secrets/credentials in CI/CD? ✅ </summary><br><b>
 
 That very much depends on the CI/CD system/platform you are using.
 
@@ -1741,7 +1741,7 @@ context:
 </b></details>
 
 <details>
-<summary>What are the pros and cons of using environment variables for managing secrets in Terraform configurations?</summary><br><b>
+<summary>What are the pros and cons of using environment variables for managing secrets in Terraform configurations? ✅ </summary><br><b>
 
 Pros:
  * You avoid using secrets directly in configurations in plain text
@@ -1755,14 +1755,14 @@ Cons:
 </b></details>
 
 <details>
-<summary>True or False? If you pass secrets with environment variables, they are not visible in your state file</summary><br><b>
+<summary>True or False? If you pass secrets with environment variables, they are not visible in your state file ✅ </summary><br><b>
 
 False. State files include sensitive data as it is. Which means it's very important that wherever you store your state file, it's encrypted and accessible only to those who should be able to access it.
 
 </b></details>
 
 <details>
-<summary>True or False? If you pass secrets from a centralized secrets store (like Hashicorp Vault) they are not visible in plan files (terraform plan)</summary><br><b>
+<summary>True or False? If you pass secrets from a centralized secrets store (like Hashicorp Vault) they are not visible in plan files (terraform plan) ✅ </summary><br><b>
 
 False. It doesn't matter where your secrets store (file, environment variables, centralized secrets store), they will be visible in both state file and plan output.
 
@@ -1773,7 +1773,7 @@ False. It doesn't matter where your secrets store (file, environment variables, 
 This section is about how Terraform is actually used in real-life scenarios and organizations.
 
 <details>
-<summary>What structure layout do you use for your projects?</summary><br><b>
+<summary>What structure layout do you use for your projects? ✅ </summary><br><b>
 
 There is no right or wrong answer, just what you personally adopted or your team, and being able to explain why.
 
@@ -1784,7 +1784,7 @@ terraform_project/
   staging/
   production/
 ```
-
+ 
 Each environment has its own backend (as you don't want to use the same authentication and access controls for all environments)
 
 Going further, under each environment you'll separate between comoponents, applications and services
@@ -1804,7 +1804,7 @@ terraform_project/
 </b></details>
 
 <details>
-<summary>What files do you have you have in your Terraform projects?</summary><br><b>
+<summary>What files do you have you have in your Terraform projects? ✅ </summary><br><b>
 
 Again, no right or wrong answer. Just your personal experience.
 
@@ -1819,14 +1819,14 @@ Each one of these files can be divided to smaller parts if needed (no reason to 
 </b></details>
 
 <details>
-<summary>An engineer in your team complains about having to copy-paste quite a lot of code between different folders and files of Terraform. What would you do?</summary><br><b>
+<summary>An engineer in your team complains about having to copy-paste quite a lot of code between different folders and files of Terraform. What would you do? ✅ </summary><br><b>
 
 Suggest to use Terraform modules.
 
 </b></details>
 
 <details>
-<summary>When working with nested layout of many directories, it can make it cumbresome to run terraform commands in many different folders. How to deal with it?</summary><br><b>
+<summary>When working with nested layout of many directories, it can make it cumbresome to run terraform commands in many different folders. How to deal with it? ✅ </summary><br><b>
 
 There are multiple ways to deal with it:
 1. Write scripts that perform some commands recursively with different conditions
@@ -1835,42 +1835,42 @@ There are multiple ways to deal with it:
 </b></details>
 
 <details>
-<summary>One of the engineers in your team complains the inline shell scripts are quite big and maintaining them in Terraform files seems like a bad idea. What would you do?</summary><br><b>
+<summary>One of the engineers in your team complains the inline shell scripts are quite big and maintaining them in Terraform files seems like a bad idea. What would you do? ✅ </summary><br><b>
 
 A good solution for not including shell scripts inline (as in inside terraform configuration files) is to keep them in a separate file and then use the terraform `templatefile` function to render and get them as a string
 
 </b></details>
 
 <details>
-<summary>You noticed a lot of your Terraform code/configuration is duplicated, between repositories and also within the same repository between different directories. What one way you may adopt that will help handling with that?</summary><br><b>
+<summary>You noticed a lot of your Terraform code/configuration is duplicated, between repositories and also within the same repository between different directories. What one way you may adopt that will help handling with that? ✅ </summary><br><b>
 
 Using Terraform modules can help greatly with duplicated code and so different environments for example (staging and production) can reuse the same code by using the same modules.
 
 </b></details>
 
 <details>
-<summary>You noticed your Terraform code includes quite a lot of hardcoded values (like ports, subnets, ...) and they are duplicated in many locations. How'd you deal with it?</summary><br><b>
+<summary>You noticed your Terraform code includes quite a lot of hardcoded values (like ports, subnets, ...) and they are duplicated in many locations. How'd you deal with it? ✅ </summary><br><b>
 
 Using variables might not be a good solution because some things shouldn't be exposed and accidentally overridden. In such case you might want to use the concept of `locals`
 
 </b></details>
 
 <details>
-<summary>Every time there is a change in tags standards (for example your team decided to change one of the tags' name) you find yourself changing tags in multiple files and you find the process quite tedious. What can be done about it?</summary><br><b>
+<summary>Every time there is a change in tags standards (for example your team decided to change one of the tags' name) you find yourself changing tags in multiple files and you find the process quite tedious. What can be done about it? ❎ </summary><br><b>
 
 Instead of defining tags at resource level, consider using `default_tags` as part of the provider configuration.
 
 </b></details>
 
 <details>
-<summary>You would like to change the name of a resource but afraid to cause downtime. What can be done?</summary><br><b>
+<summary>You would like to change the name of a resource but afraid to cause downtime. What can be done? ✅ </summary><br><b>
 
 If it's a matter of changing a resource name, you could make use of `terraform state mv <ORIGINAL_RESOURCE_NAME> <NEW_RESOURCE_NAME>`
 
 </b></details>
 
 <details>
-<summary>You try to deploy a cluster and an app on that cluster, but the app resource was created before the cluster. How to manage such situation?</summary><br><b>
+<summary>You try to deploy a cluster and an app on that cluster, but the app resource was created before the cluster. How to manage such situation? ✅ </summary><br><b>
 
 Use the meta-argument `depends_on` in the app resource definition. This way the app will depend on the cluster resource and order will be maintained in creation of the resources.
 
