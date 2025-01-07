@@ -43,7 +43,7 @@
 
 |Name|Topic|Objective & Instructions|Solution|Comments|
 |--------|--------|------|----|----|
-| Local Provider  | Basics | [Exercise](exercises/terraform_local_provider/exercise.md) | [Solution](exercises/terraform_local_provider/solution.md) | |
+| Local Provider  | Basics | [Exercise](exercises/terraform_local_provider/exercise.md) | [Solution](exercises/terraform_local_provider/solution.md) | ✅ |
 
 ### AWS
 
@@ -59,14 +59,14 @@
 ### Terraform 101
 
 <details>
-<summary>What is Terraform?</summary><br><b>
+<summary>What is Terraform? ✅ </summary><br><b>
 
 [Terraform](https://www.terraform.io/intro): "HashiCorp Terraform is an infrastructure as code tool that lets you define both cloud and on-prem resources in human-readable configuration files that you can version, reuse, and share. You can then use a consistent workflow to provision and manage all of your infrastructure throughout its lifecycle. Terraform can manage low-level components like compute, storage, and networking resources, as well as high-level components like DNS entries and SaaS features."
 </b></details>
 
 
 <details>
-<summary>What are the advantages in using Terraform or IaC in general?</summary><br><b>
+<summary>What are the advantages in using Terraform or IaC in general? ✅ </summary><br><b>
 
 - Full automation: In the past, resource creation, modification and removal were handled manually or by using a set of tooling. With Terraform or other IaC technologies, you manage the full lifecycle in an automated fashion.<br>
 - Modular and Reusable: Code that you write for certain purposes can be used and assembled in different ways. You can write code to create resources on a public cloud and it can be shared with other teams who can also use it in their account on the same (or different) cloud><br>
@@ -75,7 +75,7 @@
 </b></details>
 
 <details>
-<summary>What are some of Terraform features?</summary><br><b>
+<summary>What are some of Terraform features? :grey_exclamation: </summary><br><b>
 
 - Declarative: Terraform uses the declarative approach (rather than the procedural one) in order to define end-status of the resources
 - No agents: as opposed to other technologies (e.g. Puppet) where you use a model of agent and server, with Terraform you use the different APIs (of clouds, services, etc.) to perform the operations
@@ -84,14 +84,14 @@
 </b></details>
 
 <details>
-<summary>What language does Terraform uses?</summary><br><b>
+<summary>What language does Terraform uses? ✅ </summary><br><b>
 
 A DSL called "HCL" (Hashicorp Configuration Language). A declarative language for defining infrastructure.
 
 </b></details>
 
 <details>
-<summary>What's a typical Terraform workflow?</summary><br><b>
+<summary>What's a typical Terraform workflow? ✅ </summary><br><b>
 
 1. Write Terraform definitions: `.tf` files written in HCL that described the desired infrastructure state (and run `terraform init` at the very beginning)
 2. Review: With command such as `terraform plan` you can get a glance at what Terraform will perform with the written definitions
@@ -102,7 +102,7 @@ This is a manual process. Most of the time this is automated so user submits a P
 </b></details>
 
 <details>
-<summary>What are some use cases for using Terraform?</summary><br><b>
+<summary>What are some use cases for using Terraform? :grey_exclamation: </summary><br><b>
 
 - Infra provisioning and management: You need to automated or code your infra so you are able to test it easily, apply it and make any changes necessary.
 - Multi-cloud environment: You manage infrastructure on different clouds, but looking for a consistent way to do it across the clouds
@@ -111,7 +111,7 @@ This is a manual process. Most of the time this is automated so user submits a P
 </b></details>
 
 <details>
-<summary>What's the difference between Terraform and technologies such as Ansible, Puppet, Chef, etc.</summary><br><b>
+<summary>What's the difference between Terraform and technologies such as Ansible, Puppet, Chef, etc. ✅ </summary><br><b>
 
 Terraform is considered to be an IaC technology. It's used for provisioning resources, for managing infrastructure on different platforms.
 
@@ -124,7 +124,7 @@ To be clear, CM tools can be used to provision resources so in the end goal of h
 ### Terraform Hands-On Basics
 
 <details>
-<summary>Explain the following block of Terraform code
+<summary>Explain the following block of Terraform code ✅
 
 ```
 resource "aws_instance" "some-instance" {
@@ -140,7 +140,7 @@ The instance itself will be provisioned with type "t2.micro" and using an image 
 </b></details>
 
 <details>
-<summary>What do you do next after writing the following in main.tf file?
+<summary>What do you do next after writing the following in main.tf file? ✅
 
 ```
 resource "aws_instance" "some-instance" {
@@ -154,19 +154,19 @@ Run `terraform init`. This will scan the code in the directory to figure out whi
 </b></details>
 
 <details>
-<summary>You've executed <code>terraform init</code> and now you would like to move forward to creating the resources but you have concerns and would like to make be 100% sure on what you are going to execute. What should you be doing?</summary><br><b>
+<summary>You've executed <code>terraform init</code> and now you would like to move forward to creating the resources but you have concerns and would like to make be 100% sure on what you are going to execute. What should you be doing? ✅ </summary><br><b>
 
 Execute `terraform plan`. That will provide a detailed information on what Terraform will do once you apply the changes.
 </b></details>
 
 <details>
-<summary>You've downloaded the providers, seen the what Terraform will do (with terraform plan) and you are ready to actually apply the changes. What should you do next?</summary><br><b>
+<summary>You've downloaded the providers, seen the what Terraform will do (with terraform plan) and you are ready to actually apply the changes. What should you do next? ✅ </summary><br><b>
 
 Run `terraform apply`. That will apply the changes described in your .tf files.
 </b></details>
 
 <details>
-<summary>Explain the meaning of the following strings that seen at the beginning of each line When you run <code>terraform apply</code>
+<summary>Explain the meaning of the following strings that seen at the beginning of each line When you run <code>terraform apply</code> ✅
 
 * '+'
 * '-'
@@ -179,7 +179,7 @@ Run `terraform apply`. That will apply the changes described in your .tf files.
 </b></details>
 
 <details>
-<summary>How to cleanup Terraform resources? Why the user should be careful doing so?</summary><br><b>
+<summary>How to cleanup Terraform resources? Why the user should be careful doing so? ✅ </summary><br><b>
 
 `terraform destroy` will cleanup all the resources tracked by Terraform.
 
@@ -189,7 +189,7 @@ A user should be careful with this command because there is no way to revert it.
 ### Dependencies 
 
 <details>
-<summary>Sometimes you need to reference some resources in the same or separate .tf file. Why and how it's done?</summary><br><b>
+<summary>Sometimes you need to reference some resources in the same or separate .tf file. Why and how it's done? ✅ </summary><br><b>
 
 Why: because resources are sometimes connected or need to be connected. For example, you create an AWS instance with "aws_instance" resource but, at the same time you would like also to allow some traffic to it (because by default traffic is not allowed). For that you'll create a "aws_security_group" resource and then, in your aws_instance resource, you'll reference it.
 
@@ -211,7 +211,7 @@ resource "aws_instance" "some-instance" {
 </b></details>
 
 <details>
-<summary>Does it matter in which order Terraform creates resources?</summary><br><b>
+<summary>Does it matter in which order Terraform creates resources? ✅ </summary><br><b>
 
 Yes, when there is a dependency between different Terraform resources, you want the resources to be created in the right order and this is exactly what Terraform does.
 
@@ -219,7 +219,7 @@ To make it ever more clear, if you have a resource X that references the ID of r
 </b></details>
 
 <details>
-<summary>Is there a way to print/see the dependencies between the different resources?</summary><br><b>
+<summary>Is there a way to print/see the dependencies between the different resources? ✅ </summary><br><b>
 
 Yes, with `terraform graph`
 
@@ -229,19 +229,19 @@ The output is in DOT - A graph description language.
 ### Providers
 
 <details>
-<summary>Explain what is a "provider"</summary><br><b>
+<summary>Explain what is a "provider" ✅ </summary><br><b>
 
 [terraform.io](https://www.terraform.io/docs/language/providers/index.html): "Terraform relies on plugins called "providers" to interact with cloud providers, SaaS providers, and other APIs...Each provider adds a set of resource types and/or data sources that Terraform can manage. Every resource type is implemented by a provider; without providers, Terraform can't manage any kind of infrastructure."
 </b></details>
 
 <details>
-<summary>Where can you find publicly available providers?</summary><br><b>
+<summary>Where can you find publicly available providers? ✅ </summary><br><b>
 
 In the [Terraform Registry](https://registry.terraform.io/browse/providers) 
 </b></details>
 
 <details>
-<summary>What are the names of the providers in this case?
+<summary>What are the names of the providers in this case? ✅
 
 ```
 terraform {
@@ -262,7 +262,7 @@ azurerm and aws
 </b></details>
 
 <details>
-<summary>How to install a provider? </summary><br><b>
+<summary>How to install a provider? ✅ </summary><br><b>
 
 You write a provider block like the following one and run `terraform init`
 
@@ -275,7 +275,7 @@ provider "aws" {
 </b></details>
 
 <details>
-<summary>True or False? Applying the following Terraform configuration will fail since no source or version specific for 'aws' provider
+<summary>True or False? Applying the following Terraform configuration will fail since no source or version specific for 'aws' provider ❎
 
 ```
 terraform {
@@ -290,7 +290,7 @@ False. It will look for "aws" provider in the public Terraform registry and will
 </b></details>
 
 <details>
-<summary>Write a configuration of a Terraform provider (any type you would like)</summary><br><b>
+<summary>Write a configuration of a Terraform provider (any type you would like) ✅ </summary><br><b>
 
 AWS is one of the most popular providers in Terraform. Here is an example of how to configure it to use one specific region and specifying a specific version of the provider
 
@@ -312,25 +312,25 @@ provider "aws" {
 </b></details>
 
 <details>
-<summary>Where Terraform installs providers from by default? </summary><br><b>
+<summary>Where Terraform installs providers from by default? ✅ </summary><br><b>
 
 By default Terraform providers are installed from Terraform Registry
 </b></details>
 
 <details>
-<summary>What is the Terraform Registry?</summary><br><b>
+<summary>What is the Terraform Registry? ✅ </summary><br><b>
 
 The Terraform Registry provides a centralized location for official and community-managed providers and modules.
 </b></details>
 
 <details>
-<summary>Where providers are downloaded to? (when for example you run <code>terraform init</code>)</summary><br><b>
+<summary>Where providers are downloaded to? (when for example you run <code>terraform init</code>) ✅ </summary><br><b>
 
 `.terraform` directory.
 </b></details>
 
 <details>
-<summary>Describe in high level what happens behind the scenes when you run terraform init on on the following Terraform configuration
+<summary>Describe in high level what happens behind the scenes when you run terraform init on on the following Terraform configuration ✅
 
 ```
 terraform {
@@ -349,23 +349,23 @@ terraform {
 </b></details>
 
 <details>
-<summary>True or False? You can install providers only from hashicorp</summary><br><b>
+<summary>True or False? You can install providers only from hashicorp ✅ </summary><br><b>
 
 False. You can specify any provider from any URL, not only those from hashicorp.
 </b></details>
-
+ 
 ### Variables
 
 #### Input Variables
 
 <details>
-<summary>What input variables are good for in Terraform?</summary><br><b>
+<summary>What input variables are good for in Terraform? ✅ </summary><br><b>
 
 Variables allow you define piece of data in one location instead of repeating the hardcoded value of it in multiple different locations. Then when you need to modify the variable's value, you do it in one location instead of changing each one of the hardcoded values.
 </b></details>
 
 <details>
-<summary>What type of input variables are supported in Terraform?</summary><br><b>
+<summary>What type of input variables are supported in Terraform? ✅ </summary><br><b>
 
 ```
 string
@@ -380,13 +380,13 @@ tuple([<TYPE>, ...])
 </b></details>
 
 <details>
-<summary>What's the default input variable type in Terraform?</summary><br><b>
+<summary>What's the default input variable type in Terraform? ❎ </summary><br><b>
 
 `any`
 </b></details>
 
 <details>
-<summary>What ways are there to pass values for input variables?</summary><br><b>
+<summary>What ways are there to pass values for input variables? ✅ </summary><br><b>
 
 * Using `-var` option in the CLI
 * Using a file by using the `-var-file` option in the CLI
@@ -396,25 +396,25 @@ If no value given, user will be prompted to provide one.
 </b></details>
 
 <details>
-<summary>How to reference a variable?</summary><br><b>
+<summary>How to reference a variable? ✅ </summary><br><b>
 
 Using the syntax `var.<VAR_NAME>`
 </b></details>
 
 <details>
-<summary>What is the effect of setting variable as "sensitive"?</summary><br><b>
+<summary>What is the effect of setting variable as "sensitive"? ✅ </summary><br><b>
 
 It doesn't show its value when you run `terraform apply` or `terraform plan` but eventually it's still recorded in the state file.
 </b></details>
 
 <details>
-<summary>True or False? If an expression's result depends on a sensitive variable, it will be treated as sensitive as well</summary><br><b>
+<summary>True or False? If an expression's result depends on a sensitive variable, it will be treated as sensitive as well ❎ </summary><br><b>
 
 True
 </b></details>
 
 <details>
-<summary>The same variable is defined in the following places:
+<summary>The same variable is defined in the following places: ✅
 
 - The file `terraform.tfvars`
 - Environment variable
@@ -431,7 +431,7 @@ The order is:
 </b></details>
 
 <details>
-<summary>Whenever you run terraform apply, it prompts to enter a value for a given variable. How to avoid being prompted?</summary><br><b>
+<summary>Whenever you run terraform apply, it prompts to enter a value for a given variable. How to avoid being prompted? ✅ </summary><br><b>
 
 While removing the variable is theoretically a correct answer, it will probably fail the execution.
 
@@ -442,7 +442,7 @@ You can use something like the `-var` option to provide the value and avoid bein
 #### Output Variables
 
 <details>
-<summary>What are output variables? Why do we need them?</summary><br><b>
+<summary>What are output variables? Why do we need them? ✅ </summary><br><b>
 
 Output variable allow you to display/print certain piece of data as part of Terraform execution.
 
@@ -451,14 +451,14 @@ The most common use case for it is probably to print the IP address of an instan
 </b></details>
 
 <details>
-<summary>Explain the "sensitive" parameter of output variable</summary><br><b>
+<summary>Explain the "sensitive" parameter of output variable ✅ </summary><br><b>
 
 When set to "true", Terraform will avoid logging output variable's data. The use case for it is sensitive data such as password or private keys.
 
 </b></details>
 
 <details>
-<summary>Explain the "depends" parameter of output variable</summary><br><b>
+<summary>Explain the "depends" parameter of output variable ✅ </summary><br><b>
 
 It is used to set explicitly dependency between the output variable and any other resource. Use case: some piece of information is available only once another resource is ready.
 
@@ -467,14 +467,14 @@ It is used to set explicitly dependency between the output variable and any othe
 #### Locals
 
 <details>
-<summary>What are locals?</summary><br><b>
+<summary>What are locals? ✅ </summary><br><b>
 
 Similarly to variables they serve as placeholders for data and values. Differently from variables, users can't override them by passing different values.
 
 </b></details>
 
 <details>
-<summary>What's the use case for using locals?</summary><br><b>
+<summary>What's the use case for using locals? ✅ </summary><br><b>
 
 You have multiple hardcoded values that repeat themselves in different sections, but at the same time you don't want to expose them as in, allow users to override values.
 
@@ -483,7 +483,7 @@ You have multiple hardcoded values that repeat themselves in different sections,
 #### Variables Hands-On
 
 <details>
-<summary>Demonstrate input variable definition with type, description and default parameters</summary><br><b>
+<summary>Demonstrate input variable definition with type, description and default parameters ✅ </summary><br><b>
 
 ```
 variable "app_id" {
@@ -498,7 +498,7 @@ Unrelated note: variables are usually defined in their own file (vars.tf for exa
 </b></details>
 
 <details>
-<summary>How to define an input variable which is an object with attributes "model" (string), "color" (string), year (number)?</summary><br><b>
+<summary>How to define an input variable which is an object with attributes "model" (string), "color" (string), year (number)? ✅ </summary><br><b>
 
 ```
 variable "car_model" {
@@ -516,7 +516,7 @@ Note: you can also define a default for it.
 </b></details>
 
 <details>
-<summary>How to reference variables?</summary><br><b>
+<summary>How to reference variables? ✅ </summary><br><b>
 
 Variable are referenced with `var.VARIABLE_NAME` syntax. Let's have a look at an example:
 
@@ -547,7 +547,7 @@ resource "libvirt_domain" "vm1" {
 </b></details>
 
 <details>
-<summary>How to reference variable from inside of string literal? (bonus question: how that type of expression is called?)</summary><br><b>
+<summary>How to reference variable from inside of string literal? (bonus question: how that type of expression is called?) ✅ </summary><br><b>
 
 Using the syntax: `"${var.VAR_NAME}"`. It's called "interpolation".
 
@@ -564,13 +564,13 @@ user_data = <<-EOF
 </b></details>
 
 <details>
-<summary>How can list all outputs without applying Terraform changes?</summary><br><b>
+<summary>How can list all outputs without applying Terraform changes? ✅ </summary><br><b>
 
 `terraform output` will list all outputs without applying any changes
 </b></details>
 
 <details>
-<summary>Can you see the output of specific variable without applying terrafom changes?</summary><br><b>
+<summary>Can you see the output of specific variable without applying terrafom changes? ✅ </summary><br><b>
 
 Yes, with `terraform output <OUTPUT_VAR>`.
 
@@ -578,7 +578,7 @@ Very useful for scripts :)
 </b></details>
 
 <details>
-<summary>Demonstrate how to define locals</summary><br><b>
+<summary>Demonstrate how to define locals ✅ </summary><br><b>
 
 ```
 locals {
@@ -590,7 +590,7 @@ locals {
 </b></details>
 
 <details>
-<summary>Demonstrate how to use a local</summary><br><b>
+<summary>Demonstrate how to use a local ✅ </summary><br><b>
 
 if we defined something like this
 
@@ -606,7 +606,7 @@ then to use it, you have to use something like this: `local.x`
 ### Data Sources
 
 <details>
-<summary>Explain data sources in Terraform</summary><br><b>
+<summary>Explain data sources in Terraform ✅ </summary><br><b>
 
 * Data sources used to get data from providers or in general from external resources to Terraform (e.g. public clouds like AWS, GCP, Azure).
 * Data sources used for reading. They are not modifying or creating anything
@@ -615,7 +615,7 @@ then to use it, you have to use something like this: `local.x`
 </b></details>
 
 <details>
-<summary>Demonstrate how to use data sources</summary><br><b>
+<summary>Demonstrate how to use data sources ✅ </summary><br><b>
 
 ```
 data "aws_vpc" "default {
@@ -626,7 +626,7 @@ data "aws_vpc" "default {
 </b></details>
 
 <details>
-<summary>How to get data out of a data source?</summary><br><b>
+<summary>How to get data out of a data source? ✅ </summary><br><b>
 
 The general syntax is `data.<PROVIDER_AND_TYPE>.<NAME>.<ATTRIBUTE>`
 
@@ -642,7 +642,7 @@ You can retrieve the ID attribute this way: `data.aws_vpc.default.id`
 </b></details>
 
 <details>
-<summary>Is there such a thing as combining data sources? What would be the use case?</summary><br><b>
+<summary>Is there such a thing as combining data sources? What would be the use case? ✅ </summary><br><b>
 
 Yes, you can define a data source while using another data source as a filter for example.
 
@@ -662,14 +662,14 @@ data "aws_subnets" "default" {
 ### Lifecycle
 
 <details>
-<summary>When you update a resource, how it works?</summary><br><b>
+<summary>When you update a resource, how it works? ✅ </summary><br><b>
 
 By default the current resource is deleted, a new one is created and any references pointing the old resource are updated to point the new resource
 
 </b></details>
 
 <details>
-<summary>Is it possible to modify the default lifecycle? How? Why?</summary><br><b>
+<summary>Is it possible to modify the default lifecycle? How? Why? ✅ </summary><br><b>
 
 Yes, it's possible. There are different lifecycles one can choose from. For example "create_before_destroy" which inverts the order and first creates the new resource, updates all the references from old resource to the new resource and then removes the old resource.
 
@@ -686,7 +686,7 @@ Why to use it in the first place: you might have resources that have dependency 
 </b></details>
 
 <details>
-<summary>You've deployed a virtual machine with Terraform and you would like to pass data to it (or execute some commands). Which concept of Terraform would you use?</summary><br><b>
+<summary>You've deployed a virtual machine with Terraform and you would like to pass data to it (or execute some commands). Which concept of Terraform would you use? ✅ </summary><br><b>
 
 [Provisioners](https://www.terraform.io/docs/language/resources/provisioners)
 
@@ -695,7 +695,7 @@ Why to use it in the first place: you might have resources that have dependency 
 ### Provisioners
 
 <details>
-<summary>What are "Provisioners"? What they are used for?</summary><br><b>
+<summary>What are "Provisioners"? What they are used for? ✅ </summary><br><b>
 
 Provisioners can be described as plugin to use with Terraform, usually focusing on the aspect of service configuration and make it operational.
 
@@ -708,31 +708,31 @@ Few example of provisioners:
 </b></details>
 
 <details>
-<summary>Why is it often recommended to use provisioners as last resort?</summary><br><b>
+<summary>Why is it often recommended to use provisioners as last resort? ✅ </summary><br><b>
 
 Since a provisioner can run a variety of actions, it's not always feasible to plan and understand what will happen when running a certain provisioner. For this reason, it's usually recommended to use Terraform built-in option, whenever's possible.
 
 </b></details>
 
 <details>
-<summary>What is <code>local-exec</code> and <code>remote-exec</code> in the context of provisioners?</summary><br><b>
+<summary>What is <code>local-exec</code> and <code>remote-exec</code> in the context of provisioners? ✅ </summary><br><b>
 </b></details>
 
 <details>
-<summary>What is a "tainted resource"?</summary><br><b>
+<summary>What is a "tainted resource"? ✅ </summary><br><b>
 
 It's a resource which was successfully created but failed during provisioning. Terraform will fail and mark this resource as "tainted".
 
 </b></details>
 
 <details>
-<summary>What <code>terraform taint</code> does?</summary><br><b>
+<summary>What <code>terraform taint</code> does? ✅ </summary><br><b>
 <code>terraform taint resource.id</code> manually marks the resource as tainted in the state file. So when you run <code>terraform apply</code> the next time, the resource will be destroyed and recreated.
 
 </b></details>
 
 <details>
-<summary>What is a data source? In what scenarios for example would need to use it?</summary><br><b>
+<summary>What is a data source? In what scenarios for example would need to use it? ✅ </summary><br><b>
 Data sources lookup or compute values that can be used elsewhere in terraform configuration.
 
 There are quite a few cases you might need to use them:
@@ -743,7 +743,7 @@ There are quite a few cases you might need to use them:
 </b></details>
 
 <details>
-<summary>What are output variables and what <code>terraform output</code> does?</summary><br><b>
+<summary>What are output variables and what <code>terraform output</code> does? ✅ </summary><br><b>
 Output variables are named values that are sourced from the attributes of a module. They are stored in terraform state, and can be used by other modules through <code>remote_state</code>
 </b></details>
 
@@ -753,14 +753,14 @@ Output variables are named values that are sourced from the attributes of a modu
 
 
 <details>
-<summary>Explain "Remote State". When would you use it and how?</summary><br><b>
+<summary>Explain "Remote State". When would you use it and how? ✅ </summary><br><b>
   Terraform generates a `terraform.tfstate` json file that describes components/service provisioned on the specified provider. Remote
   State stores this file in a remote storage media to enable collaboration amongst team.
 
 </b></details>
 
 <details>
-<summary>Explain "State Locking"</summary><br><b>
+<summary>Explain "State Locking" ✅ </summary><br><b>
   State locking is a mechanism that blocks an operations against a specific state file from multiple callers so as to avoid conflicting operations from different team members. Once the first caller's operation's lock is released the other team member may go ahead to
   carryout his own operation. Nevertheless Terraform will first check the state file to see if the desired resource already exist and
   if not it goes ahead to create it.
@@ -768,13 +768,13 @@ Output variables are named values that are sourced from the attributes of a modu
 </b></details>
 
 <details>
-<summary>Aside from <code>.tfvars</code> files or CLI arguments, how can you inject dependencies from other modules?</summary><br><b>
+<summary>Aside from <code>.tfvars</code> files or CLI arguments, how can you inject dependencies from other modules? ❎ </summary><br><b>
   The built-in terraform way would be to use <code>remote-state</code> to lookup the outputs from other modules.
   It is also common in the community to use a tool called <code>terragrunt</code> to explicitly inject variables between modules.
 </b></details>
 
 <details>
-<summary>How do you import existing resource using Terraform import?</summary><br><b>
+<summary>How do you import existing resource using Terraform import? ✅ </summary><br><b>
 
 1. Identify which resource you want to import.
 2. Write terraform code matching configuration of that resource.
@@ -800,7 +800,7 @@ resource "aws_instance" "tf_aws_instance" {
 ### State
 
 <details>
-<summary>What's Terraform State?</summary><br><b>
+<summary>What's Terraform State? ✅ </summary><br><b>
 
 [terraform.io](https://www.terraform.io/language/state): "Terraform must store state about your managed infrastructure and configuration. This state is used by Terraform to map real world resources to your configuration, keep track of metadata, and to improve performance for large infrastructures."
 
@@ -809,14 +809,14 @@ In other words, it's a mechanism in Terraform to track resources you've created 
 </b></details>
 
 <details>
-<summary>Where Terraform state is stored?</summary><br><b>
+<summary>Where Terraform state is stored? ✅ </summary><br><b>
 
 There is more than one answer to this question. It's very much depends on whether you share it with others or it's only local in your Terraform directory, but taking a beginner's case, when you run terraform in a directory, the state will be stored in that directory in `terraform.tfstate` file.
 
 </b></details>
 
 <details>
-<summary>Can you name three different things included in the state file?</summary><br><b>
+<summary>Can you name three different things included in the state file? ✅ </summary><br><b>
 
 * The representation of resources - JSON format of the resources, their attributes, IDs, ... everything that required to identify the resource and also anything that was included in the .tf files on these resources
 * Terraform version
@@ -824,7 +824,7 @@ There is more than one answer to this question. It's very much depends on whethe
 </b></details>
 
 <details>
-<summary>Why does it matter where you store the tfstate file? In your answer make sure to address the following:
+<summary>Why does it matter where you store the tfstate file? In your answer make sure to address the following: ✅
 
 * Public vs. Private
 * Git repository vs. Other locations
@@ -839,19 +839,19 @@ As such, tfstate shouldn't be stored in git repositories. secured storage such a
 </b></details>
 
 <details>
-<summary>True or False? it's common to edit terraform state file directly by hand and even recommended for many different use cases</summary><br><b>
+<summary>True or False? it's common to edit terraform state file directly by hand and even recommended for many different use cases ✅ </summary><br><b>
 
 False. You should avoid as much possible to edit Terraform state files directly by hand.
 </b></details>
 
 <details>
-<summary>Why storing state file locally on your computer may be problematic?</summary><br><b>
+<summary>Why storing state file locally on your computer may be problematic? ✅ </summary><br><b>
 
 In general, storing state file on your computer isn't a problem. It starts to be a problem when you are part of a team that uses Terraform and then you would like to make sure it's shared. In addition to being shared, you want to be able to handle the fact that different teams members can edit the file and can do it at the same time, so locking is quite an important aspect as well.
 </b></details>
 
 <details>
-<summary>Mention some best practices related to tfstate</summary><br><b>
+<summary>Mention some best practices related to tfstate ❎ </summary><br><b>
 
   - Don't edit it manually. tfstate was designed to be manipulated by terraform and not by users directly.
   - Store it in secured location (since it can include credentials and sensitive data in general)
@@ -862,7 +862,7 @@ In general, storing state file on your computer isn't a problem. It starts to be
 </b></details>
 
 <details>
-<summary>How and why concurrent edits of the state file should be avoided?</summary><br><b>
+<summary>How and why concurrent edits of the state file should be avoided? ❎ </summary><br><b>
 
 If there are two users or processes concurrently editing the state file it can result in invalid state file that doesn't actually represents the state of resources.<br>
 
@@ -870,13 +870,13 @@ To avoid that, Terraform can apply state locking if the backend supports that. F
 </b></details>
 
 <details>
-<summary>Describe how you manage state file(s) when you have multiple environments (e.g. development, staging and production)</summary><br><b>
+<summary>Describe how you manage state file(s) when you have multiple environments (e.g. development, staging and production) ✅ </summary><br><b>
 
 Probably no right or wrong answer here, but it seems, based on different source, that the overall preferred way is to have a dedicated state file per environment.
 </b></details>
 
 <details>
-<summary>Why storing the state in versioned control repo is not a good idea?</summary><br><b>
+<summary>Why storing the state in versioned control repo is not a good idea? ✅ </summary><br><b>
 
 * Sensitive data: some resources may specify sensitive data (like passwords and tokens) and everything in a state file is stored in plain text
 * Prone to errors: when working with Git repos, you mayo often find yourself switch branches, checkout specific commits, perform rebases, ... all these operations may end up in you eventually performing `terraform apply` on non-latest version of your Terraform code
@@ -885,13 +885,13 @@ Probably no right or wrong answer here, but it seems, based on different source,
 #### Terraform Backend
 
 <details>
-<summary>What's a Terraform backend? What is the default backend?</summary><br><b>
+<summary>What's a Terraform backend? What is the default backend? ✅ </summary><br><b>
 
 Terraform backend determines how the Terraform state is stored and loaded. By default the state is local, but it's possible to set a remote backend
 </b></details>
 
 <details>
-<summary>Describe how to set a remote backend of any type you choose</summary><br><b>
+<summary>Describe how to set a remote backend of any type you choose ✅ </summary><br><b>
 
 Let's say we chose use Amazon s3 as a remote Terraform backend where we can store Terraform's state.
 
@@ -916,14 +916,14 @@ terraform {
 </b></details>
 
 <details>
-<summary>How <code>terraform apply</code> workflow is different when a remote backend is used?</summary><br><b>
+<summary>How <code>terraform apply</code> workflow is different when a remote backend is used? ✅ </summary><br><b>
 
 It starts with acquiring a state lock so others can't modify the state at the same time.
 
 </b></details>
 
 <details>
-<summary>What would be the process of switching back from remote backend to local?</summary><br><b>
+<summary>What would be the process of switching back from remote backend to local? ✅ </summary><br><b>
 
 1. You remove the backend code and perform `terraform init` to switch back to `local` backend
 2. You remove the resources that are the remote backend itself
@@ -931,7 +931,7 @@ It starts with acquiring a state lock so others can't modify the state at the sa
 </b></details>
 
 <details>
-<summary>True or False? it's NOT possible to use variable in a backend configuration</summary><br><b>
+<summary>True or False? it's NOT possible to use variable in a backend configuration ✅ </summary><br><b>
 
 That's true and quite a limitation as it means you'll have to go to the resources of the remote backend and copy some values to the backend configuration.
 
@@ -940,7 +940,7 @@ One way to deal with it is using partial configurations in a completely separate
 </b></details>
 
 <details>
-<summary>Is there a way to obtain information from a remote backend/state using Terraform?</summary><br><b>
+<summary>Is there a way to obtain information from a remote backend/state using Terraform? ✅ </summary><br><b>
 
 Yes, using the concept of data sources. There is a data source for a remote state called "terraform_remote_state".
 
@@ -951,21 +951,21 @@ You can use it the following syntax `data.terraform_remote_state.<NAME>.outputs.
 #### Workspaces
 
 <details>
-<summary>Explain what is a Terraform workspace</summary><br><b>
+<summary>Explain what is a Terraform workspace ✅ </summary><br><b>
 
 [developer.hashicorp.com](https://developer.hashicorp.com/terraform/language/state/workspaces): "The persistent data stored in the backend belongs to a workspace. The backend initially has only one workspace containing one Terraform state associated with that configuration. Some backends support multiple named workspaces, allowing multiple states to be associated with a single configuration."
 
 </b></details>
 
 <details>
-<summary>True or False? Each workspace has its own state file</summary><br><b>
+<summary>True or False? Each workspace has its own state file ✅ </summary><br><b>
 
 True
 
 </b></details>
 
 <details>
-<summary>Why workspaces might not be the best solution for managing states for different environments? like staging and production</summary><br><b>
+<summary>Why workspaces might not be the best solution for managing states for different environments? like staging and production ✅ </summary><br><b>
 
 One reason is that all the workspaces are stored in one location (as in one backend) and usually you don't want to use the same access control and authentication for both staging and production for obvious reasons. Also working in workspaces is quite prone to human errors as you might accidentally think you are in one workspace, while you are working a completely different one.
 </b></details>
@@ -974,42 +974,42 @@ One reason is that all the workspaces are stored in one location (as in one back
 #### State Hands-On
 
 <details>
-<summary>Which command will produce a state file?</summary><br><b>
+<summary>Which command will produce a state file? ✅ </summary><br><b>
 
 `terraform apply`
 
 </b></details>
 
 <details>
-<summary>How to inspect current state?</summary><br><b>
+<summary>How to inspect current state? ❎ </summary><br><b>
 
 `terraform show`
 
 </b></details>
 
 <details>
-<summary>How to list resources created with Terraform?</summary><br><b>
+<summary>How to list resources created with Terraform? ✅ </summary><br><b>
 
 `terraform state list`
 
 </b></details>
 
 <details>
-<summary>How do you rename an existing resource?</summary><br><b>
+<summary>How do you rename an existing resource? ✅ </summary><br><b>
 
 `terraform state mv`
 
 </b></details>
 
 <details>
-<summary>How to create a new workspace?</summary><br><b>
+<summary>How to create a new workspace? ❎ </summary><br><b>
 
 `terraform workspace new <WORKSPACE_NAME>`
 
 </b></details>
 
 <details>
-<summary>How to identify which workspace are you using?</summary><br><b>
+<summary>How to identify which workspace are you using? ❎ </summary><br><b>
 
 `terraform workspace show`
 
